@@ -11,6 +11,8 @@ DirectoryIndex index.html
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
+  RewriteRule ^(_fuente|\.git)(/|$) - [F,L]
+  RewriteRule (^|/)\.git - [F,L]
   RewriteCond %{HTTPS} off
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
   RewriteCond %{HTTP_HOST} ^www\.leypedia\.com$ [NC]
