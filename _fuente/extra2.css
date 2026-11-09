@@ -116,3 +116,15 @@ header.top .search button{padding:0 10px;font-size:13px}
 h3.persep{font-size:1rem;margin:22px 0 10px}
 h3.persep span{font-weight:400;color:var(--muted,#5B7078);font-size:.88rem;margin-left:6px}
 @media (max-width:480px){.btn.ghost{margin:10px 0 0}}
+/* nómina de ejemplo */
+.nomina{border:1px solid var(--line);border-radius:10px;background:var(--paper);margin:0 0 10px;overflow:hidden}
+.nomina .ncap{background:#152F3C;color:#fff;font-weight:600;padding:10px 14px;font-size:.92rem;letter-spacing:.02em}
+.nomina .tbl{margin:0}.nomina table{width:100%;border-collapse:collapse;font-size:.92rem}
+.nomina td{padding:7px 12px;border-top:1px solid var(--line);vertical-align:top}
+.nomina td.r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.nomina .nsec td{background:var(--bg,#F4F7F5);font-weight:700;color:var(--accent)}
+.nomina .ntot td{font-weight:700}
+.nomina .nliq td{font-weight:800;font-size:1.02rem;background:#DCE5E1;color:#152F3C}
+.nnum,.nlist>li::marker{font-weight:800;color:var(--accent)}
+.nnum{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;font-size:.8rem;margin-right:6px}
+.nlist li p{margin:4px 0 12px}

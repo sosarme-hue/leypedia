@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import os, re, shutil, sys
 sys.path.insert(0, os.path.dirname(__file__))
-from curiosidades import *
+from trabajo import *
 
 OUT = sys.argv[1]
 PREVIEW = "preview" in sys.argv[2:]
