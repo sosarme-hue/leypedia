@@ -17,6 +17,128 @@
       });
     });
   }
+  // ---------- Sugerencias al escribir (desde 3 letras) ----------
+  var IDX = null, idxP = null;
+  var loadIdx = function () { if (!idxP) idxP = fetch(BASE + 'assets/buscar-' + lang + '.json').then(function (r) { return r.json(); }).then(function (j) { IDX = j; return j; }); return idxP; };
+  var normS = function (s) { return String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); };
+  var SECN = lang === 'ca' ? { contratos: 'Contracte', contractes: 'Contracte', historia: 'Història', materias: 'Matèries', materies: 'Matèries', etica: 'Ètica', moral: 'Moral', novedades: 'Novetats', novetats: 'Novetats', catalunya: 'Catalunya', 'ue-i-internacional': 'UE', biografies: 'Història', judicis: 'Història', preguntes: 'Pregunta', canvis: 'Canvi' }
+    : { contratos: 'Contrato', historia: 'Historia', materias: 'Materias', etica: 'Ética', moral: 'Moral', novedades: 'Novedades', catalunya: 'Catalunya', 'ue-e-internacional': 'UE', biografias: 'Historia', juicios: 'Historia', preguntas: 'Pregunta', cambios: 'Cambio' };
+  var SYN = (lang === 'ca' ? [
+    ['pis', 'habitatge', 'lloguer', 'arrendament', 'llogater', 'propietari', 'habitacio', 'casa'],
+    ['cotxe', 'vehicle', 'moto', 'automobil'],
+    ['acomiadament', 'feina', 'treball', 'nomina', 'sou', 'salari', 'empresa', 'treballador'],
+    ['pensio', 'jubilacio', 'jubilar', 'retir', 'jubilat'],
+    ['herencia', 'testament', 'successio', 'heretar', 'llegitima', 'hereu'],
+    ['divorci', 'separacio', 'custodia', 'parella', 'matrimoni'],
+    ['deute', 'prestec', 'diners', 'pagament', 'terminis', 'rebut'],
+    ['multa', 'sancio', 'recurs', 'reclamacio', 'queixa'],
+    ['compra', 'compravenda', 'vendre', 'venda', 'devolucio', 'garantia', 'consumidor', 'botiga'],
+    ['dades', 'rgpd', 'privacitat', 'galetes'],
+    ['autonom', 'factura', 'socis', 'negoci'],
+    ['llei', 'norma', 'boe', 'dogc', 'novetats'],
+    ['historia', 'personatge', 'epoca', 'curiositat', 'anecdota']
+  ] : [
+    ['piso', 'vivienda', 'alquiler', 'arrendamiento', 'inquilino', 'casero', 'propietario', 'habitacion', 'casa'],
+    ['coche', 'vehiculo', 'moto', 'automovil'],
+    ['despido', 'trabajo', 'nomina', 'sueldo', 'salario', 'empresa', 'trabajador', 'empleo'],
+    ['pension', 'jubilacion', 'jubilarse', 'jubilar', 'retiro', 'jubilado'],
+    ['herencia', 'testamento', 'sucesion', 'heredar', 'legitima', 'heredero'],
+    ['divorcio', 'separacion', 'custodia', 'pareja', 'matrimonio'],
+    ['deuda', 'prestamo', 'dinero', 'pago', 'plazos', 'recibo'],
+    ['multa', 'sancion', 'recurso', 'reclamacion', 'queja'],
+    ['compra', 'compraventa', 'vender', 'venta', 'devolucion', 'garantia', 'consumidor', 'tienda'],
+    ['datos', 'rgpd', 'privacidad', 'cookies'],
+    ['autonomo', 'factura', 'socios', 'negocio'],
+    ['ley', 'norma', 'boe', 'dogc', 'novedades'],
+    ['historia', 'personaje', 'epoca', 'curiosidad', 'anecdota']
+  ]);
+  var lev1 = function (a, b) { // distancia de edición <= 1
+    if (Math.abs(a.length - b.length) > 1) return false;
+    var i = 0, j = 0, d = 0;
+    while (i < a.length && j < b.length) {
+      if (a[i] === b[j]) { i++; j++; continue; }
+      if (++d > 1) return false;
+      if (a.length > b.length) i++; else if (b.length > a.length) j++; else { i++; j++; }
+    }
+    return d + (a.length - i) + (b.length - j) <= 1;
+  };
+  var prep = function (p) {
+    if (p._t === undefined) { p._t = normS(p.t); p._d = normS(p.d); p._x = normS(p.x); p._w = (p._t + ' ' + p._d).split(/[^a-z0-9]+/).filter(function (w) { return w.length > 3; }); }
+  };
+  var expand = function (w) {
+    var out = [w];
+    if (w.length >= 3) SYN.forEach(function (g) { if (g.some(function (m) { return m.indexOf(w) === 0 || (w.length >= 5 && w.indexOf(m) === 0); })) g.forEach(function (m) { if (out.indexOf(m) < 0) out.push(m); }); });
+    return out;
+  };
+  var termScore = function (p, w, syn) {
+    var s = 0, t = p._t;
+    if (t.indexOf(w) === 0) s = 22; else if (t.indexOf(' ' + w) >= 0) s = 16; else if (t.indexOf(w) >= 0) s = 10;
+    if (p._d.indexOf(w) >= 0) s += 5;
+    var c = p._x.split(w).length - 1; s += Math.min(c, 6);
+    return syn ? s * 0.6 : s;
+  };
+  var engine = function (q, amb) {
+    if (!IDX) return { res: [], terms: [] };
+    var terms = normS(q).split(/[^a-z0-9·]+/).filter(function (x) { return x.length > 1 || /\d/.test(x); });
+    if (!terms.length) return { res: [], terms: [] };
+    var groups = terms.map(expand), all = [], any = [];
+    IDX.forEach(function (p) {
+      if (amb && p.a.indexOf(amb) < 0) return;
+      prep(p);
+      var sc = 0, hit = 0;
+      groups.forEach(function (g, gi) {
+        var best = 0;
+        g.forEach(function (w, wi) { var s = termScore(p, w, wi > 0); if (s > best) best = s; });
+        if (!best && terms[gi].length >= 4) { var fz = function (x) { return lev1(terms[gi], x) || (x.length > terms[gi].length && lev1(terms[gi], x.slice(0, terms[gi].length))); };
+          if (p._t.split(/[^a-z0-9]+/).some(fz)) best = 14; else if (p._w.some(fz)) best = 6; }
+        if (best) hit++; sc += best;
+      });
+      if (hit === groups.length) all.push([sc, p]); else if (hit) any.push([sc * hit / groups.length, p]);
+    });
+    var res = all.length >= 3 ? all : all.concat(any.sort(function (a, b) { return b[0] - a[0]; }).slice(0, 20));
+    res.sort(function (a, b) { return b[0] - a[0]; });
+    var flat = [].concat.apply([], groups);
+    return { res: res.map(function (r) { return r[1]; }), terms: flat };
+  };
+  window.__lp = { engine: engine, load: function () { return loadIdx(); } };
+  Array.prototype.forEach.call(document.querySelectorAll('form.search'), function (fm) {
+    var inp = fm.querySelector('input[name=q]');
+    if (!inp || (fm.classList.contains('big') && $('sres'))) return;
+    fm.classList.add('ac');
+    var box = document.createElement('div'); box.className = 'sugg'; box.hidden = true; box.setAttribute('role', 'listbox');
+    fm.querySelector('.sbar').appendChild(box);
+    var cur = -1, items = [];
+    var hl = function (t, q) { var n = normS(t), w = normS(q.trim().split(/\s+/)[0] || ''), i = w ? n.indexOf(w) : -1; return i < 0 ? esc(t) : esc(t.slice(0, i)) + '<mark>' + esc(t.slice(i, i + w.length)) + '</mark>' + esc(t.slice(i + w.length)); };
+    var close = function () { box.hidden = true; cur = -1; };
+    var show = function () {
+      var q = inp.value.trim();
+      if (q.length < 3) { close(); return; }
+      loadIdx().then(function () {
+        items = engine(q).res.slice(0, 8);
+        var all = fm.getAttribute('action') + (PREVIEW ? '#q=' : '?q=') + encodeURIComponent(q);
+        box.innerHTML = (items.length ? items.map(function (p, i) {
+          var sec = SECN[p.u.replace(/^ca\//, '').split('/')[0]] || '';
+          return '<a role="option" href="' + BASE + p.u + (PREVIEW ? 'index.html' : '') + '" data-i="' + i + '"><span class="sx"><span class="st">' + hl(p.t, q) + '</span><span class="sd">' + esc(p.d.length > 90 ? p.d.slice(0, 88) + '…' : p.d) + '</span></span>' + (sec ? '<span class="ss">' + esc(sec) + '</span>' : '') + '</a>';
+        }).join('') : '<p class="none">' + (lang === 'ca' ? 'Cap resultat' : 'Sin resultados') + '</p>')
+          + '<a class="all" href="' + all + '">' + (lang === 'ca' ? 'Veure tots els resultats' : 'Ver todos los resultados') + ' ›</a>';
+        box.hidden = false; cur = -1;
+      });
+    };
+    inp.addEventListener('input', show);
+    inp.addEventListener('focus', function () { loadIdx(); if (inp.value.trim().length >= 3) show(); });
+    inp.addEventListener('keydown', function (e) {
+      var links = box.querySelectorAll('a');
+      if (box.hidden || !links.length) return;
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        cur = (cur + (e.key === 'ArrowDown' ? 1 : -1) + links.length) % links.length;
+        Array.prototype.forEach.call(links, function (l, i) { l.classList.toggle('on', i === cur); });
+      } else if (e.key === 'Enter' && cur >= 0) { e.preventDefault(); location.href = links[cur].href; }
+      else if (e.key === 'Escape') close();
+    });
+    document.addEventListener('click', function (e) { if (!fm.contains(e.target)) close(); });
+  });
+
   var sres = $('sres');
   if (sres) {
     var norm = function (s) { return String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/·/g, '.'); };
@@ -37,22 +159,8 @@
     var run = function () {
       var q = norm(qi.value.trim()), a = (document.querySelector('form.search.big input[name=a]:checked') || {}).value || '';
       if (!q) { info.textContent = lang === 'ca' ? 'Escriu el que vols cercar.' : 'Escribe lo que quieres buscar.'; sres.innerHTML = ''; return; }
-      var terms = q.split(/\s+/).filter(function (x) { return x.length > 1 || /\d/.test(x); });
-      if (!terms.length) terms = [q];
-      var res = [];
-      idx.forEach(function (p) {
-        if (a && p.a.indexOf(a) < 0) return;
-        var t = norm(p.t), d = norm(p.d), x = norm(p.x), sc = 0, ok = true;
-        terms.forEach(function (w) {
-          var s = 0;
-          if (t.indexOf(w) >= 0) s += 12;
-          if (d.indexOf(w) >= 0) s += 5;
-          var c = x.split(w).length - 1; s += Math.min(c, 8);
-          if (!s) ok = false; sc += s;
-        });
-        if (ok) res.push([sc, p]);
-      });
-      res.sort(function (u, v) { return v[0] - u[0]; });
+      IDX = idx; var E = engine(qi.value.trim(), a), terms = E.terms.length ? E.terms : [q];
+      var res = E.res.map(function (p) { return [0, p]; });
       info.textContent = res.length ? (res.length + (lang === 'ca' ? (res.length === 1 ? ' resultat' : ' resultats') : (res.length === 1 ? ' resultado' : ' resultados'))) : (lang === 'ca' ? 'No hi ha resultats. Prova amb altres paraules.' : 'No hay resultados. Prueba con otras palabras.');
       sres.innerHTML = res.slice(0, 40).map(function (r) {
         var p = r[1], x = norm(p.x), pos = -1;
@@ -270,6 +378,18 @@
     });
   });
 
+  // ---------- Portada: resumen de DOGC y EUR-Lex ----------
+  ['dogc', 'ue'].forEach(function (id) {
+    var n = $(id + '-n'), f = $(id + '-fecha');
+    if (!n) return;
+    fetch(BASE + 'api/feed.php?f=' + id, { headers: { Accept: 'application/json' } }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (j) {
+      if (!j || !j.items || !j.items.length) throw new Error('vacío');
+      n.textContent = j.items.length + (lang === 'ca' ? ' publicacions recents' : ' publicaciones recientes');
+      var d = j.items[0].fecha;
+      if (d) f.textContent = new Date(d + 'T12:00:00').toLocaleDateString(lang === 'ca' ? 'ca-ES' : 'es-ES', { day: 'numeric', month: 'long', year: 'numeric' });
+    }).catch(function () {});
+  });
+
   // ---------- BOE (lo sirve api/boe.php en el propio servidor) ----------
   var list = $('boe-list'), panel = $('boe-panel');
   if (!list && !panel) return;
@@ -280,7 +400,7 @@
     if (panel) {
       $('boe-fecha').textContent = fmt(j.fecha);
       $('boe-total').textContent = j.total;
-      $('boe-secs').innerHTML = (j.secciones || []).map(function (s) { return '<li><span>' + s.nombre.replace(/[<>&]/g, '') + '</span><span class="num">' + s.n + '</span></li>'; }).join('');
+      if ($('boe-secs')) $('boe-secs').innerHTML = (j.secciones || []).map(function (s) { return '<li><span>' + s.nombre.replace(/[<>&]/g, '') + '</span><span class="num">' + s.n + '</span></li>'; }).join('');
     }
     if (list) {
       $('boe-info').textContent = (lang === 'ca' ? 'BOE del ' : 'BOE del ') + fmt(j.fecha) + ' · ' + j.items.length + (lang === 'ca' ? ' disposicions generals' : ' disposiciones generales');
@@ -292,6 +412,6 @@
   }).catch(function () {
     var t = lang === 'ca' ? 'Ara mateix no es pot connectar amb el BOE. Consulta-ho a boe.es.' : 'Ahora mismo no se puede conectar con el BOE. Consúltalo en boe.es.';
     if (list) $('boe-info').textContent = t;
-    if (panel) $('boe-secs').innerHTML = '<li><span>' + t + '</span></li>';
+    if (panel) { $('boe-total').parentNode.textContent = 'Boletín Oficial del Estado'; $('boe-fecha').textContent = lang === 'ca' ? 'Consulta-ho a boe.es' : 'Consúltalo en boe.es'; }
   });
 })();

@@ -51,10 +51,11 @@ def home2(lang):
 <h1>{T("Comprende la ley. <em>Resuelve tus dudas.</em> Prepara tus documentos.", "Comprèn la llei. <em>Resol els teus dubtes.</em> Prepara els teus documents.")}</h1>
 <p>{T("Legislación española, catalana y europea explicada con claridad, con fuentes y fechas de actualización.", "Legislació espanyola, catalana i europea explicada amb claredat, amb fonts i dates d'actualització.")}</p>
 {searchbox(lang, True)}</div>
-<aside class="panel" id="boe-panel" data-lang="{lang}"><div class="label">{T("Último BOE", "Últim BOE")} · <span id="boe-fecha">—</span></div>
-<div class="big num" id="boe-total">—</div><div class="status">{T("disposiciones publicadas", "disposicions publicades")}</div>
-<ul id="boe-secs"><li><span>{T("Se carga desde el BOE al abrir la web publicada.", "Es carrega des del BOE en obrir la web publicada.")}</span></li></ul>
-<p style="margin:12px 0 0"><a href="{{novedades}}">{T("Ver las disposiciones generales", "Veure les disposicions generals")}</a></p></aside>
+<aside class="panel diarios" id="boe-panel" data-lang="{lang}"><div class="label">{T("Diarios oficiales · hoy", "Diaris oficials · avui")}</div>
+<a class="diario" href="{{novedades}}"><span class="sig">BOE</span><span class="dt"><b><span id="boe-total">—</span> {T("disposiciones", "disposicions")}</b><span id="boe-fecha">{T("Boletín Oficial del Estado", "Boletín Oficial del Estado")}</span></span><span class="go">›</span></a>
+<a class="diario" href="{{novedades}}#dogc"><span class="sig cat">DOGC</span><span class="dt"><b id="dogc-n">{T("Diari Oficial", "Diari Oficial")}</b><span id="dogc-fecha">Diari Oficial de la Generalitat de Catalunya</span></span><span class="go">›</span></a>
+<a class="diario" href="{{novedades}}#ue"><span class="sig ue">UE</span><span class="dt"><b id="ue-n">EUR-Lex</b><span id="ue-fecha">{T("Diario Oficial de la Unión Europea", "Diari Oficial de la Unió Europea")}</span></span><span class="go">›</span></a>
+</aside>
 </div></div>'''
     caminos = f'''<div class="home-block"><div class="wrap"><div class="caminos">
 <div class="camino"><span class="num-c">01</span><h2>{T("Comprender", "Comprendre")}</h2><p>{T("La ley explicada por materias, las novedades del BOE y el DOGC, y la historia y la ética del derecho.", "La llei explicada per matèries, les novetats del BOE i el DOGC, i la història i l'ètica del dret.")}</p>
@@ -132,8 +133,8 @@ def nov2(lang):
     carga = "Se cargan cada día de la fuente oficial cuando la web está publicada." if es else "Es carreguen cada dia de la font oficial quan la web està publicada."
     return (f'<div class="fbody" style="padding-block:0"><div class="prose" style="max-width:none">'
       + bloque("Boletín Oficial del Estado · disposiciones generales" if es else "Boletín Oficial del Estado · disposicions generals", "boe-info", carga, f'id="boe-list" data-lang="{lang}"')
-      + bloque("Diari Oficial de la Generalitat de Catalunya", "dogc-info", carga, 'data-feed="dogc" data-info="dogc-info"')
-      + bloque("EUR-Lex · Diario Oficial de la Unión Europea", "ue-info", carga, 'data-feed="ue" data-info="ue-info"')
+      + '<span id="dogc"></span>' + bloque("Diari Oficial de la Generalitat de Catalunya", "dogc-info", carga, 'data-feed="dogc" data-info="dogc-info"')
+      + '<span id="ue"></span>' + bloque("EUR-Lex · Diario Oficial de la Unión Europea", "ue-info", carga, 'data-feed="ue" data-info="ue-info"')
       + f'<p class="status">{"Los títulos se muestran tal como los publica cada diario oficial, sin traducir. Se actualizan automáticamente cada día." if es else "Els títols es mostren tal com els publica cada diari oficial, sense traduir. S&#39;actualitzen automàticament cada dia."}</p></div>'
       + f'<aside class="side"><div class="box"><h3>{"Cada novedad explicada responde a" if es else "Cada novetat explicada respon a"}</h3><ol style="margin:0;padding-left:20px;font-size:14px">{"".join(f"<li>{x}</li>" for x in f)}</ol></div>'
       + box("Fuentes oficiales" if es else "Fonts oficials", ul(['<a href="https://www.boe.es/" rel="noopener">Boletín Oficial del Estado</a>', '<a href="https://dogc.gencat.cat/" rel="noopener">Diari Oficial de la Generalitat de Catalunya</a>', '<a href="https://portaljuridic.gencat.cat/" rel="noopener">Portal Jurídic de Catalunya</a>', '<a href="https://eur-lex.europa.eu/" rel="noopener">EUR-Lex</a>']))

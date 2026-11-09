@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import os, re, shutil, sys
 sys.path.insert(0, os.path.dirname(__file__))
-from trabajo import *
+from fotos import *
 
 OUT = sys.argv[1]
 PREVIEW = "preview" in sys.argv[2:]
@@ -61,13 +61,14 @@ def page(pid, lang):
 <link rel="stylesheet" href="{pre}assets/style.css">
 <script src="{pre}assets/app.js" defer></script>
 </head>
-<body>
-<header class="top"><div class="wrap">
+<body class="p-{pid}">
+<header class="top"><div class="hbar"><div class="wrap">
 <a class="brand" href="{{home}}">Ley<span>pedia</span></a>
-<nav class="main" aria-label="{"Secciones" if lang=="es" else "Seccions"}">{nav}</nav>
 {searchbox(lang)}
 <a class="langlink" href="{rel(route, alt)}" hreflang="{ui["otra_l"]}" lang="{ui["otra_l"]}">{ui["otra"]}</a>
-</div></header>
+</div></div>
+<nav class="main" aria-label="{"Secciones" if lang=="es" else "Seccions"}"><div class="wrap">{nav}</div></nav>
+</header>
 <main>
 {crumbs}
 {p["html"]}
@@ -107,6 +108,7 @@ css += open(os.path.join(HERE, "extra.css"), encoding="utf-8").read()
 css += open(os.path.join(HERE, "extra2.css"), encoding="utf-8").read()
 if PALETA:
     css += open(os.path.join(HERE, "paleta.css"), encoding="utf-8").read()
+css += open(os.path.join(HERE, "design3.css"), encoding="utf-8").read()
 open(os.path.join(OUT, "assets/style.css"), "w", encoding="utf-8").write(css)
 shutil.copy(os.path.join(HERE, "app.js"), os.path.join(OUT, "assets/app.js"))
 open(os.path.join(OUT, "assets/favicon.svg"), "w").write('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#8C2F39"/><text x="32" y="45" font-family="Georgia,serif" font-size="40" font-weight="700" text-anchor="middle" fill="#fff">L</text></svg>')

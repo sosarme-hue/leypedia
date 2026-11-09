@@ -34,8 +34,14 @@ IMG = {
  "p-fernando-vii": ("Fernando VII - Vicente López.jpg", "Vicente López Portaña", "Dominio público"),
  "p-azana": ("Manuel Azaña cropped.jpg", "Autor desconocido", "Dominio público"),
 }
+import os as _os
 from hist_mas import P2, E2, IMG2
 IMG.update(IMG2)
+import json as _json
+try:
+    IMG.update({k_: tuple(v) for k_, v in _json.load(open(_os.path.join(_os.path.dirname(__file__), "fotos_creditos.json"), encoding="utf-8")).items()})
+except FileNotFoundError:
+    pass
 import os as _os
 IMG_OK = {f[:-4] for f in _os.listdir(_os.path.join(_os.path.dirname(__file__), "img")) if f.endswith(".jpg")}
 
@@ -291,6 +297,10 @@ for _s, _v in P2.items():
     _e = next(x for x in E if x[0] == _v[3])
     if _s not in _e[15]:
         _e[15].append(_s)
+for _i, _e in enumerate(E):
+    if not _e[6] and f"e-{_e[0]}" in IMG_OK and f"e-{_e[0]}" in IMG:
+        E[_i] = _e[:6] + (f"e-{_e[0]}",) + _e[7:]
+EP = {}
 for e in E:
     ROUTES["e" + k(e[0])] = (f"historia/enciclopedia/{e[1]}/", f"ca/historia/enciclopedia/{e[2]}/")
 ROUTES["enciclopedia"] = ("historia/enciclopedia/", "ca/historia/enciclopedia/")
@@ -338,7 +348,7 @@ def persona_page(s, lang):
 def enciclo_index(lang):
     es = lang == "es"
     eps = '<ol class="epocas">' + "".join(
-        f'<li><a href="{{e{k(e[0])}}}"><span class="yr">{e[3]}</span><b>{e[4] if es else e[5]}</b><span>{e[7] if es else e[8]}</span></a></li>' for e in E) + '</ol>'
+        f'<li><a href="{{e{k(e[0])}}}">' + (f'<img src="{{img}}{e[6]}.jpg" alt="" loading="lazy">' if e[6] in IMG_OK else '') + f'<span class="yr">{e[3]}</span><b>{e[4] if es else e[5]}</b><span>{e[7] if es else e[8]}</span></a></li>' for e in E) + '</ol>'
     pers = "".join(f'<h3 class="persep">{x[4] if es else x[5]} <span>{x[3]}</span></h3><div class="perslist">' + "".join(pcard(s, lang) for s in x[15]) + '</div>' for x in E if x[15])
     return (f'<h2 class="sec">{"Las épocas" if es else "Les èpoques"}</h2>' + eps
       + f'<h2 class="sec">{"Los personajes" if es else "Els personatges"}</h2>' + pers
