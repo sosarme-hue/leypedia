@@ -11,7 +11,7 @@ $FUENTES = [
       'https://dogc.gencat.cat/ca/inici/rss/darrer-dogc.xml',
       'https://portaldogc.gencat.cat/utilsEADOP/AppJava/RssDogc.do?lang=ca',
       'https://web.gencat.cat/ca/actualitat/rss/dogc.xml',
-  ]],
+  ], 'socrata' => 'https://analisi.transparenciacatalunya.cat/api/views/n6hn-rmy7'],
   'ue' => ['nombre' => 'EUR-Lex · Diario Oficial de la Unión Europea, serie L', 'hosts' => ['europa.eu'], 'urls' => [
       'https://eur-lex.europa.eu/ES/display-feed.rss?rssId=165',
       'https://eur-lex.europa.eu/EN/display-feed.rss?rssId=165',
@@ -59,12 +59,53 @@ function feed_parse($raw, $hosts) {
     return $out;
 }
 
+// Dades obertes de la Generalitat (Socrata): normativa publicada al DOGC, actualitzada cada dia.
+// Es llegeixen les columnes del conjunt de dades per trobar el títol, l'enllaç i la data.
+function feed_socrata($base, $hosts) {
+    $meta = json_decode((string)feed_get($base . '.json'), true);
+    if (!$meta || empty($meta['columns'])) return [];
+    $tit = $url = $dat = null;
+    foreach ($meta['columns'] as $c) {
+        $f = $c['fieldName'] ?? ''; $n = mb_strtolower(($c['name'] ?? '') . ' ' . $f); $ty = $c['dataTypeName'] ?? '';
+        if (!$dat && $ty === 'calendar_date' && preg_match('/publica|dogc|data/u', $n)) $dat = $f;
+        if (!$url && ($ty === 'url' || preg_match('/url|enlla|link/u', $n))) $url = $f;
+        if (!$tit && $ty === 'text' && preg_match('/t[ií]tol|titulo|title/u', $n)) $tit = $f;
+    }
+    if (!$tit || !$url) return [];
+    $id = basename($base);
+    $dom = substr($base, 0, strpos($base, '/api/views/'));
+    $q = '$limit=30' . ($dat ? '&$order=' . rawurlencode("$dat DESC") : '');
+    $rows = json_decode((string)feed_get("$dom/resource/$id.json?$q"), true);
+    if (!is_array($rows)) return [];
+    $out = [];
+    foreach ($rows as $r) {
+        $t = trim(preg_replace('/\s+/u', ' ', strip_tags((string)($r[$tit] ?? ''))));
+        $l = $r[$url] ?? '';
+        if (is_array($l)) $l = $l['url'] ?? '';
+        $h = parse_url($l, PHP_URL_HOST); $ok = false;
+        foreach ($hosts as $hh) { if ($h && ($h === $hh || substr($h, -strlen('.' . $hh)) === '.' . $hh)) $ok = true; }
+        if (!$t || !$ok) continue;
+        if (parse_url($l, PHP_URL_SCHEME) === 'http') $l = 'https' . substr($l, 4);
+        $d = $dat && !empty($r[$dat]) ? date('Y-m-d', strtotime($r[$dat])) : '';
+        $out[] = ['titulo' => mb_strlen($t) > 220 ? mb_substr($t, 0, 217) . '…' : $t, 'url' => $l, 'fecha' => $d];
+    }
+    return $out;
+}
+
 function feed_actualiza($id, $F, $forzar = false) {
     $cacheDir = __DIR__ . '/cache';
     if (!is_dir($cacheDir)) { @mkdir($cacheDir, 0755, true); }
     $hoy = (new DateTime('now', new DateTimeZone('Europe/Madrid')))->format('Ymd');
     $file = "$cacheDir/$id-$hoy.json";
     if (!$forzar && is_file($file)) return json_decode(file_get_contents($file), true);
+    if (!empty($F['socrata'])) {
+        $items = feed_socrata($F['socrata'], $F['hosts']);
+        if ($items) {
+            $r = ['fuente' => $F['nombre'], 'canal' => $F['socrata'], 'actualizado' => $hoy, 'items' => $items];
+            @file_put_contents($file, json_encode($r, JSON_UNESCAPED_UNICODE));
+            return $r;
+        }
+    }
     foreach ($F['urls'] as $u) {
         $raw = feed_get($u);
         if (!$raw) continue;
