@@ -375,6 +375,14 @@ for hub, (le, lc) in HUBLBL.items():
                     f'<p class="status" id="dogc-cat">{carga}</p><ul class="dispo" data-feed="dogc" data-info="dogc-cat"></ul>'
                     f'<p><a href="{{novedades}}">{"Ver también el BOE y el Diario Oficial de la UE" if es else "Veure també el BOE i el Diari Oficial de la UE"}</a></p></div>')
             hh = PAGES[hub][L]["html"]
+            card = (f'<aside class="panel diarios dogc-top"><a class="diario" href="#dogc-lista"><span class="sig cat">DOGC</span><span class="dt"><b id="dogc-n">{"Últimas normas del DOGC" if es else "Darreres normes del DOGC"}</b>'
+                    f'<span id="dogc-fecha">Diari Oficial de la Generalitat de Catalunya</span></span><span class="go">›</span></a>'
+                    f'<a class="diario" href="https://dogc.gencat.cat/{"es" if es else "ca"}/" target="_blank" rel="noopener"><span class="sig cat">DOGC</span><span class="dt"><b>{"Web oficial del DOGC" if es else "Web oficial del DOGC"}</b><span>dogc.gencat.cat</span></span><span class="go">↗</span></a></aside>')
+            f0 = hh.find('<div class="fhead">')
+            f1 = hh.find('</div>', f0) + 6 if f0 >= 0 else -1
+            if f1 > 5:
+                hh = hh[:f1] + card + hh[f1:]
+            dogc = dogc.replace('<div class="dogcbox">', '<div class="dogcbox" id="dogc-lista">')
             k = hh.find("</table></div>")
             PAGES[hub][L]["html"] = hh[:k + 14] + dogc + hh[k + 14:] if k >= 0 else dogc + hh
         PAGES[hub][L]["html"] = PAGES[hub][L]["html"] + blk
