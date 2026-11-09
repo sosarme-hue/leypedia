@@ -306,11 +306,11 @@ for e in E:
 ROUTES["enciclopedia"] = ("historia/enciclopedia/", "ca/historia/enciclopedia/")
 EP = {e[0]: e for e in E}
 
-def pcard(s, lang):
+def pcard(s, lang, ep=""):
     n, a, b, ep, re_, rc = P[s][:6]
     img = f'<img src="{{img}}p-{s}.jpg" alt="" loading="lazy">' if f"p-{s}" in IMG_OK else '<span class="noimg">' + n[0] + '</span>'
     yrs = f"{a} – {b}" if b else f"n. {a}"
-    return f'<a class="pers" href="{{p{k(s)}}}">{img}<b>{n}</b><span>{yrs}</span><span>{re_ if lang == "es" else rc}</span></a>'
+    return f'<a class="pers" href="{{p{k(s)}}}">{img}<b>{n}</b><span>{yrs}</span><span>{re_ if lang == "es" else rc}</span>' + (f'<i class="ep">{ep}</i>' if ep else '') + '</a>'
 
 def epoca_page(e, lang):
     es = lang == "es"
@@ -349,7 +349,15 @@ def enciclo_index(lang):
     es = lang == "es"
     eps = '<ol class="epocas">' + "".join(
         f'<li><a href="{{e{k(e[0])}}}">' + (f'<img src="{{img}}{e[6]}.jpg" alt="" loading="lazy">' if e[6] in IMG_OK else '') + f'<span class="yr">{e[3]}</span><b>{e[4] if es else e[5]}</b><span>{e[7] if es else e[8]}</span></a></li>' for e in E) + '</ol>'
-    pers = "".join(f'<h3 class="persep">{x[4] if es else x[5]} <span>{x[3]}</span></h3><div class="perslist">' + "".join(pcard(s, lang) for s in x[15]) + '</div>' for x in E if x[15])
+    todos = [(s, x[4] if es else x[5]) for x in E for s in x[15]]
+    con = [t for t in todos if f"p-{t[0]}" in IMG_OK]
+    sin = [t for t in todos if f"p-{t[0]}" not in IMG_OK]
+    def fila(s, ep):
+        n, a, b = P[s][:3]
+        yrs = f"{a} – {b}" if b else f"n. {a}"
+        return f'<li><a href="{{p{k(s)}}}"><b>{n}</b><span>{yrs} · {(P[s][4] if es else P[s][5])}</span></a></li>'
+    pers = ('<div class="perslist all">' + "".join(pcard(s, lang, ep) for s, ep in con) + '</div>'
+      + (f'<h3 class="persmas">{"Más personajes" if es else "Més personatges"}</h3><ul class="perstxt">' + "".join(fila(s, ep) for s, ep in sin) + '</ul>' if sin else ''))
     return (f'<h2 class="sec">{"Las épocas" if es else "Les èpoques"}</h2>' + eps
       + f'<h2 class="sec">{"Los personajes" if es else "Els personatges"}</h2>' + pers
       + f'<p class="status">{"Los retratos proceden de Wikimedia Commons y son de dominio público o tienen licencia libre. Cada imagen indica su autor y licencia." if es else "Els retrats provenen de Wikimedia Commons i són de domini públic o tenen llicència lliure. Cada imatge n’indica l’autor i la llicència."}</p>')
@@ -371,7 +379,7 @@ def build_enciclo():
         crumbs=[("historia", "Historia" if L == "es" else "Història")],
         html=simple("Enciclopedia" if L == "es" else "Enciclopèdia",
                     "Historia del derecho en España y Catalunya" if L == "es" else "Història del dret a Espanya i Catalunya",
-                    "De las leyes de bronce de Roma al Codi civil de Catalunya: trece épocas, sus cambios, anécdotas y las personas que los hicieron posibles." if L == "es" else "De les lleis de bronze de Roma al Codi civil de Catalunya: tretze èpoques, els seus canvis, anècdotes i les persones que els van fer possibles.",
+                    "De las leyes de bronce de Roma al Codi civil de Catalunya: veintiuna épocas, sus cambios, anécdotas y las personas que los hicieron posibles." if L == "es" else "De les lleis de bronze de Roma al Codi civil de Catalunya: vint-i-una èpoques, els seus canvis, anècdotes i les persones que els van fer possibles.",
                     enciclo_index(L))) for L in ("es", "ca")}
     # foto de Clara Campoamor en su biografía
     for L in ("es", "ca"):

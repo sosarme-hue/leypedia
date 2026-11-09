@@ -10,6 +10,8 @@ PREVIEW = "preview" in sys.argv[2:]
 PALETA = True  # paleta azul marino y verde petróleo elegida por Alex
 import json, html as _h
 BASE = "https://leypedia.com/"
+# Identificadores públicos de Google Analytics y de verificación de buscadores (no son claves secretas)
+SEO = json.load(open(os.path.join(os.path.dirname(__file__), "seo.json"), encoding="utf-8"))
 HERE = os.path.dirname(__file__)
 
 if os.path.isdir(OUT):
@@ -33,6 +35,42 @@ def fill_links(html, lang, route):
         return m.group(0)
     return re.sub(r"\{([a-z]+)\}", rep, html)
 
+def _abs_img(html):
+    m = re.search(r'src="\{img\}([^"]+)"', html)
+    return BASE + "assets/img/" + (m.group(1) if m else "home-congreso.jpg")
+
+def seo_head(pid, lang, route, p, title):
+    es = lang == "es"
+    url = BASE + route
+    desc = _h.escape(_h.unescape(p["desc"]), quote=True)
+    t = _h.escape(_h.unescape(title), quote=True)
+    out = [f'<meta name="robots" content="{"noindex, follow" if pid == "buscar" else "index, follow, max-image-preview:large"}">']
+    if SEO.get("google"): out.append(f'<meta name="google-site-verification" content="{SEO["google"]}">')
+    if SEO.get("bing"): out.append(f'<meta name="msvalidate.01" content="{SEO["bing"]}">')
+    if SEO.get("ga"): out.append(f'<meta name="lp-ga" content="{SEO["ga"]}">')
+    out += [f'<meta property="og:type" content="{"website" if pid == "home" else "article"}">',
+            '<meta property="og:site_name" content="Leypedia">',
+            f'<meta property="og:title" content="{t}">', f'<meta property="og:description" content="{desc}">',
+            f'<meta property="og:url" content="{url}">', f'<meta property="og:image" content="{_abs_img(p["html"])}">',
+            f'<meta property="og:locale" content="{"es_ES" if es else "ca_ES"}">',
+            f'<meta property="og:locale:alternate" content="{"ca_ES" if es else "es_ES"}">',
+            '<meta name="twitter:card" content="summary_large_image">']
+    ld = []
+    if pid == "home":
+        ld.append({"@context": "https://schema.org", "@type": "WebSite", "name": "Leypedia", "url": url, "inLanguage": lang,
+                   "potentialAction": {"@type": "SearchAction", "target": BASE + ROUTES["buscar"][0 if es else 1] + "?q={search_term_string}",
+                                       "query-input": "required name=search_term_string"}})
+        ld.append({"@context": "https://schema.org", "@type": "Organization", "name": "Leypedia", "url": BASE,
+                   "logo": BASE + "assets/favicon.svg"})
+    elif p.get("crumbs") is not None:
+        items = [("Inicio" if es else "Inici", BASE + ROUTES["home"][0 if es else 1])] + \
+                [(_h.unescape(n), BASE + ROUTES[k][0 if es else 1]) for k, n in p["crumbs"] if k in ROUTES] + [(_h.unescape(p["title"]), url)]
+        ld.append({"@context": "https://schema.org", "@type": "BreadcrumbList",
+                   "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": n, "item": u} for i, (n, u) in enumerate(items)]})
+    for x in ld:
+        out.append('<script type="application/ld+json">' + json.dumps(x, ensure_ascii=False).replace("</", "<\\/") + '</script>')
+    return "\n".join(out)
+
 def page(pid, lang):
     p = PAGES[pid][lang]
     route = ROUTES[pid][0 if lang == "es" else 1]
@@ -48,6 +86,9 @@ def page(pid, lang):
         crumbs = f'<div class="wrap"><div class="crumbs">{" › ".join(cs)}</div></div>'
     title = p["title"] if p.get("plain_title") else p["title"] + " · Leypedia"
     legal = " · ".join(f'<a href="{{{k}}}">{t}</a>' for k, t in ui["legal"])
+    if SEO.get("ga"):
+        legal += f' · <a href="#" data-cookies>{"Configurar cookies" if lang == "es" else "Configurar galetes"}</a>'
+    seo = seo_head(pid, lang, route, p, title)
     html = f'''<!doctype html>
 <html lang="{lang}"{" data-preview" if PREVIEW else ""}>
 <head>
@@ -62,6 +103,7 @@ def page(pid, lang):
 <link rel="icon" href="{pre}assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="{pre}assets/style.css?v={VER}">
 <script src="{pre}assets/app.js?v={VER}" defer></script>
+{seo}
 </head>
 <body class="p-{pid}">
 <header class="top"><div class="hbar"><div class="wrap">
@@ -130,7 +172,16 @@ open(os.path.join(OUT, "api/cache/.gitkeep"), "w").write("")
 shutil.copy(os.path.join(HERE, "htaccess"), os.path.join(OUT, ".htaccess"))
 
 # sitemap / robots
-sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"  <url><loc>{BASE}{r}</loc><lastmod>2026-11-09</lastmod></url>\n" for r in routes) + "</urlset>\n"
+HOY = _time.strftime("%Y-%m-%d")
+def _sm(pid, L):
+    a, b = ROUTES[pid]
+    return (f"  <url><loc>{BASE}{a if L == 'es' else b}</loc><lastmod>{HOY}</lastmod>"
+            f'<xhtml:link rel="alternate" hreflang="es" href="{BASE}{a}"/><xhtml:link rel="alternate" hreflang="ca" href="{BASE}{b}"/>'
+            f'<xhtml:link rel="alternate" hreflang="x-default" href="{BASE}{a}"/></url>\n')
+sm = ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
+      + "".join(_sm(pid, L) for pid in ROUTES if pid in PAGES and pid not in ("buscar",) for L in ("es", "ca")) + "</urlset>\n")
 open(os.path.join(OUT, "sitemap.xml"), "w").write(sm)
 open(os.path.join(OUT, "robots.txt"), "w").write(f"User-agent: *\nDisallow: /api/\nSitemap: {BASE}sitemap.xml\n")
+if SEO.get("indexnow"):
+    open(os.path.join(OUT, SEO["indexnow"] + ".txt"), "w").write(SEO["indexnow"])
 print(len(routes), "páginas")

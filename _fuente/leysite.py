@@ -58,9 +58,9 @@ def home2(lang):
 </aside>
 </div></div>'''
     caminos = f'''<div class="home-block"><div class="wrap"><div class="caminos">
-<div class="camino"><span class="num-c">01</span><h2>{T("Comprender", "Comprendre")}</h2><p>{T("La ley explicada por materias, las novedades del BOE y el DOGC, y la historia y la ética del derecho.", "La llei explicada per matèries, les novetats del BOE i el DOGC, i la història i l'ètica del dret.")}</p>
+<div class="camino"><h2>{T("Comprender", "Comprendre")}</h2><p>{T("La ley explicada por materias, las novedades del BOE y el DOGC, y la historia y la ética del derecho.", "La llei explicada per matèries, les novetats del BOE i el DOGC, i la història i l'ètica del dret.")}</p>
 <p class="links"><a href="{{materias}}">{T("Materias", "Matèries")}</a><a href="{{novedades}}">{T("Novedades", "Novetats")}</a><a href="{{enciclopedia}}">{T("Enciclopedia", "Enciclopèdia")}</a></p></div>
-<div class="camino dark"><span class="num-c">02</span><h2>{T("Preparar", "Preparar")}</h2><p>{T("Los contratos más usados, gratis y en tu navegador: alquiler, habitación, compraventa de coche, garaje y préstamo.", "Els contractes més utilitzats, gratis i al teu navegador: lloguer, habitació, compravenda de cotxe, garatge i préstec.")}</p>
+<div class="camino dark"><h2>{T("Preparar", "Preparar")}</h2><p>{T("Los contratos más usados, gratis y en tu navegador: alquiler, habitación, compraventa de coche, garaje y préstamo.", "Els contractes més utilitzats, gratis i al teu navegador: lloguer, habitació, compravenda de cotxe, garatge i préstec.")}</p>
 <p class="links"><a href="{{contratos}}">{T("Ver los contratos", "Veure els contractes")}</a></p></div>
 </div></div></div>'''
     inst = [("home-congreso", "novedades", T("Las Cortes Generales", "Les Corts Generals"), T("Aprueban las leyes del Estado, que se publican en el BOE.", "Aproven les lleis de l'Estat, que es publiquen al BOE.")),
@@ -77,7 +77,7 @@ def home2(lang):
     pers = ["alfonso-x", "jaime-i", "concepcion-arenal", "clara-campoamor", "macia", "tarradellas"]
     enc = (f'<div class="home-block"><div class="wrap"><div class="enc">{foto("home-cortes-cadiz", T("Promulgación de la Constitución de 1812", "Promulgació de la Constitució del 1812"), lang, "foto wide")}'
            f'<div><span class="label">{T("Enciclopedia", "Enciclopèdia")}</span><h2>{T("La historia del derecho en España y Catalunya", "La història del dret a Espanya i Catalunya")}</h2>'
-           f'<p>{T("De las leyes de bronce de Roma al Codi civil de Catalunya: trece épocas, sus anécdotas y las personas que las protagonizaron.", "De les lleis de bronze de Roma al Codi civil de Catalunya: tretze èpoques, les seves anècdotes i les persones que les van protagonitzar.")}</p>'
+           f'<p>{T("De las leyes de bronce de Roma al Codi civil de Catalunya: veintiuna épocas, sus anécdotas y las personas que las protagonizaron.", "De les lleis de bronze de Roma al Codi civil de Catalunya: vint-i-una èpoques, les seves anècdotes i les persones que les van protagonitzar.")}</p>'
            f'<p><a class="btn" href="{{enciclopedia}}">{T("Abrir la enciclopedia", "Obrir l&#39;enciclopèdia")}</a></p></div></div>'
            '<div class="perslist mini">' + "".join(pcard(s, lang) for s in pers) + '</div></div></div>')
     em = (f'<div class="home-block"><div class="wrap"><div class="cols two">'
@@ -95,7 +95,7 @@ def historia3(lang):
              ("bio", "Biografía" if es else "Biografia", "Clara Campoamor"),
              ("juicio", "Juicio célebre" if es else "Judici cèlebre", "Los juicios de Núremberg" if es else "Els judicis de Nuremberg")]
     enc = (f'<a class="card enc-cta" href="{{enciclopedia}}"><img src="{{img}}doc-usatges.jpg" alt="" loading="lazy" style="width:100%;border-radius:6px"><div><span class="label">{"Enciclopedia" if es else "Enciclopèdia"}</span>'
-           f'<h3>{"Historia del derecho en España y Catalunya" if es else "Història del dret a Espanya i Catalunya"}</h3><p>{"Trece épocas y más de cuarenta personajes con su ficha y su retrato." if es else "Tretze èpoques i més de quaranta personatges amb la seva fitxa i el seu retrat."}</p><span class="go">{"Abrir la enciclopedia" if es else "Obrir l&#39;enciclopèdia"}</span></div></a>')
+           f'<h3>{"Historia del derecho en España y Catalunya" if es else "Història del dret a Espanya i Catalunya"}</h3><p>{"Veintiuna épocas y más de setenta personajes con su ficha y su retrato." if es else "Vint-i-una èpoques i més de setanta personatges amb la seva fitxa i el seu retrat."}</p><span class="go">{"Abrir la enciclopedia" if es else "Obrir l&#39;enciclopèdia"}</span></div></a>')
     return (enc + '<div class="cols" style="margin-top:16px">' + "".join(f'<a class="card" href="{{{k_}}}"><span class="label">{l}</span><h3>{t}</h3><span class="go">{"Leer la ficha" if es else "Llegir la fitxa"}</span></a>' for k_, l, t in items) + '</div>'
       + f'<h2 class="sec">{"Línea del tiempo" if es else "Línia del temps"}</h2>' + tl(TL_ES if es else TL_CA)
       + f'<p class="status">{"La ética y la moral tienen ahora sus propias secciones: " if es else "L&#39;ètica i la moral tenen ara les seves pròpies seccions: "}<a href="{{eticas}}">{"Ética" if es else "Ètica"}</a> · <a href="{{moral}}">Moral</a>.</p>')

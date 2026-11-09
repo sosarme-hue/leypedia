@@ -371,9 +371,12 @@ for hub, (le, lc) in HUBLBL.items():
         blk = f'<div class="wrap temas"><h2 class="sec">{le if es else lc}</h2><div class="cols">{cards}</div></div>'
         if hub == "catalunya":
             carga = "Se cargan cada día de la fuente oficial." if es else "Es carreguen cada dia de la font oficial."
-            blk = (f'<div class="wrap temas"><h2 class="sec">{"Últimas normas publicadas en el DOGC" if es else "Darreres normes publicades al DOGC"}</h2>'
+            dogc = (f'<div class="dogcbox"><h2 class="sec">{"Últimas normas publicadas en el DOGC" if es else "Darreres normes publicades al DOGC"}</h2>'
                     f'<p class="status" id="dogc-cat">{carga}</p><ul class="dispo" data-feed="dogc" data-info="dogc-cat"></ul>'
-                    f'<p><a href="{{novedades}}">{"Ver también el BOE y el Diario Oficial de la UE" if es else "Veure també el BOE i el Diari Oficial de la UE"}</a></p></div>') + blk
+                    f'<p><a href="{{novedades}}">{"Ver también el BOE y el Diario Oficial de la UE" if es else "Veure també el BOE i el Diari Oficial de la UE"}</a></p></div>')
+            hh = PAGES[hub][L]["html"]
+            k = hh.find("</table></div>")
+            PAGES[hub][L]["html"] = hh[:k + 14] + dogc + hh[k + 14:] if k >= 0 else dogc + hh
         PAGES[hub][L]["html"] = PAGES[hub][L]["html"] + blk
 
 # Títulos de la portada que llevan a su sección

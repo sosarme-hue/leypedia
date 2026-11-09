@@ -415,3 +415,47 @@
     if (panel) { $('boe-total').parentNode.textContent = 'Boletín Oficial del Estado'; $('boe-fecha').textContent = lang === 'ca' ? 'Consulta-ho a boe.es' : 'Consúltalo en boe.es'; }
   });
 })();
+
+// Cookies y Google Analytics: solo se carga Analytics si la persona lo acepta (Consent Mode v2)
+(function () {
+  var m = document.querySelector('meta[name="lp-ga"]');
+  if (!m || !m.content) return;
+  var GA = m.content, KEY = 'lp-consent', ca = document.documentElement.lang === 'ca';
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  window.gtag = gtag;
+  gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500 });
+  var loaded = false;
+  function load() {
+    if (loaded) return; loaded = true;
+    var s = document.createElement('script'); s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA;
+    document.head.appendChild(s);
+    gtag('js', new Date()); gtag('config', GA, { anonymize_ip: true });
+  }
+  function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+  function set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+  function apply(v) {
+    gtag('consent', 'update', { analytics_storage: v === 'yes' ? 'granted' : 'denied' });
+    if (v === 'yes') load();
+  }
+  function banner() {
+    var old = document.getElementById('cookiebar'); if (old) old.remove();
+    var b = document.createElement('div'); b.id = 'cookiebar'; b.setAttribute('role', 'dialog'); b.setAttribute('aria-label', ca ? 'Galetes' : 'Cookies');
+    var href = (document.querySelector('footer a[href*="cookies"], footer a[href*="galetes"]') || {}).getAttribute ? document.querySelector('footer a[href*="cookies"], footer a[href*="galetes"]').getAttribute('href') : '#';
+    b.innerHTML = '<p>' + (ca ? 'Fem servir galetes de Google Analytics per saber quines pàgines es consulten i millorar el web. Només s\'activen si ho acceptes.' : 'Usamos cookies de Google Analytics para saber qué páginas se consultan y mejorar la web. Solo se activan si las aceptas.') +
+      ' <a href="' + href + '">' + (ca ? 'Més informació' : 'Más información') + '</a></p>' +
+      '<div><button type="button" data-v="no">' + (ca ? 'Rebutjar' : 'Rechazar') + '</button><button type="button" data-v="yes" class="ok">' + (ca ? 'Acceptar' : 'Aceptar') + '</button></div>';
+    b.addEventListener('click', function (e) {
+      var v = e.target.getAttribute && e.target.getAttribute('data-v'); if (!v) return;
+      set(v); apply(v); b.remove();
+      if (v === 'no' && loaded) location.reload();
+    });
+    document.body.appendChild(b);
+  }
+  var v = get();
+  if (v) apply(v);
+  document.addEventListener('DOMContentLoaded', function () {
+    if (!v) banner();
+    document.querySelectorAll('[data-cookies]').forEach(function (a) { a.addEventListener('click', function (e) { e.preventDefault(); banner(); }); });
+  });
+})();

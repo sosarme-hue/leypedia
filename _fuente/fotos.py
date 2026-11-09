@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Fotos en materias y en las cabeceras de sección (todas de Wikimedia Commons, en assets/img/)
 import re
-from temas import *
+from quejas import *
 
 MATIMG = {"Vivienda": "m-vivienda", "Habitatge": "m-vivienda", "Trabajo": "m-trabajo", "Treball": "m-trabajo",
           "Familia": "m-familia", "Família": "m-familia", "Sucesiones": "m-sucesiones", "Successions": "m-sucesiones",

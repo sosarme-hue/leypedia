@@ -203,3 +203,10 @@ E2 = [
   "Conservadores y liberales se turnaban en el Gobierno y pactaban de antemano el resultado de las elecciones, con la ayuda de los caciques locales. Se llamaba el «turno pacífico».",
   "Conservadors i liberals es tornaven en el Govern i pactaven per endavant el resultat de les eleccions, amb l'ajuda dels cacics locals. Se'n deia el «torn pacífic».", [])),
 ]
+
+# Ampliación (noviembre de 2026)
+import json as _j3, os as _o3
+from hist3 import E3, P3
+E2.extend(E3)
+P2.update(P3)
+IMG2.update({k: tuple(v) for k, v in _j3.load(open(_o3.path.join(_o3.path.dirname(__file__), "img3.json"), encoding="utf-8")).items()})

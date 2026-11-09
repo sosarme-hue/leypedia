@@ -3,7 +3,7 @@
 import json
 from leysite import *
 from cbase import LISTA, FIRMA_ES, FIRMA_CA
-import c_vivienda, c_bienes, c_trabajo, c_tramites  # noqa: F401 (rellenan LISTA)
+import c_vivienda, c_bienes, c_trabajo, c_tramites, c_admin  # noqa: F401 (rellenan LISTA)
 
 def kc(cid):
     return "c" + "".join(ch for ch in cid if ch.isalpha())
@@ -11,7 +11,8 @@ def kc(cid):
 CATS = [("vivienda", "Vivienda y alquiler", "Habitatge i lloguer"), ("bienes", "Compraventa y objetos", "Compravenda i objectes"),
         ("dinero", "Dinero y deudas", "Diners i deutes"), ("trabajo", "Trabajo y negocios", "Feina i negocis"),
         ("tramites", "Autorizaciones y trámites", "Autoritzacions i tràmits"), ("consumo", "Consumo y datos personales", "Consum i dades personals"),
-        ("familia", "Familia y herencias", "Família i herències")]
+        ("familia", "Familia y herencias", "Família i herències"),
+        ("admin", "Quejas, recursos y multas", "Queixes, recursos i multes")]
 CATN = {c: (a, b) for c, a, b in CATS}
 # los cinco contratos con plantilla propia
 BASE5 = [("calquiler", "vivienda", "alquiler"), ("chabitacion", "vivienda", "habitacion"), ("cgaraje", "vivienda", "garaje"), ("ccoche", "bienes", "coche"), ("contrato", "dinero", "prestamo")]
@@ -90,9 +91,9 @@ def cidx2(lang):
     return nav + out
 
 PAGES["contratos"] = {
- "es": dict(title="Contratos y modelos", desc="50 modelos gratuitos de los contratos y escritos más usados: alquiler, compraventa, deudas, trabajo, consumo, autorizaciones y familia.", crumbs=[],
-   html=simple("Contratos", "Los 50 contratos y escritos más usados", "Modelos claros y gratuitos para el día a día, en castellano y en catalán. Se rellenan en tu navegador y tus datos no salen de tu ordenador.", cidx2("es"))),
- "ca": dict(title="Contractes i models", desc="50 models gratuïts dels contractes i escrits més utilitzats: lloguer, compravenda, deutes, feina, consum, autoritzacions i família.", crumbs=[],
-   html=simple("Contractes", "Els 50 contractes i escrits més utilitzats", "Models clars i gratuïts per al dia a dia, en castellà i en català. S'omplen al teu navegador i les teves dades no surten del teu ordinador.", cidx2("ca"))),
+ "es": dict(title="Contratos y modelos", desc=f"{len(LISTA) + 5} modelos gratuitos de los contratos y escritos más usados: alquiler, compraventa, deudas, trabajo, consumo, autorizaciones, familia, quejas a la Administración y multas.", crumbs=[],
+   html=simple("Contratos", f"Los {len(LISTA) + 5} contratos y escritos más usados", "Modelos claros y gratuitos para el día a día, en castellano y en catalán. Se rellenan en tu navegador y tus datos no salen de tu ordenador.", cidx2("es"))),
+ "ca": dict(title="Contractes i models", desc=f"{len(LISTA) + 5} models gratuïts dels contractes i escrits més utilitzats: lloguer, compravenda, deutes, feina, consum, autoritzacions, família, queixes a l'Administració i multes.", crumbs=[],
+   html=simple("Contractes", f"Els {len(LISTA) + 5} contractes i escrits més utilitzats", "Models clars i gratuïts per al dia a dia, en castellà i en català. S'omplen al teu navegador i les teves dades no surten del teu ordinador.", cidx2("ca"))),
 }
 print(len(LISTA) + 5, "contratos")
