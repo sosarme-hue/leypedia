@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import os, re, shutil, sys
 sys.path.insert(0, os.path.dirname(__file__))
-from pages2 import *
+from pages3 import *
 
 OUT = sys.argv[1]
 PREVIEW = len(sys.argv) > 2 and sys.argv[2] == "preview"
@@ -34,7 +34,7 @@ def page(pid, lang):
     ui = UI[lang]
     pre = "../" * route.count("/")
     nav = "".join(
-        f'<a href="{{{k}}}"{" aria-current=\"page\"" if (k == pid or (pid in ("vivienda","cambio","pregunta") and k=="materias") or (pid in ("hito","bio","juicio","etica") and k=="historia")) else ""}>{t}</a>'
+        f'<a href="{{{k}}}"{" aria-current=\"page\"" if (k == pid or (pid in ("vivienda","cambio","pregunta") and k=="materias") or (pid in ("ue","transfronterizo") and k=="internacional") or (pid in ("hito","bio","juicio","etica") and k=="historia")) else ""}>{t}</a>'
         for k, t in ui["nav"])
     crumbs = ""
     if p.get("crumbs") is not None:
