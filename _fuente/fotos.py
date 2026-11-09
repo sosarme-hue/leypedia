@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Fotos en materias y en las cabeceras de sección (todas de Wikimedia Commons, en assets/img/)
 import re
-from trabajo import *
+from materias import *
 
 MATIMG = {"Vivienda": "m-vivienda", "Habitatge": "m-vivienda", "Trabajo": "m-trabajo", "Treball": "m-trabajo",
           "Familia": "m-familia", "Família": "m-familia", "Sucesiones": "m-sucesiones", "Successions": "m-sucesiones",
@@ -30,7 +30,9 @@ def fhero(slug, alt, lang):
 HERO = {"eticas": "s-etica", "moral": "s-moral", "contratos": "s-contratos", "curiosidades": "s-curiosidades",
         "catalunya": "s-catalunya", "trabajo": "m-trabajo", "jubilacion": "s-jubilacion", "nomina": "s-nomina",
         "etica": "s-pena", "divorcio": "s-divorcio", "matrimonio": "s-matrimonio", "novedades": "s-boe",
-        "vivienda": "m-vivienda"}
+        "vivienda": "m-vivienda", "familia": "m-familia", "sucesiones": "m-sucesiones", "consumo": "m-consumo",
+        "autonomos": "m-autonomos", "fiscalidad": "m-fiscalidad", "segsocial": "s-jubilacion", "extranjeria": "m-extranjeria",
+        "administracion": "m-administracion", "datos": "m-datos"}
 
 for pid, pg in PAGES.items():
     for L in ("es", "ca"):

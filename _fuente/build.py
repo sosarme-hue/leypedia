@@ -2,6 +2,8 @@
 import os, re, shutil, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from fotos import *
+import time as _time
+VER = _time.strftime("%Y%m%d%H%M")
 
 OUT = sys.argv[1]
 PREVIEW = "preview" in sys.argv[2:]
@@ -58,8 +60,8 @@ def page(pid, lang):
 <link rel="alternate" hreflang="ca" href="{BASE}{ROUTES[pid][1]}">
 <link rel="alternate" hreflang="x-default" href="{BASE}{ROUTES[pid][0]}">
 <link rel="icon" href="{pre}assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="{pre}assets/style.css">
-<script src="{pre}assets/app.js" defer></script>
+<link rel="stylesheet" href="{pre}assets/style.css?v={VER}">
+<script src="{pre}assets/app.js?v={VER}" defer></script>
 </head>
 <body class="p-{pid}">
 <header class="top"><div class="hbar"><div class="wrap">

@@ -148,8 +148,6 @@ p,li{text-wrap:pretty}
   .card.photo{padding:0!important}
   .card.photo h3,.card.photo p{padding:0 14px}
   .card.photo p{padding-bottom:12px}
-  .card.photo img,figure.foto img{max-height:190px;object-fit:cover;object-position:center 30%;width:100%}
-  aside figure.foto img,.fbody aside img{max-height:260px}
   .claro{padding:10px 12px;margin-bottom:12px}
   .claro p{font-size:15px}
   .label{margin-bottom:6px!important}
@@ -175,3 +173,27 @@ header.top .brand{display:inline-flex;align-items:center;gap:9px;text-decoration
 header.top .brand .logo{flex:0 0 auto;display:block}
 @media (max-width:760px){header.top .brand .logo{width:28px;height:28px}header.top .brand{gap:7px}}
 header.top .brand .wm{color:#fff!important}header.top .brand .wm span{color:#8DD8C4!important}
+/* Guías destacadas e índice de página */
+.guias{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 0 8px}
+.guia{display:flex;flex-direction:column;gap:3px;background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:12px 14px;text-decoration:none;color:var(--ink);transition:transform .15s,box-shadow .15s}
+.guia:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(21,47,60,.1)}
+.guia b{font-size:16px;line-height:1.25}
+.guia span{font-size:13.5px;color:var(--muted);line-height:1.4}
+.toc{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:0 0 18px}
+.toc ol{margin:6px 0 0;padding-left:20px;columns:2;column-gap:24px;font-size:14.5px}
+.toc li{margin-bottom:4px;break-inside:avoid}
+.prose h2[id]{scroll-margin-top:120px}
+@media (max-width:760px){.guias{grid-template-columns:1fr 1fr;gap:8px}.guia{padding:10px 11px}.guia b{font-size:14.5px}.guia span{font-size:12.5px}.toc ol{columns:1}}
+
+/* Fotos enteras, sin recortes */
+.fhero img{max-height:none!important;height:auto;object-fit:contain}
+.fhero figcaption{position:static;border-radius:0;background:var(--paper);color:var(--muted);border:1px solid var(--line);border-top:0;border-radius:0 0 12px 12px;padding:5px 10px}
+.fhero figcaption a{color:var(--accent)}
+.fhero{border-radius:12px}
+.mat.ph img{height:auto!important;aspect-ratio:3/2;object-position:center}
+.epocas img{height:auto;aspect-ratio:3/2;object-position:center}
+.card.photo figure.foto img{aspect-ratio:auto;object-fit:contain;height:auto}
+figure.foto.retrato img{aspect-ratio:auto;object-fit:contain}
+.pers img{object-fit:cover;object-position:center 20%}
+@media (max-width:760px){.fhero figcaption{white-space:normal}}
+.fhero img{max-height:460px!important;background:var(--paper)}@media (max-width:760px){.fhero img{max-height:52vh!important}}

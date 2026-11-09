@@ -3,7 +3,7 @@
   var $ = function (id) { return document.getElementById(id); };
   var lang = document.documentElement.lang === 'ca' ? 'ca' : 'es';
 
-  var BASE = (document.querySelector('link[rel=stylesheet]').getAttribute('href') || '').replace('assets/style.css', '');
+  var BASE = (document.querySelector('link[rel=stylesheet]').getAttribute('href') || '').split('?')[0].replace('assets/style.css', '');
   var PREVIEW = document.documentElement.hasAttribute('data-preview');
   var esc = function (s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
 
