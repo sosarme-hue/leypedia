@@ -111,7 +111,7 @@ PAGES["catalunya"] = {
  "ca": dict(title="Dret a Catalunya", desc="Quines normes són catalanes i quines estatals, i com es manté actualitzada la informació.", crumbs=[], html=simple("Catalunya","Llei estatal i llei catalana","Catalunya té dret civil propi i competències en habitatge, consum i impostos cedits. Cada fitxa et diu quina part és estatal i quina és catalana.",cat("ca"))),
 }
 
-TIT = "[Nombre y apellidos o razón social] · NIF [pendiente] · [domicilio] · [email de contacto]"
+TIT = "Alejandro Rosàs Navarro · NIF 35056148P · Calle Blaumar 19, bajos 1.ª, Sant Pere de Ribes (Barcelona) · <a href=\"mailto:partenopides@gmail.com\">partenopides@gmail.com</a>"
 PAGES["aviso"] = {
  "es": dict(title="Aviso legal", desc="Aviso legal de Leypedia.", crumbs=[], html=simple("Legal","Aviso legal","Información del titular y condiciones de uso.",
    f'<div class="prose"><h2>Titular</h2><p>{TIT}</p><h2>Qué es Leypedia</h2><p>Leypedia ofrece información jurídica general y divulgativa. No presta asesoramiento legal, no es un despacho de abogados y no sustituye la consulta con un profesional colegiado.</p><h2>Fuentes</h2><p>Los textos legales proceden del Boletín Oficial del Estado y del Diari Oficial de la Generalitat de Catalunya. La versión con valor jurídico es siempre la publicada en el diario oficial. Cada ficha indica la fecha en que se comprobó.</p><h2>Plantillas de contratos</h2><p>Las plantillas son orientativas. Quien las use es responsable de adaptarlas a su caso.</p><h2>Responsabilidad</h2><p>Leypedia revisa su contenido con regularidad, pero no garantiza que esté libre de errores ni actualizado en todo momento.</p></div>')),

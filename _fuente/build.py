@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 import os, re, shutil, sys
 sys.path.insert(0, os.path.dirname(__file__))
-from pages3 import *
+from leysite import *
 
 OUT = sys.argv[1]
-PREVIEW = len(sys.argv) > 2 and sys.argv[2] == "preview"
+PREVIEW = "preview" in sys.argv[2:]
+PALETA = "paleta" in sys.argv[2:]
+import json, html as _h
 BASE = "https://leypedia.com/"
 HERE = os.path.dirname(__file__)
 
@@ -21,6 +23,8 @@ def rel(from_route, to_route):
 def fill_links(html, lang, route):
     def rep(m):
         k = m.group(1)
+        if k == "img":
+            return "../" * route.count("/") + "assets/img/"
         if k in ROUTES:
             r = rel(route, ROUTES[k][0 if lang == "es" else 1])
             return r or "./"
@@ -34,7 +38,7 @@ def page(pid, lang):
     ui = UI[lang]
     pre = "../" * route.count("/")
     nav = "".join(
-        f'<a href="{{{k}}}"{" aria-current=\"page\"" if (k == pid or (pid in ("vivienda","cambio","pregunta") and k=="materias") or (pid in ("ue","transfronterizo") and k=="internacional") or (pid in ("hito","bio","juicio","etica") and k=="historia")) else ""}>{t}</a>'
+        f'<a href="{{{k}}}"{" aria-current=\"page\"" if (k == pid or PARENT.get(pid) == k) else ""}>{t}</a>'
         for k, t in ui["nav"])
     crumbs = ""
     if p.get("crumbs") is not None:
@@ -43,7 +47,7 @@ def page(pid, lang):
     title = p["title"] if p.get("plain_title") else p["title"] + " · Leypedia"
     legal = " · ".join(f'<a href="{{{k}}}">{t}</a>' for k, t in ui["legal"])
     html = f'''<!doctype html>
-<html lang="{lang}">
+<html lang="{lang}"{" data-preview" if PREVIEW else ""}>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -61,6 +65,7 @@ def page(pid, lang):
 <header class="top"><div class="wrap">
 <a class="brand" href="{{home}}">Ley<span>pedia</span></a>
 <nav class="main" aria-label="{"Secciones" if lang=="es" else "Seccions"}">{nav}</nav>
+{searchbox(lang)}
 <a class="langlink" href="{rel(route, alt)}" hreflang="{ui["otra_l"]}" lang="{ui["otra_l"]}">{ui["otra"]}</a>
 </div></header>
 <main>
@@ -79,10 +84,16 @@ def page(pid, lang):
     os.makedirs(d, exist_ok=True)
     with open(os.path.join(d, "index.html"), "w", encoding="utf-8") as f:
         f.write(html)
+    txt = re.sub(r"<[^>]+>", " ", p["html"])
+    txt = re.sub(r"\s+", " ", _h.unescape(txt)).strip()
+    INDEX[lang].append({"t": p["title"], "d": _h.unescape(p["desc"]), "u": route, "a": ambitos(pid, p["html"]), "x": txt[:5000]})
     return route
 
+INDEX = {"es": [], "ca": []}
 routes = []
 for pid in ROUTES:
+    if pid not in PAGES:
+        continue
     for lang in ("es", "ca"):
         routes.append(page(pid, lang))
 
@@ -93,9 +104,17 @@ css = css.replace('--f-display:"Spectral", Georgia, "Times New Roman", serif;', 
 css = css.replace('--f-body:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;', '--f-body:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;')
 css = css.replace('--f-mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;', '--f-mono:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;')
 css += open(os.path.join(HERE, "extra.css"), encoding="utf-8").read()
+css += open(os.path.join(HERE, "extra2.css"), encoding="utf-8").read()
+if PALETA:
+    css += open(os.path.join(HERE, "paleta.css"), encoding="utf-8").read()
 open(os.path.join(OUT, "assets/style.css"), "w", encoding="utf-8").write(css)
 shutil.copy(os.path.join(HERE, "app.js"), os.path.join(OUT, "assets/app.js"))
 open(os.path.join(OUT, "assets/favicon.svg"), "w").write('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#8C2F39"/><text x="32" y="45" font-family="Georgia,serif" font-size="40" font-weight="700" text-anchor="middle" fill="#fff">L</text></svg>')
+
+shutil.copytree(os.path.join(HERE, "img"), os.path.join(OUT, "assets/img"))
+for L in ("es", "ca"):
+    INDEX[L] = [x for x in INDEX[L] if x["u"] not in ("buscar/", "ca/cercar/")]
+    json.dump(INDEX[L], open(os.path.join(OUT, f"assets/buscar-{L}.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 
 # api
 os.makedirs(os.path.join(OUT, "api/cache"))

@@ -1,0 +1,9 @@
+/* Paleta propuesta por Alex: azul marino, verde petróleo y blancos verdosos */
+:root{--bg:#F4F7F5;--paper:#FFFFFF;--ink:#152F3C;--muted:#5B7078;--line:#DCE5E1;--accent:#08786E;--accent-soft:#E3F1ED;--hl:#8DD8C4;--ok:#08786E}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0E1F28;--paper:#152F3C;--ink:#EAF2EF;--muted:#A9BCC2;--line:#24434F;--accent:#8DD8C4;--accent-soft:#163E44;--hl:#8DD8C4;--ok:#8DD8C4}}
+:root[data-theme="dark"]{--bg:#0E1F28;--paper:#152F3C;--ink:#EAF2EF;--muted:#A9BCC2;--line:#24434F;--accent:#8DD8C4;--accent-soft:#163E44;--hl:#8DD8C4;--ok:#8DD8C4}
+.home-block.contracts,.camino.dark{background:#152F3C;color:#fff}
+.home-block.contracts h2{color:#fff}
+.search button,.btn{background:#08786E}
+.brand span{color:#08786E}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .search button,:root:not([data-theme="light"]) .btn{background:#8DD8C4;color:#152F3C}:root:not([data-theme="light"]) .brand span{color:#8DD8C4}}
