@@ -5,7 +5,7 @@ from leysite import *
 
 OUT = sys.argv[1]
 PREVIEW = "preview" in sys.argv[2:]
-PALETA = "paleta" in sys.argv[2:]
+PALETA = True  # paleta azul marino y verde petróleo elegida por Alex
 import json, html as _h
 BASE = "https://leypedia.com/"
 HERE = os.path.dirname(__file__)
