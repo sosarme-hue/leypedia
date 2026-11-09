@@ -76,7 +76,7 @@ def home2(lang):
     pers = ["alfonso-x", "jaime-i", "concepcion-arenal", "clara-campoamor", "macia", "tarradellas"]
     enc = (f'<div class="home-block"><div class="wrap"><div class="enc">{foto("home-cortes-cadiz", T("Promulgación de la Constitución de 1812", "Promulgació de la Constitució del 1812"), lang, "foto wide")}'
            f'<div><span class="label">{T("Enciclopedia", "Enciclopèdia")}</span><h2>{T("La historia del derecho en España y Catalunya", "La història del dret a Espanya i Catalunya")}</h2>'
-           f'<p>{T("De las leyes de bronce de Roma al Codi civil de Catalunya: once épocas, sus anécdotas y las personas que las protagonizaron.", "De les lleis de bronze de Roma al Codi civil de Catalunya: onze èpoques, les seves anècdotes i les persones que les van protagonitzar.")}</p>'
+           f'<p>{T("De las leyes de bronce de Roma al Codi civil de Catalunya: trece épocas, sus anécdotas y las personas que las protagonizaron.", "De les lleis de bronze de Roma al Codi civil de Catalunya: tretze èpoques, les seves anècdotes i les persones que les van protagonitzar.")}</p>'
            f'<p><a class="btn" href="{{enciclopedia}}">{T("Abrir la enciclopedia", "Obrir l&#39;enciclopèdia")}</a></p></div></div>'
            '<div class="perslist mini">' + "".join(pcard(s, lang) for s in pers) + '</div></div></div>')
     em = (f'<div class="home-block"><div class="wrap"><div class="cols two">'
@@ -94,7 +94,7 @@ def historia3(lang):
              ("bio", "Biografía" if es else "Biografia", "Clara Campoamor"),
              ("juicio", "Juicio célebre" if es else "Judici cèlebre", "Los juicios de Núremberg" if es else "Els judicis de Nuremberg")]
     enc = (f'<a class="card enc-cta" href="{{enciclopedia}}"><img src="{{img}}doc-usatges.jpg" alt="" loading="lazy" style="width:100%;border-radius:6px"><div><span class="label">{"Enciclopedia" if es else "Enciclopèdia"}</span>'
-           f'<h3>{"Historia del derecho en España y Catalunya" if es else "Història del dret a Espanya i Catalunya"}</h3><p>{"Once épocas y veinte personajes con su ficha y su retrato." if es else "Onze èpoques i vint personatges amb la seva fitxa i el seu retrat."}</p><span class="go">{"Abrir la enciclopedia" if es else "Obrir l&#39;enciclopèdia"}</span></div></a>')
+           f'<h3>{"Historia del derecho en España y Catalunya" if es else "Història del dret a Espanya i Catalunya"}</h3><p>{"Trece épocas y más de cuarenta personajes con su ficha y su retrato." if es else "Tretze èpoques i més de quaranta personatges amb la seva fitxa i el seu retrat."}</p><span class="go">{"Abrir la enciclopedia" if es else "Obrir l&#39;enciclopèdia"}</span></div></a>')
     return (enc + '<div class="cols" style="margin-top:16px">' + "".join(f'<a class="card" href="{{{k_}}}"><span class="label">{l}</span><h3>{t}</h3><span class="go">{"Leer la ficha" if es else "Llegir la fitxa"}</span></a>' for k_, l, t in items) + '</div>'
       + f'<h2 class="sec">{"Línea del tiempo" if es else "Línia del temps"}</h2>' + tl(TL_ES if es else TL_CA)
       + f'<p class="status">{"La ética y la moral tienen ahora sus propias secciones: " if es else "L&#39;ètica i la moral tenen ara les seves pròpies seccions: "}<a href="{{eticas}}">{"Ética" if es else "Ètica"}</a> · <a href="{{moral}}">Moral</a>.</p>')
@@ -121,4 +121,27 @@ def buscar_page(lang):
 PAGES["buscar"] = {
  "es": dict(title="Buscar", desc="Buscador de Leypedia.", crumbs=[], html=buscar_page("es")),
  "ca": dict(title="Cercar", desc="Cercador de Leypedia.", crumbs=[], html=buscar_page("ca")),
+}
+
+# ---------- Novedades: BOE, DOGC y EUR-Lex ----------
+def nov2(lang):
+    es = lang == "es"
+    f = ["Qué se ha publicado", "Qué cambia", "A quién afecta", "Desde cuándo", "Qué hay que hacer", "Régimen transitorio", "Fuente"] if es else ["Què s'ha publicat", "Què canvia", "A qui afecta", "Des de quan", "Què cal fer", "Règim transitori", "Font"]
+    def bloque(h, info_id, info, lista, extra=""):
+        return f'<h2>{h}</h2><p class="status" id="{info_id}">{info}</p><ul class="dispo" {lista}></ul>{extra}'
+    carga = "Se cargan cada día de la fuente oficial cuando la web está publicada." if es else "Es carreguen cada dia de la font oficial quan la web està publicada."
+    return (f'<div class="fbody" style="padding-block:0"><div class="prose" style="max-width:none">'
+      + bloque("Boletín Oficial del Estado · disposiciones generales" if es else "Boletín Oficial del Estado · disposicions generals", "boe-info", carga, f'id="boe-list" data-lang="{lang}"')
+      + bloque("Diari Oficial de la Generalitat de Catalunya", "dogc-info", carga, 'data-feed="dogc" data-info="dogc-info"')
+      + bloque("EUR-Lex · Diario Oficial de la Unión Europea", "ue-info", carga, 'data-feed="ue" data-info="ue-info"')
+      + f'<p class="status">{"Los títulos se muestran tal como los publica cada diario oficial, sin traducir. Se actualizan automáticamente cada día." if es else "Els títols es mostren tal com els publica cada diari oficial, sense traduir. S&#39;actualitzen automàticament cada dia."}</p></div>'
+      + f'<aside class="side"><div class="box"><h3>{"Cada novedad explicada responde a" if es else "Cada novetat explicada respon a"}</h3><ol style="margin:0;padding-left:20px;font-size:14px">{"".join(f"<li>{x}</li>" for x in f)}</ol></div>'
+      + box("Fuentes oficiales" if es else "Fonts oficials", ul(['<a href="https://www.boe.es/" rel="noopener">Boletín Oficial del Estado</a>', '<a href="https://dogc.gencat.cat/" rel="noopener">Diari Oficial de la Generalitat de Catalunya</a>', '<a href="https://portaljuridic.gencat.cat/" rel="noopener">Portal Jurídic de Catalunya</a>', '<a href="https://eur-lex.europa.eu/" rel="noopener">EUR-Lex</a>']))
+      + '</aside></div>')
+
+PAGES["novedades"] = {
+ "es": dict(title="Novedades del BOE, el DOGC y la UE", desc="Lo último publicado en el Boletín Oficial del Estado, el Diari Oficial de la Generalitat de Catalunya y el Diario Oficial de la Unión Europea, actualizado cada día.", crumbs=[],
+   html=simple("Novedades", "Novedades del BOE, el DOGC y la UE", "Lo que se ha publicado en los diarios oficiales, actualizado cada día y con enlace al texto original.", nov2("es"))),
+ "ca": dict(title="Novetats del BOE, el DOGC i la UE", desc="L'últim publicat al Boletín Oficial del Estado, al Diari Oficial de la Generalitat de Catalunya i al Diario Oficial de la Unión Europea, actualitzat cada dia.", crumbs=[],
+   html=simple("Novetats", "Novetats del BOE, el DOGC i la UE", "El que s'ha publicat als diaris oficials, actualitzat cada dia i amb enllaç al text original.", nov2("ca"))),
 }

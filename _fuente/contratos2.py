@@ -48,6 +48,9 @@ def field(f, es):
         return f'<label for="{i}">{lab}<input id="{i}" data-name value="" placeholder="{N_ES if es else N_CA}"></label>'
     if t == "check":
         return f'<label class="check" for="{i}"><input id="{i}" type="checkbox"> {lab}</label>'
+    if t == "area":
+        ph = f[5] if len(f) > 5 else ""
+        return f'<label for="{i}">{lab}<textarea id="{i}" rows="4" placeholder="{ph}"></textarea></label>'
     if t == "select":
         return f'<label for="{i}">{lab}<select id="{i}">' + "".join(f'<option value="{v}">{a if es else b}</option>' for v, a, b in f[4]) + '</select></label>'
     attrs = f[5] if len(f) > 5 else ""

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import os, re, shutil, sys
 sys.path.insert(0, os.path.dirname(__file__))
-from leysite import *
+from curiosidades import *
 
 OUT = sys.argv[1]
 PREVIEW = "preview" in sys.argv[2:]
@@ -119,6 +119,8 @@ for L in ("es", "ca"):
 # api
 os.makedirs(os.path.join(OUT, "api/cache"))
 shutil.copy(os.path.join(HERE, "boe.php"), os.path.join(OUT, "api/boe.php"))
+shutil.copy(os.path.join(HERE, "feed.php"), os.path.join(OUT, "api/feed.php"))
+shutil.copy(os.path.join(HERE, "actualizar.php"), os.path.join(OUT, "api/actualizar.php"))
 open(os.path.join(OUT, "api/cache/.htaccess"), "w").write("Require all denied\n")
 open(os.path.join(OUT, "api/cache/.gitkeep"), "w").write("")
 shutil.copy(os.path.join(HERE, "htaccess"), os.path.join(OUT, ".htaccess"))

@@ -212,6 +212,27 @@
           '<p>Y en prueba de conformidad, las partes firman el presente contrato por duplicado.</p>' + firma('La parte arrendadora', 'La parte arrendataria');
       }
     };
+    var cd = $('cdata');
+    if (cd) {
+      var D = JSON.parse(cd.textContent);
+      T.gen = function () {
+        var sel = function (id) { var e = $(id); return e && e.selectedIndex >= 0 ? esc(e.options[e.selectedIndex].text) : ''; };
+        var fill = function (s) {
+          return s.replace(/\{fecha\}/g, fecha()).replace(/\{(n|t|T|e|d|s|a):(\w+)\}/g, function (m, k, id) {
+            if (k === 'n') return nom(id);
+            if (k === 't') return txt(id);
+            if (k === 'T') return txt(id, HUECO);
+            if (k === 'e') return eur(num(id));
+            if (k === 'd') return num(id).toLocaleString(loc);
+            if (k === 's') return sel(id);
+            if (k === 'a') { var v = val(id).trim(); return v ? esc(v).replace(/\n/g, '<br>') : HUECO + '<br>' + HUECO; }
+            return m;
+          });
+        };
+        return '<h3>' + D.t + '</h3><p>' + fill(D.i) + '</p>' + D.c.map(function (c) { return '<p>' + (c[0] ? '<b>' + c[0] + '</b> ' : '') + fill(c[1]) + '</p>'; }).join('') +
+          (D.f ? '<p>' + D.f + '</p>' : '') + '<div class="firma' + (D.s.length === 1 ? ' one' : D.s.length === 3 ? ' three' : '') + '">' + D.s.map(function (x) { return '<div>' + x + '</div>'; }).join('') + '</div>';
+      };
+    }
     var render = function () { doc.innerHTML = (T[tipo] || T.prestamo)(); };
     f.addEventListener('input', render);
     f.addEventListener('change', render);
@@ -232,6 +253,22 @@
     // Al salir de la página no queda nada: el formulario se vacía.
     window.addEventListener('pagehide', function () { f.reset(); });
   }
+
+  // ---------- DOGC y EUR-Lex (los sirve api/feed.php en el propio servidor) ----------
+  Array.prototype.forEach.call(document.querySelectorAll('[data-feed]'), function (ul) {
+    var id = ul.getAttribute('data-feed'), info = $(ul.getAttribute('data-info'));
+    var fmtd = function (d) { return d ? new Date(d + 'T12:00:00').toLocaleDateString(lang === 'ca' ? 'ca-ES' : 'es-ES', { day: 'numeric', month: 'short', year: 'numeric' }) : ''; };
+    fetch(BASE + 'api/feed.php?f=' + id, { headers: { Accept: 'application/json' } }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (j) {
+      if (!j || !j.items || !j.items.length) throw new Error('vacío');
+      info.textContent = j.fuente + ' · ' + j.items.length + (lang === 'ca' ? ' publicacions recents' : ' publicaciones recientes');
+      ul.innerHTML = j.items.map(function (it) {
+        if (!/^https:\/\//.test(it.url)) return '';
+        return '<li><span class="dep">' + esc(fmtd(it.fecha)) + '</span><a href="' + esc(it.url) + '" target="_blank" rel="noopener">' + esc(it.titulo) + '</a></li>';
+      }).join('');
+    }).catch(function () {
+      info.textContent = lang === 'ca' ? 'Ara mateix no es pot connectar amb la font oficial. Consulta-la directament.' : 'Ahora mismo no se puede conectar con la fuente oficial. Consúltala directamente.';
+    });
+  });
 
   // ---------- BOE (lo sirve api/boe.php en el propio servidor) ----------
   var list = $('boe-list'), panel = $('boe-panel');

@@ -34,6 +34,8 @@ IMG = {
  "p-fernando-vii": ("Fernando VII - Vicente López.jpg", "Vicente López Portaña", "Dominio público"),
  "p-azana": ("Manuel Azaña cropped.jpg", "Autor desconocido", "Dominio público"),
 }
+from hist_mas import P2, E2, IMG2
+IMG.update(IMG2)
 import os as _os
 IMG_OK = {f[:-4] for f in _os.listdir(_os.path.join(_os.path.dirname(__file__), "img")) if f.endswith(".jpg")}
 
@@ -164,6 +166,7 @@ P = {
    "La ponencia trabajó en secreto, pero el borrador se filtró a la prensa en noviembre de 1977, antes de terminarlo.",
    "La ponència treballava en secret, però l'esborrany es va filtrar a la premsa el novembre de 1977, abans d'acabar-lo."),
 }
+P.update(P2)
 for s in P:
     ROUTES["p" + k(s)] = (f"historia/personajes/{s}/", f"ca/historia/personatges/{s}/")
 ROUTES["pclaracampoamor"] = ROUTES["bio"]
@@ -282,6 +285,12 @@ E = [
   "El Estatut de 2006 fue recurrido ante el Tribunal Constitucional, que en 2010 anuló o reinterpretó parte de sus artículos.",
   "L'Estatut del 2006 va ser recorregut davant el Tribunal Constitucional, que el 2010 en va anul·lar o reinterpretar una part dels articles.", ["tarradellas", "peces-barba"]),
 ]
+for _after, _ep in E2:
+    E.insert([x[0] for x in E].index(_after) + 1, _ep)
+for _s, _v in P2.items():
+    _e = next(x for x in E if x[0] == _v[3])
+    if _s not in _e[15]:
+        _e[15].append(_s)
 for e in E:
     ROUTES["e" + k(e[0])] = (f"historia/enciclopedia/{e[1]}/", f"ca/historia/enciclopedia/{e[2]}/")
 ROUTES["enciclopedia"] = ("historia/enciclopedia/", "ca/historia/enciclopedia/")
@@ -290,7 +299,8 @@ EP = {e[0]: e for e in E}
 def pcard(s, lang):
     n, a, b, ep, re_, rc = P[s][:6]
     img = f'<img src="{{img}}p-{s}.jpg" alt="" loading="lazy">' if f"p-{s}" in IMG_OK else '<span class="noimg">' + n[0] + '</span>'
-    return f'<a class="pers" href="{{p{k(s)}}}">{img}<b>{n}</b><span>{a} – {b}</span><span>{re_ if lang == "es" else rc}</span></a>'
+    yrs = f"{a} – {b}" if b else f"n. {a}"
+    return f'<a class="pers" href="{{p{k(s)}}}">{img}<b>{n}</b><span>{yrs}</span><span>{re_ if lang == "es" else rc}</span></a>'
 
 def epoca_page(e, lang):
     es = lang == "es"
@@ -323,13 +333,13 @@ def persona_page(s, lang):
       + (box("De la misma época" if es else "De la mateixa època", ul([f'<a href="{{p{k(x)}}}">{P[x][0]}</a>' for x in others])) if others else "")
       + box("Enciclopedia" if es else "Enciclopèdia", ul([f'<a href="{{enciclopedia}}">{"Todas las épocas y personajes" if es else "Totes les èpoques i personatges"}</a>'])))
     return ficha(("Personaje · " if es else "Personatge · ") + (e[4] if es else e[5]), n, re_ if es else rc,
-                 [("Nació" if es else "Va néixer", a), ("Murió" if es else "Va morir", b)], body, side)
+                 [("Nació" if es else "Va néixer", a)] + ([("Murió" if es else "Va morir", b)] if b else []), body, side)
 
 def enciclo_index(lang):
     es = lang == "es"
     eps = '<ol class="epocas">' + "".join(
         f'<li><a href="{{e{k(e[0])}}}"><span class="yr">{e[3]}</span><b>{e[4] if es else e[5]}</b><span>{e[7] if es else e[8]}</span></a></li>' for e in E) + '</ol>'
-    pers = '<div class="perslist">' + "".join(pcard(s, lang) for s in P) + '</div>'
+    pers = "".join(f'<h3 class="persep">{x[4] if es else x[5]} <span>{x[3]}</span></h3><div class="perslist">' + "".join(pcard(s, lang) for s in x[15]) + '</div>' for x in E if x[15])
     return (f'<h2 class="sec">{"Las épocas" if es else "Les èpoques"}</h2>' + eps
       + f'<h2 class="sec">{"Los personajes" if es else "Els personatges"}</h2>' + pers
       + f'<p class="status">{"Los retratos proceden de Wikimedia Commons y son de dominio público o tienen licencia libre. Cada imagen indica su autor y licencia." if es else "Els retrats provenen de Wikimedia Commons i són de domini públic o tenen llicència lliure. Cada imatge n’indica l’autor i la llicència."}</p>')
@@ -343,7 +353,7 @@ def build_enciclo():
     for s in P:
         if s == "clara-campoamor":
             continue
-        PAGES["p" + k(s)] = {L: dict(title=P[s][0], desc=f"{P[s][0]} ({P[s][1]}–{P[s][2]}): {P[s][4] if L == 'es' else P[s][5]}.",
+        PAGES["p" + k(s)] = {L: dict(title=P[s][0], desc=f"{P[s][0]} ({P[s][1]}{'–' + P[s][2] if P[s][2] else ''}): {P[s][4] if L == 'es' else P[s][5]}.",
             crumbs=[("historia", "Historia" if L == "es" else "Història"), ("enciclopedia", "Enciclopedia" if L == "es" else "Enciclopèdia")],
             html=persona_page(s, L)) for L in ("es", "ca")}
     PAGES["enciclopedia"] = {L: dict(title="Enciclopedia de historia del derecho" if L == "es" else "Enciclopèdia d'història del dret",
@@ -351,7 +361,7 @@ def build_enciclo():
         crumbs=[("historia", "Historia" if L == "es" else "Història")],
         html=simple("Enciclopedia" if L == "es" else "Enciclopèdia",
                     "Historia del derecho en España y Catalunya" if L == "es" else "Història del dret a Espanya i Catalunya",
-                    "De las leyes de bronce de Roma al Codi civil de Catalunya: once épocas, sus cambios, anécdotas y las personas que los hicieron posibles." if L == "es" else "De les lleis de bronze de Roma al Codi civil de Catalunya: onze èpoques, els seus canvis, anècdotes i les persones que els van fer possibles.",
+                    "De las leyes de bronce de Roma al Codi civil de Catalunya: trece épocas, sus cambios, anécdotas y las personas que los hicieron posibles." if L == "es" else "De les lleis de bronze de Roma al Codi civil de Catalunya: tretze èpoques, els seus canvis, anècdotes i les persones que els van fer possibles.",
                     enciclo_index(L))) for L in ("es", "ca")}
     # foto de Clara Campoamor en su biografía
     for L in ("es", "ca"):
