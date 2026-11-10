@@ -14,3 +14,6 @@ grep -q 'filo-portada.css' index.html || sed -i 's#<link rel="stylesheet" href="
 grep -q 'filo-portada.css' en/index.html || sed -i 's#<link rel="stylesheet" href="../assets/filo2.css?v=2">#&\n<link rel="stylesheet" href="../assets/filo-portada.css?v=1">#' en/index.html
 date > _diseno/hecho.txt
 grep -c 'filo-portada.css' index.html en/index.html >> _diseno/hecho.txt
+# version del estilo (para que los navegadores bajen el nuevo)
+sed -i 's#filo-portada.css?v=[0-9]*#filo-portada.css?v=2#' index.html en/index.html
+grep -o 'filo-portada.css?v=[0-9]*' index.html en/index.html >> _diseno/hecho.txt
