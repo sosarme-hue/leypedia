@@ -139,3 +139,5 @@ body:has(article.ficha[class*=" p-"]) .curio{border:0!important;border-left:6px 
 body:has(article.ficha[class*=" p-"]) .ficha>header{position:static;margin-bottom:24px}
 body:has(article.ficha[class*=" p-"]) .ficha header .retrato img{aspect-ratio:1}
 body:has(article.ficha[class*=" p-"]) #catalogo>details{width:100%;margin-right:0}}
+@media (min-width:901px){body:has(article.ficha[class*=" p-"]) .cab{position:relative}
+body:has(article.ficha[class*=" p-"]) .ficha>header{top:16px;max-height:calc(100vh - 32px);overflow-y:auto}}
