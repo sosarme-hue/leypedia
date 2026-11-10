@@ -43,10 +43,9 @@ h1,h2,.marca{font-family:Fraunces,Georgia,serif}
 .galeria strong{position:absolute;left:0;right:0;bottom:0;margin:0;padding:18px 6px 6px;background:linear-gradient(transparent,rgba(0,0,0,.85));color:#fff;font-size:.72rem;font-weight:700;text-align:left}
 .galeria span{display:none}
 /* títulos con número grande */
-main{counter-reset:sec}
-.titulo-bloque{border-bottom:3px solid var(--tinta);margin:64px 0 20px;padding-bottom:10px;counter-increment:sec}
+.titulo-bloque{border-bottom:3px solid var(--tinta);margin:64px 0 20px;padding-bottom:10px;}
 .titulo-bloque h2{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.03em;font-size:2.4rem}
-.titulo-bloque h2::before{content:counter(sec,decimal-leading-zero);color:var(--oro);font-family:Inter,sans-serif;font-size:.9rem;font-weight:800;vertical-align:top;margin-right:12px;letter-spacing:0}
+.titulo-bloque h2::before{content:none}
 .titulo-bloque a{font-weight:700;color:var(--tinta)}
 .efe,.gp,.acard,.region,.familia,.anecdota,.post-t,.blog-card{border-radius:0;border:2px solid var(--tinta);background:#fff;box-shadow:none;transition:transform .15s,box-shadow .15s}
 .efe:hover,.acard:hover,.region:hover,.familia:hover,.post-t:hover,.blog-card:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--tinta)}
