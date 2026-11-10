@@ -4,3 +4,4 @@ cd "$R" || exit 1
 if [ ! -f "$C/estilo.css" ]; then mkdir -p "$C"; cp -p assets/estilo.css "$C/estilo.css"; fi
 sed -i '/=== ilustraciones por seccion/,/=== fin ilustraciones ===/d' assets/estilo.css
 cat _diseno/bloque-ilus.css >> assets/estilo.css
+{ date; wc -c assets/estilo.css; } > _diseno/hecho-ilus.txt
