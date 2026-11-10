@@ -1,0 +1,74 @@
+
+/* === diseno Sala de museo para toda la web (10-11-2026) === */
+:root{--papel:#fcfaf6;--blanco:#ffffff;--tinta:#16110f;--linea:#d9cfc2;--marca:#7a2926;--pared:#3a1715;--oro:#c9a25a;--negro:#16110f}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--papel:#16120f;--blanco:#201a16;--tinta:#efe6db;--linea:#3a3029;--marca:#e07a63;--negro:#efe6db}}
+:root[data-theme=dark]{--papel:#16120f;--blanco:#201a16;--tinta:#efe6db;--linea:#3a3029;--marca:#e07a63;--negro:#efe6db}
+html,body{overflow-x:clip}
+.cab{background:var(--pared);border-bottom:3px solid var(--oro);padding:12px 24px}
+.cab .menu a{font-weight:600;font-size:.86rem;color:#f3e6d6}
+.cab .menu a:hover,.cab .menu a[aria-current=page]{color:var(--oro);text-decoration:none}
+.cab .menu a[aria-current=page]{box-shadow:inset 0 -2px 0 var(--oro)}
+.cab .idioma a{border:1px solid var(--oro);color:var(--oro);padding:3px 10px;text-decoration:none;font-weight:600;font-size:.8rem}
+.cab .busca-mini input{border:1px solid var(--oro);border-radius:0;background:#fbf3e8;color:#16110f}
+.pie{background:var(--pared);border-top:3px solid var(--oro)}
+:where(main) h1{font-size:clamp(2.4rem,5.4vw,3.8rem);letter-spacing:-.015em;line-height:1.02;font-weight:600}
+:where(main) h2{font-weight:600;font-size:clamp(1.8rem,3.4vw,2.4rem);letter-spacing:-.01em;line-height:1.05;margin:60px 0 22px;padding-top:14px;border-top:4px double var(--negro)}
+:where(main) h2 a{text-decoration:none;color:inherit}
+:where(main) h2 a:hover{color:var(--marca)}
+.texto h2{border-top:0;padding-top:0;margin:42px 0 12px;font-size:1.8rem}
+.texto h2::before{content:"";display:block;width:56px;height:3px;background:var(--oro);margin-bottom:12px}
+.miga{font-size:.74rem;text-transform:uppercase;letter-spacing:.12em;margin:22px 0 4px}
+.miga a{text-decoration:none;font-weight:700}
+.sub{font-size:.98rem}
+:where(main)>.hero:not(.portada){padding:44px 0 6px}
+:where(main)>.hero:not(.portada) .nota{color:var(--marca);font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.16em;margin:0}
+:where(main)>.hero:not(.portada) .entradilla{font-style:italic;font-family:'Cormorant Garamond',Georgia,serif;font-size:1.35rem;margin-bottom:0}
+/* retrato y cuadro de las fichas, enmarcados */
+.retrato img{border-radius:0;border:8px solid var(--blanco);outline:1px solid var(--negro);box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.retrato figcaption{margin-top:10px}
+.cuadro{margin:26px 0 30px}
+.cuadro img{border-radius:0;border:12px solid #b8914a;outline:3px solid #6e5222;outline-offset:-3px;padding:8px;background:#f5ecd9;box-shadow:inset 0 0 0 2px #e6c987,0 24px 44px rgba(0,0,0,.35)}
+.cuadro figcaption{margin-top:12px}
+.ficha header{gap:6px 32px}
+.chip{border-radius:0;border:1px solid var(--negro);background:var(--blanco);color:var(--tinta);font-weight:600}
+.chip:hover,.chips a.chip:hover{border-color:var(--oro);background:var(--oro);color:#16110f}
+.chips a.chip{color:var(--marca)}
+/* cartela de datos */
+.datos{background:var(--blanco);border:1px solid var(--negro);border-top:5px solid var(--marca);padding:16px 20px;max-width:620px}
+.datos dt{font-size:.74rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;padding-top:3px}
+/* muro de obras: cuadros enmarcados con cartela */
+.muro{column-gap:20px}
+.obra{border:0;border-radius:0;background:transparent;box-shadow:none;margin:0 0 22px;overflow:visible}
+.obra img{border:8px solid var(--blanco);outline:1px solid var(--negro);box-shadow:0 8px 18px rgba(0,0,0,.16)}
+.obra figcaption{padding:12px 2px 4px}
+.obra figcaption b{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.15rem;line-height:1.15;color:var(--tinta)}
+.obra a:hover b{color:var(--marca)}
+.obra .sinimg{border:1px solid var(--negro)}
+/* fichas de pintor en rejilla */
+.rejilla{gap:26px 16px;grid-template-columns:repeat(auto-fill,minmax(124px,1fr))}
+.pcard{background:transparent;border:0;border-radius:0;padding:0}
+.pcard img,.pcard .vacio{width:100%;height:auto;aspect-ratio:4/5;border-radius:0;border:6px solid var(--blanco);outline:1px solid var(--negro);box-shadow:0 6px 14px rgba(0,0,0,.15)}
+.pcard:hover img{outline:3px solid var(--oro)}
+.pcard strong{font-size:.88rem;margin-top:10px}
+/* periodos, movimientos y temas */
+.linea{gap:26px 18px}
+.tramo{border:0;border-radius:0;background:transparent;padding:0;overflow:visible}
+.tramo img,.tramo-vacio{margin:0 0 12px;width:100%;border-radius:0;border:8px solid var(--blanco);outline:1px solid var(--negro);box-shadow:0 8px 18px rgba(0,0,0,.18)}
+.tramo strong{font-size:1.3rem}
+.tramo:hover{transform:translateY(-3px);border-color:transparent}
+/* curiosidades, listas, botones, filtros */
+.curio{border:1px solid var(--negro);border-top:5px solid var(--marca);border-left:1px solid var(--negro);border-radius:0;padding:16px 20px}
+.lista{list-style:none;padding:0}
+.lista li{border-bottom:1px solid var(--linea);padding:8px 0;margin:0}
+.lista a{color:var(--tinta);font-weight:600}
+.lista a:hover{color:var(--marca)}
+.boton-mas{border:1px solid var(--negro);border-radius:0;background:var(--pared);color:#fbf3e8;text-decoration:none;display:inline-block;letter-spacing:.04em}
+.filtros select,.filtros input{border-radius:0;border-color:var(--negro)}
+.busca-grande{border-radius:0;border:1px solid var(--negro)}
+.busca-grande button{border-radius:0;background:var(--pared)}
+.sugerencias,.sug-mini{border-radius:0;border-color:var(--negro)}
+.mapa{border-radius:0;border:1px solid var(--negro)}
+.efe{border-radius:0}
+@media (max-width:860px){.cab{padding:10px 16px}:where(main) h2{margin-top:46px}.rejilla{grid-template-columns:repeat(3,minmax(0,1fr))}.linea{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:700px){.retrato img{width:170px}.cuadro img{border-width:8px;padding:4px}}
+/* === fin diseno Sala === */

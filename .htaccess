@@ -1,0 +1,4 @@
+Require all denied
+<FilesMatch "\.css$">
+Require all granted
+</FilesMatch>

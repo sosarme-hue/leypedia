@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* Pinacopedia - Propuesta C "Sala de museo" (solo portada). Familia Classicapedia/Filopedia: rayas negras y titulares grandes, con la portada como una pared de museo. */
+:root{--negro:#16110f;--granate:#7a2926;--pared:#3a1715;--oro:#c9a25a;--verde:#2f5546;--azul:#3d6a8a;--amarillo:#e3b04b;--papel:#fcfaf6;--blanco:#ffffff;--suave:#5f554d}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--negro:#efe6db;--papel:#16120f;--blanco:#201a16;--suave:#b3a493}}
+:root[data-theme=dark]{--negro:#efe6db;--papel:#16120f;--blanco:#201a16;--suave:#b3a493}
+html,body{overflow-x:clip}
+body{background:var(--papel)}
+/* cabecera: misma pared granate, raya dorada */
+.cab{background:var(--pared)!important;border-bottom:3px solid var(--oro)!important;padding:12px 24px!important}
+.cab .marca{font-size:1.75rem}
+.cab .menu a{font-weight:600;font-size:.86rem!important;color:#f3e6d6!important}
+.cab .menu a:hover{color:var(--oro)!important;text-decoration:none!important}
+.cab .idioma a{border:1px solid var(--oro);color:var(--oro)!important;padding:3px 10px;text-decoration:none;font-weight:600;font-size:.8rem}
+/* portada: pared de museo a todo el ancho */
+.hero.portada{position:relative;padding:60px 0 70px;text-align:left;color:#f3e6d6;isolation:isolate}
+.hero.portada::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);background:radial-gradient(ellipse at 70% 30%,#5a2421 0,var(--pared) 55%,#260e0d 100%)}
+.hero-texto{display:flex;flex-direction:column;align-items:flex-start}
+.portada .logo-hero{width:60px!important;height:60px!important;margin:0 0 8px!important}
+.portada .logo-hero path{fill:#f3e6d6}
+.portada .lema-corto{order:-1;color:var(--oro)!important;font-variant:normal!important;text-transform:uppercase!important;letter-spacing:.22em!important;font-size:.74rem!important;font-weight:700;margin:0 0 22px!important;padding-bottom:10px;border-bottom:1px solid rgba(201,162,90,.5)}
+.nombre-hero{color:#fbf3e8!important;font-size:clamp(3.4rem,9vw,7.2rem)!important;line-height:.9;letter-spacing:-.02em;margin:0 0 14px!important}
+.portada .lema{color:#fbf3e8!important;font-style:italic;font-size:clamp(1.5rem,2.6vw,2rem)!important;margin:0 0 8px!important}
+.portada .entradilla{color:#d9c8b6!important;text-align:left;margin:0 0 28px!important;max-width:32em}
+.busca-grande{width:100%;max-width:540px;margin:0;border:0;border-radius:0;background:#fbf3e8;box-shadow:0 0 0 1px var(--oro),0 14px 30px rgba(0,0,0,.35)}
+.busca-grande input{padding:15px 18px;color:#16110f}
+.busca-grande button{background:var(--oro);color:#16110f;border-radius:0;font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.76rem;padding:0 24px}
+.sugerencias{max-width:540px;margin:12px 0 0;width:100%;color:var(--negro)}
+/* el cuadro colgado, con marco dorado y cartela */
+.cuadro-hero{text-align:center!important}
+.cuadro-hero img{margin:0 auto!important;max-height:440px!important;border:14px solid #b8914a!important;outline:3px solid #6e5222!important;outline-offset:-3px;box-shadow:inset 0 0 0 2px #e6c987,0 30px 50px rgba(0,0,0,.55),0 0 0 1px #3d2a0d!important;padding:10px;background:#f5ecd9}
+.cuadro-hero figcaption{display:inline-block;margin:26px auto 0!important;background:#fbf3e8;color:#5f554d!important;font-style:normal!important;padding:10px 16px;font-size:.82rem!important;text-align:left;box-shadow:0 6px 14px rgba(0,0,0,.35);max-width:320px}
+.cuadro-hero figcaption::before{content:"Cuadro del d\00ED a";display:block;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--granate);font-weight:700;margin-bottom:2px}
+:lang(en) .cuadro-hero figcaption::before{content:"Painting of the day"}
+.cuadro-hero figcaption a{color:#16110f!important;font-family:'Cormorant Garamond',Georgia,serif;font-size:1.25rem;font-weight:700!important}
+/* galeria de retratos: tira de miniaturas enmarcadas sobre la raya */
+.galeria{margin-top:-34px!important;position:relative;background:var(--blanco);border:1px solid var(--negro);box-shadow:0 10px 30px rgba(0,0,0,.12);padding:18px 14px 2px!important;column-gap:12px!important}
+.galeria img{border-radius:0!important;border:1px solid var(--negro)!important;padding:3px;background:var(--blanco);box-shadow:none!important;width:100%!important;aspect-ratio:4/5!important;height:auto!important}
+.galeria a:hover img{border-color:var(--oro)!important;background:var(--oro);transform:none!important}
+.galeria strong{font-size:.78rem!important;font-weight:700;margin-top:10px!important}
+/* titulos centrados como en un catalogo */
+h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:clamp(2rem,3.8vw,2.8rem)!important;letter-spacing:-.01em;line-height:1.05}
+main>section:not(.hero)>h2,.titulo-bloque{margin:76px 0 26px!important;padding:14px 0 0;border-top:4px double var(--negro)}
+.titulo-bloque h2{margin:0!important;padding:0;border:0}
+.titulo-bloque{align-items:baseline}
+.titulo-bloque a{color:var(--granate)!important;font-weight:700;font-size:.8rem!important;text-transform:uppercase;letter-spacing:.12em;text-decoration:none}
+.fecha-hoy{color:var(--granate)!important;font-style:italic}
+/* un dia como hoy: cartelas */
+.efe-lista{gap:14px!important}
+.efe{border:1px solid var(--negro)!important;border-radius:0!important;background:var(--blanco)!important;border-top:5px solid var(--granate)!important;flex-direction:column;align-items:flex-start!important;gap:4px!important}
+.efe .anyo{font-size:2.2rem!important;line-height:1;color:var(--granate)!important}
+.efe:hover{background:#fbf3e8!important}
+/* obra y curiosidad del dia */
+.dia{gap:26px!important;margin-top:76px}
+.dia>div{border:1px solid var(--negro)!important;border-radius:0!important;padding:26px!important;background:var(--blanco)!important}
+#obra-dia{background:#f4ede2!important}
+.dia h2{border:0!important;margin:0 0 18px!important;padding:0!important;font-size:2rem!important;text-align:center}
+.dia img{border:10px solid var(--blanco);outline:1px solid var(--negro);border-radius:0!important;box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.dia h3 a{color:var(--granate);text-decoration:none}
+.curio-foto{border-radius:0!important;border:6px solid var(--blanco)!important;outline:1px solid var(--negro)}
+/* periodos: cuadros enmarcados con cartela */
+#periodos .linea{gap:26px 18px!important}
+.tramo{border:0!important;border-radius:0!important;background:transparent!important;padding:0!important}
+.tramo img,.tramo-vacio{margin:0 0 12px!important;width:100%!important;border-radius:0!important;border:8px solid var(--blanco);outline:1px solid var(--negro);box-shadow:0 8px 18px rgba(0,0,0,.18)}
+.tramo strong{font-size:1.3rem!important;order:2}
+.tramo span:first-of-type{order:1;font-size:.72rem!important;letter-spacing:.12em;text-transform:uppercase;color:var(--granate)!important;font-weight:700}
+.tramo span{order:3}
+.tramo:hover{transform:translateY(-3px)!important}
+/* grandes maestros */
+.rejilla{gap:26px 16px!important;grid-template-columns:repeat(auto-fill,minmax(120px,1fr))!important}
+.pcard{background:transparent!important;border:0!important;border-radius:0!important;padding:0!important}
+.pcard img{width:100%!important;height:auto!important;aspect-ratio:4/5;border-radius:0!important;border:6px solid var(--blanco);outline:1px solid var(--negro);box-shadow:0 6px 14px rgba(0,0,0,.15)}
+.pcard:hover img{outline:3px solid var(--oro)}
+.pcard strong{font-size:.86rem!important;margin-top:10px!important}
+/* museos */
+.lista{padding:0!important;list-style:none}
+.lista li{border-bottom:1px solid var(--linea);padding:9px 0;margin:0!important}
+.lista a{color:var(--negro)!important;font-weight:600}
+.boton-mas{border:1px solid var(--negro)!important;border-radius:0!important;background:var(--pared)!important;color:#fbf3e8!important;text-decoration:none;display:inline-block;letter-spacing:.06em}
+.pie{background:var(--pared)!important;border-top:3px solid var(--oro)!important}
+@media (min-width:960px){.portada{grid-template-columns:minmax(0,1fr) minmax(0,460px)!important;gap:50px!important}}
+@media (max-width:860px){
+ .cab{padding:10px 16px!important}
+ .hero.portada{padding:34px 0 60px}
+ .cuadro-hero{margin-top:40px!important}
+ .cuadro-hero img{border-width:10px!important;padding:6px}
+ .galeria{padding:14px 10px 2px!important}
+ .dia{gap:18px!important}
+ #periodos .linea{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .rejilla{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+}
+.hero.portada>*{min-width:0}
