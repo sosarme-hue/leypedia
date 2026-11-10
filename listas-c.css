@@ -1,0 +1,280 @@
+/* === diseño Explorar y Maestros (nov 2026) === */
+body:has(#lista),body:has(#lista):not([data-theme=light]){--papel:#ffffff;--tinta:#111111;--suave:#5c5c5c;--linea:#e6e6e6;--oro:#e8452c;--blanco:#f4f2ee;--marca:#e8452c;
+--medieval:#6b3fa0;--renacimiento:#0f8a6a;--barroco:#e08a00;--clasicismo:#2357d8;--romanticismo:#d6283c;--siglo-xx:#222222;--contemporaneo:#00a3b4}
+body:has(#lista){background:#fff;color:var(--tinta);font-family:Inter,system-ui,sans-serif}
+body:has(#lista) h1,body:has(#lista) h2,body:has(#lista) .marca{font-family:Fraunces,Georgia,serif}
+body:has(#lista) .cab{background:#fff;border-bottom:3px solid var(--tinta);padding:12px 32px}
+body:has(#lista) .marca{font-weight:900;font-size:1.9rem;letter-spacing:-.03em}
+body:has(#lista) .marca .logo{color:var(--oro)}
+body:has(#lista) .cab .menu{font-weight:600;font-size:.88rem;gap:1.2rem}
+body:has(#lista) .cab .menu a{opacity:1}
+body:has(#lista) .cab .menu .patreon{background:var(--tinta);border-radius:0}
+body:has(#lista) .cab .menu a.facebook{border-radius:0}
+body:has(#lista) .portada-top{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:0;padding:0;margin-top:32px;border:3px solid var(--tinta);align-items:stretch}
+body:has(#lista) .hero{text-align:left;padding:40px 40px 34px!important;background:#fff;position:relative;overflow:hidden}
+body:has(#lista) .hero::after{content:'22.403';position:absolute;right:-10px;bottom:-34px;font-family:Fraunces,serif;font-weight:900;font-size:9rem;letter-spacing:-.05em;color:var(--blanco);z-index:0;line-height:1}
+body:has(#lista) .hero>*{position:relative;z-index:1}
+body:has(#lista) .antetitulo{display:inline-block;background:var(--oro);color:#fff!important;padding:4px 10px;letter-spacing:.14em;font-size:.72rem}
+body:has(#lista) .portada-top .hero h1{font-size:clamp(2.6rem,5.8vw,4.6rem);font-weight:900;letter-spacing:-.035em;line-height:.95;margin:18px 0 20px}
+body:has(#lista) .entradilla{margin:0 0 24px;color:#333;font-size:1.05rem}
+body:has(#lista) .entradilla a{text-decoration:none;box-shadow:inset 0 -.45em 0 rgba(232,69,44,.25)}
+body:has(#lista) .busca-grande{margin:0;border:2px solid var(--tinta);border-radius:0}
+body:has(#lista) .busca-grande input{font-weight:500}
+body:has(#lista) .busca-grande button{background:var(--oro);color:#fff;border-radius:0;font-weight:800;text-transform:uppercase;letter-spacing:.06em}
+body:has(#lista) .atajos{text-align:left}
+body:has(#lista) .atajos a{font-weight:600}
+body:has(#lista) .dia-personaje{border:0;border-left:3px solid var(--tinta);border-radius:0;box-shadow:none;background:var(--tinta);color:#fff;text-align:left;padding:28px}
+body:has(#lista) .dp-tag{color:var(--oro);letter-spacing:.14em}
+body:has(#lista) .dp-foto{margin:0 0 14px}
+body:has(#lista) .dp-foto img{width:100%;height:230px;border-radius:0;box-shadow:none;filter:grayscale(1) contrast(1.1)}
+body:has(#lista) .dia-personaje h2{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.02em}
+body:has(#lista) .dia-personaje h2 a,body:has(#lista) .dp-sub{color:#fff}
+body:has(#lista) .dp-sub{opacity:.7}
+body:has(#lista) .dp-txt{opacity:.85}
+body:has(#lista) .dp-leer{color:var(--oro)}
+body:has(#lista) .galeria{grid-template-columns:repeat(10,1fr);gap:0;padding:0;margin-top:24px;border:3px solid var(--tinta);max-width:1100px}
+body:has(#lista) .galeria .gal{position:relative;overflow:hidden;border-right:1px solid #fff}
+body:has(#lista) .galeria img{border-radius:0;border:0;box-shadow:none;max-width:none;aspect-ratio:3/4;filter:grayscale(1) contrast(1.1);transition:filter .3s,transform .3s}
+body:has(#lista) .galeria a:hover img{filter:none;transform:scale(1.04)}
+body:has(#lista) .galeria strong{position:absolute;left:0;right:0;bottom:0;margin:0;padding:18px 6px 6px;background:linear-gradient(transparent,rgba(0,0,0,.85));color:#fff;font-size:.72rem;font-weight:700;text-align:left}
+body:has(#lista) .galeria span{display:none}
+body:has(#lista) main{counter-reset:sec}
+body:has(#lista) .titulo-bloque{border-bottom:3px solid var(--tinta);margin:64px 0 20px;padding-bottom:10px;counter-increment:sec}
+body:has(#lista) .titulo-bloque h2{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.03em;font-size:2.4rem}
+body:has(#lista) .titulo-bloque h2::before{content:counter(sec,decimal-leading-zero);color:var(--oro);font-family:Inter,sans-serif;font-size:.9rem;font-weight:800;vertical-align:top;margin-right:12px;letter-spacing:0}
+body:has(#lista) .titulo-bloque a{font-weight:700;color:var(--tinta)}
+body:has(#lista) .efe,body:has(#lista) .gp,body:has(#lista) .acard,body:has(#lista) .region,body:has(#lista) .familia,body:has(#lista) .anecdota,body:has(#lista) .post-t,body:has(#lista) .blog-card{border-radius:0;border:2px solid var(--tinta);background:#fff;box-shadow:none;transition:transform .15s,box-shadow .15s}
+body:has(#lista) .efe:hover,body:has(#lista) .acard:hover,body:has(#lista) .region:hover,body:has(#lista) .familia:hover,body:has(#lista) .post-t:hover,body:has(#lista) .blog-card:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--tinta)}
+body:has(#lista) .efe{border-left-width:2px;background:var(--c);color:#fff}
+body:has(#lista) .efe .anyo{color:#fff;font-family:Fraunces,serif;font-weight:900}
+body:has(#lista) .efe em{color:rgba(255,255,255,.8)}
+body:has(#lista) .gp{border-top:10px solid var(--c)}
+body:has(#lista) .gp h3{font-family:Fraunces,serif;font-weight:900;color:var(--c)}
+body:has(#lista) .gp li img{border-radius:0;filter:grayscale(1)}
+body:has(#lista) .linea{border-radius:0;border:3px solid var(--tinta);min-height:190px}
+body:has(#lista) .tramo{border-right:2px solid var(--tinta)}
+body:has(#lista) .tramo strong{font-family:Fraunces,serif;font-weight:900;font-size:1.4rem;letter-spacing:-.02em}
+body:has(#lista) .tramo .num{font-size:1.4rem;font-weight:900;font-family:Fraunces,serif}
+body:has(#lista) .acard{background:#fff}
+body:has(#lista) .acard svg{stroke:var(--oro)}
+body:has(#lista) .acard strong{font-weight:700}
+body:has(#lista) .acard span{font-weight:800;color:var(--oro)}
+body:has(#lista) .region strong,body:has(#lista) .familia strong{font-family:Fraunces,serif;font-weight:900}
+body:has(#lista) .region .num{color:var(--oro)}
+body:has(#lista) .biblioteca{background:var(--oro);color:#fff;border-radius:0;border:3px solid var(--tinta);box-shadow:8px 8px 0 var(--tinta)}
+body:has(#lista) .biblioteca h2{font-family:Fraunces,serif;font-weight:900}
+body:has(#lista) .biblioteca .antetitulo{background:var(--tinta)}
+body:has(#lista) .boton{background:var(--tinta);border-radius:0}
+body:has(#lista) .anecdota .tag{color:var(--oro);font-weight:800}
+body:has(#lista) .anecdota h3{font-family:Fraunces,serif;font-weight:900}
+body:has(#lista) .curio-foto{border-radius:0;filter:grayscale(1);border:2px solid var(--tinta)}
+body:has(#lista) .pie{background:var(--tinta);color:#bbb;border:0;margin-top:72px;padding:40px 24px}
+body:has(#lista) .pie a{color:#fff}
+body:has(#lista) .periodo-tag{border-radius:0;padding:4px 12px;text-transform:uppercase;letter-spacing:.12em;font-size:.7rem}
+body:has(#lista) .ficha h1{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.035em;font-size:clamp(2.6rem,7vw,4.4rem);line-height:.95}
+body:has(#lista) .ficha header{border-bottom:3px solid var(--tinta);padding-bottom:16px}
+body:has(#lista) .ficha header .retrato img{border-radius:0;filter:grayscale(1) contrast(1.1);border:3px solid var(--tinta);box-shadow:8px 8px 0 var(--c)}
+body:has(#lista) .chip{border-radius:0;border:2px solid var(--tinta);font-weight:600}
+body:has(#lista) .texto{font-family:Fraunces,Georgia,serif;font-weight:300;font-size:1.15rem;line-height:1.75}
+body:has(#lista) .texto p:first-child::first-letter{font-family:Fraunces,serif;font-weight:900;font-size:4.4rem;color:var(--c)}
+body:has(#lista) #bio h3,body:has(#lista) .texto h2{font-family:Inter,sans-serif;font-weight:800;font-size:1.05rem;text-transform:uppercase;letter-spacing:.08em;color:var(--c)}
+body:has(#lista) .compartir a{border-radius:0}
+body:has(#lista) .curio{border-radius:0;border:2px solid var(--tinta);background:#fff}
+body:has(#lista) .explorar h1{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.04em;font-size:4rem;margin-bottom:6px}
+body:has(#lista) .chip.on{background:var(--oro);border-color:var(--tinta)}
+body:has(#lista) .posts-busca input{border-radius:0;border:2px solid var(--tinta)}
+body:has(#lista) .post-t img{border-radius:0;filter:grayscale(1)}
+body:has(#lista) .post-t:hover img{filter:none}
+body:has(#lista) .post-t strong{font-family:Fraunces,serif;font-weight:700}
+body:has(#lista) .blog-card{border-left:10px solid var(--oro)}
+body:has(#lista) .blog-card strong{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.02em}
+body:has(#lista) .blog-card .leer{color:var(--oro)}
+body:has(#lista) .aviso-cookies{border-radius:0;border:2px solid var(--tinta)}
+body:has(#lista) .aviso-cookies button{border-radius:0}
+@media (max-width:860px){body:has(#lista) .cab .menu a:not(.patreon):not(.facebook){background:#fff!important;color:var(--tinta)!important;border:2px solid var(--tinta);border-radius:0!important;font-weight:700}
+body:has(#lista) .portada-top{grid-template-columns:1fr}
+body:has(#lista) .dia-personaje{border-left:0;border-top:3px solid var(--tinta)}}
+@media (max-width:760px){body:has(#lista) .cab{padding:12px 16px}
+body:has(#lista) .portada-top{margin-top:16px}
+body:has(#lista) .hero{padding:24px 20px!important}
+body:has(#lista) .hero::after{font-size:5.5rem;bottom:-18px}
+body:has(#lista) .portada-top .hero h1{font-size:2.5rem}
+body:has(#lista) .galeria{grid-template-columns:repeat(6,1fr)}
+body:has(#lista) .galeria strong{display:none}
+body:has(#lista) .titulo-bloque h2{font-size:1.8rem}
+body:has(#lista) .explorar h1{font-size:2.8rem}
+body:has(#lista) .efe-lista{grid-template-columns:1fr}}
+body:has(#lista) #quiz-semanal>a{border:3px solid var(--tinta)!important;border-radius:0!important;background:#ffd84a!important}
+body:has(#lista) #quiz-semanal>a>span:last-child{background:var(--tinta)!important;border-radius:0!important;text-transform:uppercase;font-weight:800!important;letter-spacing:.06em}
+body:has(#lista) #quiz-semanal>a>span:first-child{font-family:Fraunces,serif;font-weight:900;font-size:4rem!important;line-height:1}
+body:has(#lista) .hero .antetitulo{color:#fff}
+body:has(#lista) .hero::after{color:#f1eee8}
+body:has(#lista) .portada-top .hero .antetitulo{color:#fff!important}
+body:has(#lista) .explorar h1{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.04em;font-size:clamp(2.6rem,6vw,4.4rem);line-height:.95;margin:40px 0 20px}
+body:has(#lista) .filtros{gap:0;border:3px solid var(--tinta);background:var(--tinta);grid-template-columns:2fr repeat(5,1fr)}
+body:has(#lista) .filtros input,body:has(#lista) .filtros select{border:0;border-right:1px solid var(--tinta);border-radius:0;padding:14px 12px;font:600 .9rem Inter,sans-serif;background:#fff;color:var(--tinta)}
+body:has(#lista) .filtros input{font-weight:500;font-size:1rem}
+body:has(#lista) .filtros select:last-child{border-right:0}
+body:has(#lista) .filtros input:focus,body:has(#lista) .filtros select:focus{outline:3px solid var(--oro);outline-offset:-3px}
+body:has(#lista) .total{font:800 .78rem Inter,sans-serif;text-transform:uppercase;letter-spacing:.14em;color:var(--tinta);border-bottom:3px solid var(--tinta);padding-bottom:8px;margin:28px 0 0}
+body:has(#lista) .pager button{border:3px solid var(--tinta);border-radius:0;background:var(--tinta);color:#fff;font:800 .85rem Inter,sans-serif;text-transform:uppercase;letter-spacing:.1em;padding:14px 32px}
+body:has(#lista) .pager button:hover{background:var(--oro);border-color:var(--oro)}
+body:has(#lista) #foto-dia>a{border:3px solid var(--tinta)!important;border-radius:0!important;background:var(--tinta)!important;color:#fff!important;padding:0!important;gap:28px!important;margin:24px 0 0!important;overflow:hidden}
+body:has(#lista) #foto-dia img{border-radius:0!important;width:150px!important;height:190px!important;filter:grayscale(1) contrast(1.1)}
+body:has(#lista) #foto-dia small{background:var(--oro)!important;border-radius:0!important;text-transform:uppercase;letter-spacing:.14em;font-weight:800;font-size:.7rem!important;padding:4px 10px!important}
+body:has(#lista) #foto-dia strong{font-family:Fraunces,serif!important;font-weight:900;font-size:2.2rem!important;letter-spacing:-.03em;line-height:1;margin:.5rem 0 .3rem!important}
+body:has(#lista) #foto-dia span[style*="667"]{color:#bbb!important}
+body:has(#lista) #foto-dia span[style*="font-weight:600"]{color:var(--oro)}
+@media (max-width:760px){body:has(#lista) .filtros{grid-template-columns:1fr 1fr!important}
+body:has(#lista) .filtros input{border-right:0;border-bottom:1px solid var(--tinta)}
+body:has(#lista) .filtros select{border-bottom:1px solid var(--tinta)}
+body:has(#lista) #foto-dia img{width:110px!important;height:140px!important}
+body:has(#lista) #foto-dia strong{font-size:1.5rem!important}
+body:has(#lista) #foto-dia>a{gap:16px!important}}
+body:has(#lista) .lista li a{grid-template-columns:110px minmax(0,1fr) auto;grid-template-rows:auto auto;gap:2px 24px;padding:18px 8px;border:0;border-bottom:1px solid var(--tinta);border-radius:0;background:transparent;margin:0;transition:background .15s,padding .15s}
+body:has(#lista) .lista .fechas{grid-column:1;grid-row:1/3;text-align:left;font:800 .95rem Inter,sans-serif;color:var(--tinta);letter-spacing:-.01em;align-self:center}
+body:has(#lista) .lista strong{grid-column:2;font-family:Fraunces,serif;font-weight:900;font-size:1.65rem;letter-spacing:-.025em;line-height:1.05;color:var(--tinta)}
+body:has(#lista) .lista .desc{grid-column:2;color:var(--suave);font-size:.92rem}
+body:has(#lista) .lista .tag{grid-column:3;grid-row:1/3;align-self:center;background:var(--c);color:#fff;padding:5px 10px;text-transform:uppercase;letter-spacing:.12em;font-size:.66rem;font-weight:800}
+body:has(#lista) .lista li a:hover{background:var(--c);padding-left:20px}
+body:has(#lista) .lista li a:hover *{color:#fff}
+@media (max-width:760px){body:has(#lista) .lista li a{grid-template-columns:minmax(0,1fr) auto;padding:14px 4px}
+body:has(#lista) .lista .fechas{grid-column:1;grid-row:3;font-size:.8rem}
+body:has(#lista) .lista strong{grid-column:1;font-size:1.3rem}
+body:has(#lista) .lista .desc{grid-column:1}
+body:has(#lista) .lista .tag{grid-column:2;grid-row:1/4}}
+body:has(section.maestro),body:has(section.maestro):not([data-theme=light]){--papel:#ffffff;--tinta:#111111;--suave:#5c5c5c;--linea:#e6e6e6;--oro:#e8452c;--blanco:#f4f2ee;--marca:#e8452c;
+--medieval:#6b3fa0;--renacimiento:#0f8a6a;--barroco:#e08a00;--clasicismo:#2357d8;--romanticismo:#d6283c;--siglo-xx:#222222;--contemporaneo:#00a3b4}
+body:has(section.maestro){background:#fff;color:var(--tinta);font-family:Inter,system-ui,sans-serif}
+body:has(section.maestro) h1,body:has(section.maestro) h2,body:has(section.maestro) .marca{font-family:Fraunces,Georgia,serif}
+body:has(section.maestro) .cab{background:#fff;border-bottom:3px solid var(--tinta);padding:12px 32px}
+body:has(section.maestro) .marca{font-weight:900;font-size:1.9rem;letter-spacing:-.03em}
+body:has(section.maestro) .marca .logo{color:var(--oro)}
+body:has(section.maestro) .cab .menu{font-weight:600;font-size:.88rem;gap:1.2rem}
+body:has(section.maestro) .cab .menu a{opacity:1}
+body:has(section.maestro) .cab .menu .patreon{background:var(--tinta);border-radius:0}
+body:has(section.maestro) .cab .menu a.facebook{border-radius:0}
+body:has(section.maestro) .portada-top{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:0;padding:0;margin-top:32px;border:3px solid var(--tinta);align-items:stretch}
+body:has(section.maestro) .hero{text-align:left;padding:40px 40px 34px!important;background:#fff;position:relative;overflow:hidden}
+body:has(section.maestro) .hero::after{content:'22.403';position:absolute;right:-10px;bottom:-34px;font-family:Fraunces,serif;font-weight:900;font-size:9rem;letter-spacing:-.05em;color:var(--blanco);z-index:0;line-height:1}
+body:has(section.maestro) .hero>*{position:relative;z-index:1}
+body:has(section.maestro) .antetitulo{display:inline-block;background:var(--oro);color:#fff!important;padding:4px 10px;letter-spacing:.14em;font-size:.72rem}
+body:has(section.maestro) .portada-top .hero h1{font-size:clamp(2.6rem,5.8vw,4.6rem);font-weight:900;letter-spacing:-.035em;line-height:.95;margin:18px 0 20px}
+body:has(section.maestro) .entradilla{margin:0 0 24px;color:#333;font-size:1.05rem}
+body:has(section.maestro) .entradilla a{text-decoration:none;box-shadow:inset 0 -.45em 0 rgba(232,69,44,.25)}
+body:has(section.maestro) .busca-grande{margin:0;border:2px solid var(--tinta);border-radius:0}
+body:has(section.maestro) .busca-grande input{font-weight:500}
+body:has(section.maestro) .busca-grande button{background:var(--oro);color:#fff;border-radius:0;font-weight:800;text-transform:uppercase;letter-spacing:.06em}
+body:has(section.maestro) .atajos{text-align:left}
+body:has(section.maestro) .atajos a{font-weight:600}
+body:has(section.maestro) .dia-personaje{border:0;border-left:3px solid var(--tinta);border-radius:0;box-shadow:none;background:var(--tinta);color:#fff;text-align:left;padding:28px}
+body:has(section.maestro) .dp-tag{color:var(--oro);letter-spacing:.14em}
+body:has(section.maestro) .dp-foto{margin:0 0 14px}
+body:has(section.maestro) .dp-foto img{width:100%;height:230px;border-radius:0;box-shadow:none;filter:grayscale(1) contrast(1.1)}
+body:has(section.maestro) .dia-personaje h2{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.02em}
+body:has(section.maestro) .dia-personaje h2 a,body:has(section.maestro) .dp-sub{color:#fff}
+body:has(section.maestro) .dp-sub{opacity:.7}
+body:has(section.maestro) .dp-txt{opacity:.85}
+body:has(section.maestro) .dp-leer{color:var(--oro)}
+body:has(section.maestro) .galeria{grid-template-columns:repeat(10,1fr);gap:0;padding:0;margin-top:24px;border:3px solid var(--tinta);max-width:1100px}
+body:has(section.maestro) .galeria .gal{position:relative;overflow:hidden;border-right:1px solid #fff}
+body:has(section.maestro) .galeria img{border-radius:0;border:0;box-shadow:none;max-width:none;aspect-ratio:3/4;filter:grayscale(1) contrast(1.1);transition:filter .3s,transform .3s}
+body:has(section.maestro) .galeria a:hover img{filter:none;transform:scale(1.04)}
+body:has(section.maestro) .galeria strong{position:absolute;left:0;right:0;bottom:0;margin:0;padding:18px 6px 6px;background:linear-gradient(transparent,rgba(0,0,0,.85));color:#fff;font-size:.72rem;font-weight:700;text-align:left}
+body:has(section.maestro) .galeria span{display:none}
+body:has(section.maestro) main{counter-reset:sec}
+body:has(section.maestro) .titulo-bloque{border-bottom:3px solid var(--tinta);margin:64px 0 20px;padding-bottom:10px;counter-increment:sec}
+body:has(section.maestro) .titulo-bloque h2{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.03em;font-size:2.4rem}
+body:has(section.maestro) .titulo-bloque h2::before{content:counter(sec,decimal-leading-zero);color:var(--oro);font-family:Inter,sans-serif;font-size:.9rem;font-weight:800;vertical-align:top;margin-right:12px;letter-spacing:0}
+body:has(section.maestro) .titulo-bloque a{font-weight:700;color:var(--tinta)}
+body:has(section.maestro) .efe,body:has(section.maestro) .gp,body:has(section.maestro) .acard,body:has(section.maestro) .region,body:has(section.maestro) .familia,body:has(section.maestro) .anecdota,body:has(section.maestro) .post-t,body:has(section.maestro) .blog-card{border-radius:0;border:2px solid var(--tinta);background:#fff;box-shadow:none;transition:transform .15s,box-shadow .15s}
+body:has(section.maestro) .efe:hover,body:has(section.maestro) .acard:hover,body:has(section.maestro) .region:hover,body:has(section.maestro) .familia:hover,body:has(section.maestro) .post-t:hover,body:has(section.maestro) .blog-card:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--tinta)}
+body:has(section.maestro) .efe{border-left-width:2px;background:var(--c);color:#fff}
+body:has(section.maestro) .efe .anyo{color:#fff;font-family:Fraunces,serif;font-weight:900}
+body:has(section.maestro) .efe em{color:rgba(255,255,255,.8)}
+body:has(section.maestro) .gp{border-top:10px solid var(--c)}
+body:has(section.maestro) .gp h3{font-family:Fraunces,serif;font-weight:900;color:var(--c)}
+body:has(section.maestro) .gp li img{border-radius:0;filter:grayscale(1)}
+body:has(section.maestro) .linea{border-radius:0;border:3px solid var(--tinta);min-height:190px}
+body:has(section.maestro) .tramo{border-right:2px solid var(--tinta)}
+body:has(section.maestro) .tramo strong{font-family:Fraunces,serif;font-weight:900;font-size:1.4rem;letter-spacing:-.02em}
+body:has(section.maestro) .tramo .num{font-size:1.4rem;font-weight:900;font-family:Fraunces,serif}
+body:has(section.maestro) .acard{background:#fff}
+body:has(section.maestro) .acard svg{stroke:var(--oro)}
+body:has(section.maestro) .acard strong{font-weight:700}
+body:has(section.maestro) .acard span{font-weight:800;color:var(--oro)}
+body:has(section.maestro) .region strong,body:has(section.maestro) .familia strong{font-family:Fraunces,serif;font-weight:900}
+body:has(section.maestro) .region .num{color:var(--oro)}
+body:has(section.maestro) .biblioteca{background:var(--oro);color:#fff;border-radius:0;border:3px solid var(--tinta);box-shadow:8px 8px 0 var(--tinta)}
+body:has(section.maestro) .biblioteca h2{font-family:Fraunces,serif;font-weight:900}
+body:has(section.maestro) .biblioteca .antetitulo{background:var(--tinta)}
+body:has(section.maestro) .boton{background:var(--tinta);border-radius:0}
+body:has(section.maestro) .anecdota .tag{color:var(--oro);font-weight:800}
+body:has(section.maestro) .anecdota h3{font-family:Fraunces,serif;font-weight:900}
+body:has(section.maestro) .curio-foto{border-radius:0;filter:grayscale(1);border:2px solid var(--tinta)}
+body:has(section.maestro) .pie{background:var(--tinta);color:#bbb;border:0;margin-top:72px;padding:40px 24px}
+body:has(section.maestro) .pie a{color:#fff}
+body:has(section.maestro) .periodo-tag{border-radius:0;padding:4px 12px;text-transform:uppercase;letter-spacing:.12em;font-size:.7rem}
+body:has(section.maestro) .ficha h1{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.035em;font-size:clamp(2.6rem,7vw,4.4rem);line-height:.95}
+body:has(section.maestro) .ficha header{border-bottom:3px solid var(--tinta);padding-bottom:16px}
+body:has(section.maestro) .ficha header .retrato img{border-radius:0;filter:grayscale(1) contrast(1.1);border:3px solid var(--tinta);box-shadow:8px 8px 0 var(--c)}
+body:has(section.maestro) .chip{border-radius:0;border:2px solid var(--tinta);font-weight:600}
+body:has(section.maestro) .texto{font-family:Fraunces,Georgia,serif;font-weight:300;font-size:1.15rem;line-height:1.75}
+body:has(section.maestro) .texto p:first-child::first-letter{font-family:Fraunces,serif;font-weight:900;font-size:4.4rem;color:var(--c)}
+body:has(section.maestro) #bio h3,body:has(section.maestro) .texto h2{font-family:Inter,sans-serif;font-weight:800;font-size:1.05rem;text-transform:uppercase;letter-spacing:.08em;color:var(--c)}
+body:has(section.maestro) .compartir a{border-radius:0}
+body:has(section.maestro) .curio{border-radius:0;border:2px solid var(--tinta);background:#fff}
+body:has(section.maestro) .explorar h1{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.04em;font-size:4rem;margin-bottom:6px}
+body:has(section.maestro) .chip.on{background:var(--oro);border-color:var(--tinta)}
+body:has(section.maestro) .posts-busca input{border-radius:0;border:2px solid var(--tinta)}
+body:has(section.maestro) .post-t img{border-radius:0;filter:grayscale(1)}
+body:has(section.maestro) .post-t:hover img{filter:none}
+body:has(section.maestro) .post-t strong{font-family:Fraunces,serif;font-weight:700}
+body:has(section.maestro) .blog-card{border-left:10px solid var(--oro)}
+body:has(section.maestro) .blog-card strong{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.02em}
+body:has(section.maestro) .blog-card .leer{color:var(--oro)}
+body:has(section.maestro) .aviso-cookies{border-radius:0;border:2px solid var(--tinta)}
+body:has(section.maestro) .aviso-cookies button{border-radius:0}
+@media (max-width:860px){body:has(section.maestro) .cab .menu a:not(.patreon):not(.facebook){background:#fff!important;color:var(--tinta)!important;border:2px solid var(--tinta);border-radius:0!important;font-weight:700}
+body:has(section.maestro) .portada-top{grid-template-columns:1fr}
+body:has(section.maestro) .dia-personaje{border-left:0;border-top:3px solid var(--tinta)}}
+@media (max-width:760px){body:has(section.maestro) .cab{padding:12px 16px}
+body:has(section.maestro) .portada-top{margin-top:16px}
+body:has(section.maestro) .hero{padding:24px 20px!important}
+body:has(section.maestro) .hero::after{font-size:5.5rem;bottom:-18px}
+body:has(section.maestro) .portada-top .hero h1{font-size:2.5rem}
+body:has(section.maestro) .galeria{grid-template-columns:repeat(6,1fr)}
+body:has(section.maestro) .galeria strong{display:none}
+body:has(section.maestro) .titulo-bloque h2{font-size:1.8rem}
+body:has(section.maestro) .explorar h1{font-size:2.8rem}
+body:has(section.maestro) .efe-lista{grid-template-columns:1fr}}
+body:has(section.maestro) #quiz-semanal>a{border:3px solid var(--tinta)!important;border-radius:0!important;background:#ffd84a!important}
+body:has(section.maestro) #quiz-semanal>a>span:last-child{background:var(--tinta)!important;border-radius:0!important;text-transform:uppercase;font-weight:800!important;letter-spacing:.06em}
+body:has(section.maestro) #quiz-semanal>a>span:first-child{font-family:Fraunces,serif;font-weight:900;font-size:4rem!important;line-height:1}
+body:has(section.maestro) .hero .antetitulo{color:#fff}
+body:has(section.maestro) .hero::after{color:#f1eee8}
+body:has(section.maestro) .portada-top .hero .antetitulo{color:#fff!important}
+body:has(section.maestro) .explorar h1{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.04em;font-size:clamp(2.6rem,6vw,4.4rem);line-height:.95;margin:40px 0 14px}
+body:has(section.maestro) .explorar>.entradilla{margin:0 0 22px;max-width:680px;color:#333;font-size:1.05rem}
+body:has(section.maestro) .explorar>.chips{gap:0;border:3px solid var(--tinta);display:inline-flex;flex-wrap:wrap}
+body:has(section.maestro) .explorar>.chips .chip{border:0;border-right:1px solid var(--tinta);border-radius:0;padding:10px 14px;font-weight:700;background:#fff}
+body:has(section.maestro) .explorar>.chips .chip:last-child{border-right:0}
+body:has(section.maestro) .explorar>.chips .chip:hover{background:var(--tinta);color:#fff}
+body:has(section.maestro) .maestro .fechas{font:800 .9rem Inter,sans-serif;letter-spacing:0;color:var(--oro);margin-left:10px;vertical-align:middle}
+body:has(section.maestro) .maestro h2 a{color:inherit;text-decoration:none}
+body:has(section.maestro) .maestro h2 a:hover{box-shadow:inset 0 -.3em 0 rgba(232,69,44,.35)}
+@media (max-width:760px){body:has(section.maestro) .explorar>.chips{display:flex}
+body:has(section.maestro) .explorar>.chips .chip{flex:1 1 45%;border-bottom:1px solid var(--tinta)}}
+body:has(section.maestro) .maestro{display:grid;grid-template-columns:300px minmax(0,1fr);gap:0 40px;border-top:3px solid var(--tinta);margin:44px 0 0;padding-top:18px}
+body:has(section.maestro) .maestro h2{grid-column:1;grid-row:1/4;margin:0;font-family:Fraunces,serif;font-weight:900;font-size:2.3rem;letter-spacing:-.035em;line-height:1}
+body:has(section.maestro) .maestro h2 .fechas{display:block;margin:10px 0 0;font-size:1rem;color:var(--oro)}
+body:has(section.maestro) .maestro .nota{grid-column:2;margin:0 0 14px;font-size:.92rem;color:#444}
+body:has(section.maestro) .maestro .nota a{color:var(--tinta);font-weight:600}
+body:has(section.maestro) .maestro p:not(.nota){grid-column:2;margin:0;columns:3 180px;column-gap:28px;font-size:0}
+body:has(section.maestro) .maestro p:not(.nota) strong{display:block;column-span:all;font:800 .74rem Inter,sans-serif;text-transform:uppercase;letter-spacing:.14em;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--linea)}
+body:has(section.maestro) .maestro p:not(.nota) a{display:block;font-size:.92rem;padding:3px 0;color:var(--tinta);text-decoration:none;break-inside:avoid;border-bottom:1px dotted #ccc}
+body:has(section.maestro) .maestro p:not(.nota) a:hover{color:var(--oro)}
+@media (max-width:860px){body:has(section.maestro) .maestro{display:block}
+body:has(section.maestro) .maestro h2{font-size:1.8rem;margin-bottom:12px}
+body:has(section.maestro) .maestro p:not(.nota){columns:2 140px}}
+/* === fin diseño Explorar y Maestros === */
