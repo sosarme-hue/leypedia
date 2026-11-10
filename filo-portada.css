@@ -1,0 +1,105 @@
+@charset "utf-8";
+/* Filopedia - diseno C "Ensayo" (solo portada, 10-11-2026) */
+:root{--papel:#fbfaf6;--blanco:#ffffff;--tinta:#111111;--suave:#55595e;--linea:#111111;--marca:#2f6f9f;--ocre:#f2c230;--azul:#2f6f9f;--celeste:#a9d0ee;--amarillo:#f2c230;--negro:#111}
+body{background:var(--papel)}
+h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:clamp(2.2rem,4.4vw,3.4rem);letter-spacing:-.01em;line-height:1;margin:80px 0 22px;padding-top:16px;border-top:6px solid var(--negro)}
+.titulo-bloque{align-items:flex-end;border-top:6px solid var(--negro);margin-top:80px;padding-top:16px;margin-bottom:22px}
+.titulo-bloque h2{border:0;margin:0;padding:0}
+.titulo-bloque a,.titulo-bloque .fecha-hoy{color:var(--negro);font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.1em;text-decoration:none;border-bottom:3px solid var(--amarillo)}
+.nota{font-size:1rem;color:var(--suave);margin-top:-8px}
+/* cabecera blanca, linea negra */
+.cab{background:var(--blanco)!important;border-bottom:3px solid var(--negro)!important;padding:12px 24px!important}
+.cab .marca,.cab .menu a,.cab .idioma a{color:var(--negro)!important}
+.cab .marca{font-size:1.75rem}
+.cab .menu a{font-weight:600;font-size:.86rem!important}
+.cab .menu a:hover{color:var(--azul)!important;text-decoration:none!important;box-shadow:inset 0 -3px 0 var(--amarillo)}
+.cab .idioma a{background:var(--negro);color:#fff!important;padding:4px 10px;text-decoration:none;font-weight:600}
+/* portada */
+.hero.portada{padding:56px 0 40px}
+.portada .logo-hero{width:64px!important;height:64px!important}
+.nombre-hero{color:var(--negro)!important;font-size:clamp(4rem,11vw,8.6rem);line-height:.86;letter-spacing:-.035em;margin:10px 0 18px!important}
+.portada .lema{font-style:italic;font-size:clamp(1.5rem,3vw,2.2rem)!important;line-height:1.15;max-width:15em;padding-left:18px;border-left:8px solid var(--amarillo)}
+.portada .entradilla{font-size:1.1rem!important;color:var(--suave);max-width:34em}
+.busca-grande{border:3px solid var(--negro);border-radius:0;box-shadow:8px 8px 0 var(--azul)}
+.busca-grande input{font-size:1.1rem;padding:16px 20px}
+.busca-grande button{background:var(--negro);border-radius:0;font-size:1rem;padding:0 28px}
+.busca-grande button:hover{background:var(--azul)}
+/* autor del dia con bloque de color desplazado */
+.autor-dia{text-align:left}
+.autor-dia .et{display:inline-block;background:var(--amarillo);color:var(--negro);padding:4px 10px;letter-spacing:.12em;font-size:.72rem;margin-bottom:16px}
+.autor-dia img{margin:0!important;border:0!important;outline:0!important;max-height:420px;box-shadow:18px 18px 0 var(--azul)!important}
+.autor-dia h3{font-size:2.2rem;margin:30px 0 4px;line-height:1}
+.autor-dia .f{margin:0!important;font-size:.95rem}
+/* galeria: tiras de retratos cuadrados */
+.galeria{border-top:3px solid var(--negro);border-bottom:3px solid var(--negro);padding:18px 0 4px!important;column-gap:0!important}
+.galeria .gal{padding:0 6px}
+.galeria img{border-radius:0!important;border:0!important;box-shadow:none!important;filter:grayscale(1) contrast(1.1);width:100%!important;aspect-ratio:1!important;height:auto!important;transition:filter .25s}
+.galeria a:hover img{filter:none;transform:none!important}
+.galeria strong{font-size:.8rem!important;font-weight:700;text-align:left}
+.galeria span{text-align:left}
+/* tres puertas: bloques de color */
+.secciones{gap:0;border:3px solid var(--negro)}
+.seccion{border:0!important;border-radius:0!important;padding:30px 26px 30px!important;min-height:230px;justify-content:flex-end;color:#fff;background:var(--azul)}
+.secciones .seccion:nth-child(2){background:var(--amarillo);color:var(--negro)}
+.secciones .seccion:nth-child(3){background:var(--negro)}
+.seccion strong{font-size:2.6rem!important;letter-spacing:-.01em}
+.seccion span{color:inherit!important;opacity:.85;font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:.75rem!important}
+.seccion em{opacity:.85}
+.secciones .seccion:hover{filter:brightness(1.08)}
+#explora .secciones{border:0;gap:24px}
+#explora .seccion{background:var(--blanco);color:var(--negro);min-height:0;justify-content:flex-start;border:3px solid var(--negro)!important;box-shadow:8px 8px 0 var(--celeste)}
+#explora .seccion:hover{box-shadow:8px 8px 0 var(--amarillo)}
+#explora .seccion strong{font-size:1.8rem!important}
+#explora .seccion span{text-transform:none;letter-spacing:0;font-weight:400;font-size:.92rem!important;color:var(--suave)!important;opacity:1}
+/* un dia como hoy: lista con anos grandes */
+.efe-lista{gap:0;border-top:1px solid var(--negro)}
+.efe{background:transparent!important;border:0!important;border-bottom:1px solid var(--negro)!important;border-radius:0!important;padding:16px 8px!important}
+.efe .anyo{font-family:Inter,system-ui,sans-serif!important;font-weight:700;font-size:1.7rem!important;color:var(--azul)!important;letter-spacing:-.03em}
+.efe img{filter:grayscale(1);border-radius:0!important}
+.efe:hover{background:var(--amarillo)!important}
+#quiz-diario{--qbg:var(--amarillo)!important;--qln:var(--negro)!important;--qac:var(--negro)!important;--qtx:var(--negro)!important}
+#quiz-diario a[style]{border-radius:0!important;border-width:3px!important}
+/* idea, cita y curiosidad: columnas de periodico */
+.dia{gap:0!important;border-top:6px solid var(--negro);margin-top:80px}
+.dia>div{background:transparent!important;border:0!important;border-radius:0!important;padding:16px 26px 10px!important;border-right:1px solid var(--negro)!important}
+.dia>div:last-child{border-right:0!important}.dia>div:first-child{padding-left:0!important}
+.dia h2{border:0;padding:0;margin:0 0 16px;font-size:1.9rem}
+.curio-foto{border-radius:0!important;border:0!important;box-shadow:6px 6px 0 var(--celeste)!important;filter:grayscale(1)}
+.cita-dia{border-left:0!important;padding-left:0!important}
+.cita-dia p{font-size:1.7rem!important;line-height:1.2!important}
+.cita-dia p::first-letter{color:var(--azul)}
+/* epocas: indice en tres columnas, sin numeros */
+#epocas .linea{grid-template-columns:repeat(3,minmax(0,1fr));gap:0 32px}
+#epocas .tramo{border:0!important;border-radius:0!important;border-bottom:1px solid var(--negro)!important;background:transparent!important;padding:14px 0!important;flex-direction:column;align-items:flex-start;gap:2px}
+#epocas .tramo .n{display:none}
+#epocas .tramo strong{font-size:1.45rem}
+#epocas .tramo span{font-variant-numeric:tabular-nums}
+#epocas .tramo:hover strong{color:var(--azul);box-shadow:inset 0 -6px 0 var(--amarillo)}
+/* autores destacados: mosaico en blanco y negro */
+.rejilla{gap:0!important;grid-template-columns:repeat(6,minmax(0,1fr));border-left:1px solid var(--negro);border-top:1px solid var(--negro)}
+.pcard{background:transparent!important;border:0!important;border-right:1px solid var(--negro)!important;border-bottom:1px solid var(--negro)!important;border-radius:0!important;padding:0 0 12px!important;align-items:flex-start!important;text-align:left!important}
+.pcard img{width:100%!important;height:200px!important;border-radius:0!important;filter:grayscale(1) contrast(1.05);transition:filter .25s}
+.pcard:hover img{filter:none}.pcard:hover{background:var(--amarillo)!important}
+.pcard strong,.pcard span{padding:0 12px}
+.pcard strong{font-weight:700;margin-top:10px!important}
+/* corrientes */
+.chip{border-radius:999px!important;border:2px solid var(--negro)!important;background:transparent!important;color:var(--negro)!important;font-weight:600;font-size:.85rem!important;padding:5px 14px!important}
+.chip:hover{background:var(--negro)!important;color:#fff!important}
+/* pie */
+.pie{background:var(--negro)!important;border:0!important;padding-top:34px!important;border-top:10px solid var(--amarillo)!important}
+.pie,.pie a{color:#e9e9e9!important}
+@media (min-width:960px){.portada{grid-template-columns:minmax(0,1fr) minmax(0,380px)!important;gap:60px!important}}
+@media (max-width:900px){.rejilla{grid-template-columns:repeat(4,minmax(0,1fr))}#epocas .linea{grid-template-columns:repeat(2,minmax(0,1fr))}.dia>div{border-right:0!important;border-bottom:1px solid var(--negro)!important;padding:16px 0!important}}
+@media (max-width:700px){
+ .nombre-hero{font-size:4.2rem}
+ .autor-dia img{box-shadow:12px 12px 0 var(--azul)!important}
+ .secciones .seccion{min-height:0}
+ #epocas .linea{grid-template-columns:1fr}
+ .rejilla{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .pcard img{height:190px!important}
+ h2,.titulo-bloque{margin-top:56px}
+}
+@media (max-width:700px){.galeria{grid-template-columns:repeat(4,minmax(0,1fr))!important;display:grid!important;grid-auto-rows:auto!important;overflow:visible!important}.galeria .gal:nth-child(n+9){display:none}}
+@media (max-width:959px){.portada .lema{border-left:0;padding-left:0;margin:0 auto 14px!important}.portada .lema span,.portada .lema{text-decoration:underline;text-decoration-color:var(--amarillo);text-decoration-thickness:.22em;text-underline-offset:.06em;text-decoration-skip-ink:none}}
+@media (max-width:700px){.busca-grande{box-shadow:5px 5px 0 var(--azul);margin-right:5px!important}}
+@media (max-width:959px){.autor-dia{text-align:center}.autor-dia img{margin:0 auto!important}}
