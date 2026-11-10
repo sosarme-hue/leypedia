@@ -1,0 +1,257 @@
+{
+ "sitio": "catdogpedia.com",
+ "articulos": [
+  {
+   "clave": "petardos-perro-gato-miedo",
+   "fecha": "2026-11-09",
+   "archivos": [
+    "blog/petardos-perro-gato-miedo.html",
+    "en/blog/fireworks-dog-cat-fear.html"
+   ],
+   "urls": [
+    "https://catdogpedia.com/blog/petardos-perro-gato-miedo.html",
+    "https://catdogpedia.com/en/blog/fireworks-dog-cat-fear.html"
+   ]
+  },
+  {
+   "clave": "peligros-navidad-perros-gatos",
+   "fecha": "2026-11-10",
+   "archivos": [
+    "blog/peligros-navidad-perros-gatos.html",
+    "en/blog/christmas-dangers-dogs-cats.html"
+   ],
+   "urls": [
+    "https://catdogpedia.com/blog/peligros-navidad-perros-gatos.html",
+    "https://catdogpedia.com/en/blog/christmas-dangers-dogs-cats.html"
+   ]
+  },
+  {
+   "clave": "regalar-mascota-navidad",
+   "fecha": "2026-11-10",
+   "archivos": [
+    "blog/regalar-mascota-navidad.html",
+    "en/blog/giving-a-pet-at-christmas.html"
+   ],
+   "urls": [
+    "https://catdogpedia.com/blog/regalar-mascota-navidad.html",
+    "https://catdogpedia.com/en/blog/giving-a-pet-at-christmas.html"
+   ]
+  },
+  {
+   "clave": "abrigo-perro-frio",
+   "fecha": "2026-11-17",
+   "archivos": [
+    "blog/abrigo-perro-frio.html",
+    "en/blog/does-my-dog-need-a-coat.html"
+   ],
+   "urls": [
+    "https://catdogpedia.com/blog/abrigo-perro-frio.html",
+    "https://catdogpedia.com/en/blog/does-my-dog-need-a-coat.html"
+   ]
+  },
+  {
+   "clave": "black-friday-mascotas",
+   "fecha": "2026-11-24",
+   "archivos": [
+    "blog/black-friday-mascotas.html",
+    "en/blog/black-friday-pet-shopping.html"
+   ],
+   "urls": [
+    "https://catdogpedia.com/blog/black-friday-mascotas.html",
+    "https://catdogpedia.com/en/blog/black-friday-pet-shopping.html"
+   ]
+  },
+  {
+   "clave": "gato-arbol-navidad",
+   "fecha": "2026-12-01",
+   "archivos": [
+    "blog/gato-arbol-navidad.html",
+    "en/blog/cat-and-christmas-tree.html"
+   ],
+   "urls": [
+    "https://catdogpedia.com/blog/gato-arbol-navidad.html",
+    "https://catdogpedia.com/en/blog/cat-and-christmas-tree.html"
+   ]
+  },
+  {
+   "clave": "viajar-navidad-perro-gato",
+   "fecha": "2026-12-08",
+   "archivos": [
+    "blog/viajar-navidad-perro-gato.html",
+    "en/blog/travelling-at-christmas-with-pets.html"
+   ],
+   "urls": [
+    "https://catdogpedia.com/blog/viajar-navidad-perro-gato.html",
+    "https://catdogpedia.com/en/blog/travelling-at-christmas-with-pets.html"
+   ]
+  },
+  {
+   "clave": "regalos-perros-gatos",
+   "fecha": "2026-12-15",
+   "archivos": [
+    "blog/regalos-perros-gatos.html",
+    "en/blog/safe-gifts-for-dogs-and-cats.html"
+   ],
+   "urls": [
+    "https://catdogpedia.com/blog/regalos-perros-gatos.html",
+    "https://catdogpedia.com/en/blog/safe-gifts-for-dogs-and-cats.html"
+   ]
+  },
+  {
+   "clave": "perros-gatos-mayores-invierno",
+   "fecha": "2026-12-22",
+   "archivos": [
+    "blog/perros-gatos-mayores-invierno.html",
+    "en/blog/older-dogs-and-cats-in-winter.html"
+   ],
+   "urls": [
+    "https://catdogpedia.com/blog/perros-gatos-mayores-invierno.html",
+    "https://catdogpedia.com/en/blog/older-dogs-and-cats-in-winter.html"
+   ]
+  },
+  {
+   "clave": "propositos-ano-nuevo-mascota",
+   "fecha": "2026-12-29",
+   "archivos": [
+    "blog/propositos-ano-nuevo-mascota.html",
+    "en/blog/new-year-resolutions-with-your-pet.html"
+   ],
+   "urls": [
+    "https://catdogpedia.com/blog/propositos-ano-nuevo-mascota.html",
+    "https://catdogpedia.com/en/blog/new-year-resolutions-with-your-pet.html"
+   ]
+  },
+  {
+   "clave": "cachorro-nuevo-primeros-dias",
+   "fecha": "2027-01-05",
+   "archivos": [
+    "blog/cachorro-nuevo-primeros-dias.html",
+    "en/blog/new-puppy-first-days.html"
+   ],
+   "urls": [
+    "https://catdogpedia.com/blog/cachorro-nuevo-primeros-dias.html",
+    "https://catdogpedia.com/en/blog/new-puppy-first-days.html"
+   ]
+  }
+ ],
+ "indices": [
+  {
+   "fecha": "2026-11-09",
+   "archivos": [
+    "blog/index.html",
+    "index.html",
+    "assets/buscar.json",
+    "en/blog/index.html",
+    "en/index.html",
+    "en/assets/buscar.json"
+   ]
+  },
+  {
+   "fecha": "2026-11-10",
+   "archivos": [
+    "blog/index.html",
+    "index.html",
+    "assets/buscar.json",
+    "en/blog/index.html",
+    "en/index.html",
+    "en/assets/buscar.json"
+   ]
+  },
+  {
+   "fecha": "2026-11-17",
+   "archivos": [
+    "blog/index.html",
+    "index.html",
+    "assets/buscar.json",
+    "en/blog/index.html",
+    "en/index.html",
+    "en/assets/buscar.json"
+   ]
+  },
+  {
+   "fecha": "2026-11-24",
+   "archivos": [
+    "blog/index.html",
+    "index.html",
+    "assets/buscar.json",
+    "en/blog/index.html",
+    "en/index.html",
+    "en/assets/buscar.json"
+   ]
+  },
+  {
+   "fecha": "2026-12-01",
+   "archivos": [
+    "blog/index.html",
+    "index.html",
+    "assets/buscar.json",
+    "en/blog/index.html",
+    "en/index.html",
+    "en/assets/buscar.json"
+   ]
+  },
+  {
+   "fecha": "2026-12-08",
+   "archivos": [
+    "blog/index.html",
+    "index.html",
+    "assets/buscar.json",
+    "en/blog/index.html",
+    "en/index.html",
+    "en/assets/buscar.json"
+   ]
+  },
+  {
+   "fecha": "2026-12-15",
+   "archivos": [
+    "blog/index.html",
+    "index.html",
+    "assets/buscar.json",
+    "en/blog/index.html",
+    "en/index.html",
+    "en/assets/buscar.json"
+   ]
+  },
+  {
+   "fecha": "2026-12-22",
+   "archivos": [
+    "blog/index.html",
+    "index.html",
+    "assets/buscar.json",
+    "en/blog/index.html",
+    "en/index.html",
+    "en/assets/buscar.json"
+   ]
+  },
+  {
+   "fecha": "2026-12-29",
+   "archivos": [
+    "blog/index.html",
+    "index.html",
+    "assets/buscar.json",
+    "en/blog/index.html",
+    "en/index.html",
+    "en/assets/buscar.json"
+   ]
+  },
+  {
+   "fecha": "2027-01-05",
+   "archivos": [
+    "blog/index.html",
+    "index.html",
+    "assets/buscar.json",
+    "en/blog/index.html",
+    "en/index.html",
+    "en/assets/buscar.json"
+   ]
+  }
+ ],
+ "urls_portadas": [
+  "https://catdogpedia.com/blog/",
+  "https://catdogpedia.com/en/blog/"
+ ],
+ "sitemap": {
+  "archivo": "sitemap.xml",
+  "modo": "anadir"
+ }
+}
