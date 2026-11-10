@@ -95,8 +95,8 @@ h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:clam
  .autor-dia img{box-shadow:12px 12px 0 var(--azul)!important}
  .secciones .seccion{min-height:0}
  #epocas .linea{grid-template-columns:1fr}
- .rejilla{grid-template-columns:repeat(2,minmax(0,1fr))}
- .pcard img{height:190px!important}
+ .rejilla{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .pcard img{height:128px!important}.pcard strong{font-size:.8rem!important}.pcard span{font-size:.72rem!important}
  h2,.titulo-bloque{margin-top:56px}
 }
 @media (max-width:700px){.galeria{grid-template-columns:repeat(4,minmax(0,1fr))!important;display:grid!important;grid-auto-rows:auto!important;overflow:visible!important}.galeria .gal:nth-child(n+9){display:none}}
