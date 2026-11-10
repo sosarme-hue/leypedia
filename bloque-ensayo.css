@@ -1,0 +1,87 @@
+
+/* === diseno Ensayo para toda la web (10-11-2026) === */
+:root,:root:not([data-theme=light]),:root[data-theme=dark]{--papel:#fbfaf6;--blanco:#fff;--tinta:#111;--suave:#55595e;--linea:#d9d5cc;--marca:#2f6f9f;--ocre:#f2c230;--celeste-claro:#eaf3fa;--sombra:none;--ens-azul:#2f6f9f;--ens-amarillo:#f2c230;--ens-negro:#111;--ens-celeste:#a9d0ee}
+body{background:var(--papel);color:var(--tinta)}
+/* cabecera y pie */
+.cab{background:#fff!important;border-bottom:3px solid #111!important;padding:12px 24px!important}
+.cab .marca,.cab .menu a,.cab .redes-cab a{color:#111!important}
+.cab .marca{font-size:1.75rem}
+.cab .logo circle{fill:#fff}
+.cab .menu a{font-weight:600;font-size:.86rem}
+.cab .menu a:hover{color:var(--ens-azul)!important;text-decoration:none!important;box-shadow:inset 0 -3px 0 var(--ens-amarillo)}
+.cab .idioma a{background:#111;color:#fff!important;padding:4px 10px;text-decoration:none;font-weight:600}
+.busca-mini input{border:2px solid #111!important;border-radius:0!important;background:#fff!important}
+.pie{background:#111!important;border:0!important;border-top:10px solid var(--ens-amarillo)!important;padding-top:34px!important}
+.pie,.pie a{color:#e9e9e9!important}
+/* titulos */
+h1{font-weight:700;font-size:clamp(2.6rem,6vw,4.4rem);letter-spacing:-.02em;line-height:.95}
+:where(main) h2{font-weight:700;font-size:clamp(1.8rem,3.4vw,2.5rem);letter-spacing:-.01em;line-height:1.05;border-top:6px solid #111;padding-top:14px;margin:56px 0 18px}
+:where(main) h2 a{text-decoration:none}
+:where(main) h2 .nota{font-family:Inter,system-ui,sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--suave);margin-left:8px}
+.texto h2,#bio h2.bio-sec{font-size:1.6rem!important;border-top:2px solid #111;padding-top:10px;margin:2em 0 .6em!important}
+.miga{text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;font-weight:700;margin-top:18px}
+.miga a{color:#111;text-decoration:none;box-shadow:inset 0 -3px 0 var(--ens-amarillo)}
+.sub{font-size:1rem;color:var(--suave)}
+/* cabeceras de seccion (corrientes, epocas, glosario...) */
+.hero:not(.portada){text-align:left;padding:48px 0 10px;margin-bottom:10px}
+.hero:not(.portada) h1{margin:0 0 12px}
+.hero:not(.portada) .entradilla{margin:0 0 18px;max-width:44em;color:var(--suave)}
+.hero:not(.portada) .nota,.hero:not(.portada)>p:first-child{font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.78rem}
+.hero:not(.portada) .busca-grande{margin:0;border:3px solid #111;border-radius:0;box-shadow:8px 8px 0 var(--ens-azul)}
+.busca-grande button{background:#111!important;border-radius:0}
+/* ficha de autor */
+.ficha header{margin:22px 0 26px;gap:8px 32px}
+.retrato img{border-radius:0!important;box-shadow:12px 12px 0 var(--ens-azul)!important}
+.retrato figcaption{margin-top:16px}
+.texto{max-width:780px;font-size:1.04rem}
+.texto p:first-of-type::first-letter{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700}
+.compartir a{color:#111;font-weight:600}
+.chip{border-radius:999px!important;border:2px solid #111!important;background:transparent!important;color:#111!important;font-weight:600;font-size:.8rem!important;padding:3px 12px!important}
+a.chip:hover{background:#111!important;color:#fff!important}
+/* recuadros: ideas clave, por donde empezar, obras, libros, autores */
+.recuadro{background:#fff!important;border:3px solid #111!important;border-radius:0!important;box-shadow:8px 8px 0 var(--ens-celeste)!important;padding:18px 22px!important;margin:30px 8px 30px 0!important}
+.recuadro h2{border:0!important;padding:0!important;margin:0 0 12px!important;font-size:1.6rem!important}
+.recuadro.empezar{box-shadow:8px 8px 0 var(--ens-amarillo)!important}
+.empezar .emp-luego{border-top:1px solid #111!important}.empezar .emp-luego span{color:var(--ens-azul)}
+.lista a,.recuadro a{color:#111;text-decoration-color:var(--ens-azul);text-underline-offset:3px}
+.lista .num,.num{color:var(--suave)}
+.boton-libro{border-radius:0!important;background:#111!important;color:#fff!important;border:2px solid #111!important}
+.boton-libro.sec{background:#fff!important;color:#111!important}
+.boton-mas{border-radius:0!important;background:#111!important;color:#fff!important;border:0!important}
+/* curiosidades */
+.curio{background:var(--ens-amarillo)!important;border:3px solid #111!important;border-radius:0!important;padding:16px 18px!important}
+.curio h3{font-size:1.4rem}
+/* rejillas de retratos */
+.rejilla{gap:0!important;border-left:1px solid #111;border-top:1px solid #111}
+.pcard{background:transparent!important;border:0!important;border-right:1px solid #111!important;border-bottom:1px solid #111!important;border-radius:0!important;padding:0 0 12px!important;align-items:flex-start!important;text-align:left!important}
+.pcard img,.pcard .vacio{width:100%!important;height:190px!important;border-radius:0!important;filter:grayscale(1) contrast(1.05);transition:filter .25s}
+.pcard:hover img{filter:none}.pcard:hover{background:var(--ens-amarillo)!important}
+.pcard strong,.pcard span{padding:0 12px}.pcard strong{font-weight:700;margin-top:10px!important}
+/* epocas / curiosidades por epoca */
+.linea{gap:0 32px}
+.tramo{border:0!important;border-radius:0!important;border-bottom:1px solid #111!important;background:transparent!important;padding:14px 0!important}
+.tramo .n{display:none}
+.tramo:hover strong{color:var(--ens-azul)}
+/* obras y glosario */
+.obra-card{border:2px solid #111!important;border-radius:0!important;background:#fff!important}
+.obra-card:hover{background:var(--ens-amarillo)!important}
+.obra-autor{border:3px solid #111!important;border-radius:0!important;box-shadow:6px 6px 0 var(--ens-celeste)}
+.obra-autor img{border-radius:0!important}
+.glo-lista li{border-bottom:1px solid #111!important}
+.glo-lista a,.glo-usos a{color:#111;text-decoration-color:var(--ens-azul)}
+a.glo{text-decoration-color:var(--ens-amarillo)!important;text-decoration-thickness:3px}
+.citas blockquote,.cita-dia{border-left:6px solid var(--ens-amarillo)!important}
+/* filtros (explorar, biblioteca, linea) */
+.filtros input,.filtros select{border:2px solid #111!important;border-radius:0!important}
+.linea-filtros .chip.activo{background:#111!important;color:#fff!important}
+.lt-barra{background:var(--ens-azul)}
+.mapa-centro a{border:3px solid #111!important;border-radius:0!important;box-shadow:8px 8px 0 var(--ens-azul)!important}
+.mapa-it{border-radius:0!important}
+@media (max-width:860px){.cab{padding:10px 16px!important}}
+@media (max-width:700px){
+ .rejilla{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+ .pcard img,.pcard .vacio{height:128px!important}.pcard strong{font-size:.8rem!important}.pcard span{font-size:.72rem!important}
+ .retrato img{box-shadow:8px 8px 0 var(--ens-azul)!important}
+ .recuadro{margin-right:8px!important}
+}
+/* === fin diseno Ensayo === */
