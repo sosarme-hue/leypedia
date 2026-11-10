@@ -1,0 +1,59 @@
+/* === ilustraciones por seccion (10-11-2026) === */
+.hero:not(.portada){display:flow-root}
+.hero:not(.portada)::before{content:var(--ilus-pie,none);float:right;box-sizing:border-box;width:min(42%,430px);aspect-ratio:4/3;margin:-14px 10px 24px 44px;display:flex;align-items:flex-end;padding:40px 14px 10px;background:linear-gradient(rgba(0,0,0,0) 55%,rgba(0,0,0,.78)),var(--ilus-img) center 30%/cover no-repeat #222;border:3px solid #111;box-shadow:10px 10px 0 var(--ens-azul,#2f6f9f);color:#fff;font:italic .76rem/1.35 Georgia,serif;text-align:left;letter-spacing:0;text-transform:none}
+@media (max-width:760px){.hero:not(.portada)::before{float:none;width:calc(100% - 6px);aspect-ratio:16/10;margin:0 0 22px;box-shadow:6px 6px 0 var(--ens-azul,#2f6f9f);font-size:.7rem;padding:30px 10px 8px}}
+html:has(link[rel=canonical][href$="/e/origenes.html"]),html:has(link[rel=canonical][href$="/cu/origenes.html"]){--ilus-img:url(/img/ilus/Q3202169.jpg);--ilus-pie:"Jean-Auguste-Dominique Ingres, La apoteosis de Homero (1827)"}
+html[lang="en"]:has(link[rel=canonical][href$="/e/origenes.html"]),html[lang="en"]:has(link[rel=canonical][href$="/cu/origenes.html"]){--ilus-pie:"Jean-Auguste-Dominique Ingres, The Apotheosis of Homer (1827)"}
+html:has(link[rel=canonical][href$="/e/grecia-clasica.html"]),html:has(link[rel=canonical][href$="/cu/grecia-clasica.html"]){--ilus-img:url(/img/ilus/Q1752990.jpg);--ilus-pie:"Jacques-Louis David, La muerte de S\f3 crates (1787)"}
+html[lang="en"]:has(link[rel=canonical][href$="/e/grecia-clasica.html"]),html[lang="en"]:has(link[rel=canonical][href$="/cu/grecia-clasica.html"]){--ilus-pie:"Jacques-Louis David, The Death of Socrates (1787)"}
+html:has(link[rel=canonical][href$="/e/helenismo.html"]),html:has(link[rel=canonical][href$="/cu/helenismo.html"]){--ilus-img:url(/img/ilus/Q19568007.jpg);--ilus-pie:"Vincenzo Camuccini, Tolomeo Filadelfo en la biblioteca de Alejandr\ed a (1813)"}
+html[lang="en"]:has(link[rel=canonical][href$="/e/helenismo.html"]),html[lang="en"]:has(link[rel=canonical][href$="/cu/helenismo.html"]){--ilus-pie:"Vincenzo Camuccini, Ptolemy II Philadelphus in the Library of Alexandria (1813)"}
+html:has(link[rel=canonical][href$="/e/roma.html"]),html:has(link[rel=canonical][href$="/cu/roma.html"]){--ilus-img:url(/img/ilus/Q3210841.jpg);--ilus-pie:"Jacques-Louis David, La muerte de S\e9 neca (1773)"}
+html[lang="en"]:has(link[rel=canonical][href$="/e/roma.html"]),html[lang="en"]:has(link[rel=canonical][href$="/cu/roma.html"]){--ilus-pie:"Jacques-Louis David, The Death of Seneca (1773)"}
+html:has(link[rel=canonical][href$="/e/alta-edad-media.html"]),html:has(link[rel=canonical][href$="/cu/alta-edad-media.html"]){--ilus-img:url(/img/ilus/Q1114823.jpg);--ilus-pie:"Sandro Botticelli, San Agust\ed n en su gabinete (1490)"}
+html[lang="en"]:has(link[rel=canonical][href$="/e/alta-edad-media.html"]),html[lang="en"]:has(link[rel=canonical][href$="/cu/alta-edad-media.html"]){--ilus-pie:"Sandro Botticelli, Saint Augustine in His Cell (1490)"}
+html:has(link[rel=canonical][href$="/e/baja-edad-media.html"]),html:has(link[rel=canonical][href$="/cu/baja-edad-media.html"]){--ilus-img:url(/img/ilus/Q5701651.jpg);--ilus-pie:"Francisco de Zurbar\e1 n, Apoteosis de Santo Tom\e1 s de Aquino (1631)"}
+html[lang="en"]:has(link[rel=canonical][href$="/e/baja-edad-media.html"]),html[lang="en"]:has(link[rel=canonical][href$="/cu/baja-edad-media.html"]){--ilus-pie:"Francisco de Zurbar\e1 n, The Apotheosis of Saint Thomas Aquinas (1631)"}
+html:has(link[rel=canonical][href$="/e/renacimiento.html"]),html:has(link[rel=canonical][href$="/cu/renacimiento.html"]){--ilus-img:url(/img/ilus/Q877191.jpg);--ilus-pie:"Giorgione, Los tres fil\f3 sofos (1500)"}
+html[lang="en"]:has(link[rel=canonical][href$="/e/renacimiento.html"]),html[lang="en"]:has(link[rel=canonical][href$="/cu/renacimiento.html"]){--ilus-pie:"Giorgione, The Three Philosophers (1500)"}
+html:has(link[rel=canonical][href$="/e/barroco.html"]),html:has(link[rel=canonical][href$="/cu/barroco.html"]){--ilus-img:url(/img/ilus/Q3381192.jpg);--ilus-pie:"Rembrandt, Fil\f3 sofo en meditaci\f3 n (1632)"}
+html[lang="en"]:has(link[rel=canonical][href$="/e/barroco.html"]),html[lang="en"]:has(link[rel=canonical][href$="/cu/barroco.html"]){--ilus-pie:"Rembrandt, Philosopher in Meditation (1632)"}
+html:has(link[rel=canonical][href$="/e/ilustracion.html"]),html:has(link[rel=canonical][href$="/cu/ilustracion.html"]){--ilus-img:url(/img/ilus/Q15731375.jpg);--ilus-pie:"Anicet Charles Gabriel Lemonnier, Tertulia en casa de Madame Geoffrin (1812)"}
+html[lang="en"]:has(link[rel=canonical][href$="/e/ilustracion.html"]),html[lang="en"]:has(link[rel=canonical][href$="/cu/ilustracion.html"]){--ilus-pie:"Anicet Charles Gabriel Lemonnier, In the Salon of Madame Geoffrin in 1755 (1812)"}
+html:has(link[rel=canonical][href$="/e/romanticismo.html"]),html:has(link[rel=canonical][href$="/cu/romanticismo.html"]){--ilus-img:url(/img/ilus/Q311243.jpg);--ilus-pie:"Caspar David Friedrich, El caminante sobre el mar de nubes (1818)"}
+html[lang="en"]:has(link[rel=canonical][href$="/e/romanticismo.html"]),html[lang="en"]:has(link[rel=canonical][href$="/cu/romanticismo.html"]){--ilus-pie:"Caspar David Friedrich, Wanderer above the Sea of Fog (1818)"}
+html:has(link[rel=canonical][href$="/e/realismo.html"]),html:has(link[rel=canonical][href$="/cu/realismo.html"]){--ilus-img:url(/img/ilus/Q8561671.jpg);--ilus-pie:"Honor\e9  Daumier, Don Quijote y Sancho Panza (1868)"}
+html[lang="en"]:has(link[rel=canonical][href$="/e/realismo.html"]),html[lang="en"]:has(link[rel=canonical][href$="/cu/realismo.html"]){--ilus-pie:"Honor\e9  Daumier, Don Quixote and Sancho Panza (1868)"}
+html:has(link[rel=canonical][href$="/e/fin-de-siglo.html"]),html:has(link[rel=canonical][href$="/cu/fin-de-siglo.html"]){--ilus-img:url(/img/ilus/Q5550018.jpg);--ilus-pie:"Paul Gauguin, La Melancol\ed a (1891)"}
+html[lang="en"]:has(link[rel=canonical][href$="/e/fin-de-siglo.html"]),html[lang="en"]:has(link[rel=canonical][href$="/cu/fin-de-siglo.html"]){--ilus-pie:"Paul Gauguin, The Brooding Woman (1891)"}
+html:has(link[rel=canonical][href$="/e/vanguardias.html"]),html:has(link[rel=canonical][href$="/cu/vanguardias.html"]){--ilus-img:url(/img/ilus/Q2990634.jpg);--ilus-pie:"Vasili Kandinski, Composici\f3 n VII (1913)"}
+html[lang="en"]:has(link[rel=canonical][href$="/e/vanguardias.html"]),html[lang="en"]:has(link[rel=canonical][href$="/cu/vanguardias.html"]){--ilus-pie:"Wassily Kandinsky, Composition VII (1913)"}
+html:has(link[rel=canonical][href$="/e/posguerra.html"]),html:has(link[rel=canonical][href$="/cu/posguerra.html"]){--ilus-img:url(/img/ilus/Q537640.jpg);--ilus-pie:"Paul Klee, Angelus Novus (1920)"}
+html[lang="en"]:has(link[rel=canonical][href$="/e/posguerra.html"]),html[lang="en"]:has(link[rel=canonical][href$="/cu/posguerra.html"]){--ilus-pie:"Paul Klee, Angelus Novus (1920)"}
+html:has(link[rel=canonical][href$="/e/contemporanea.html"]),html:has(link[rel=canonical][href$="/cu/contemporanea.html"]){--ilus-img:url(/img/ilus/Q2915406.jpg);--ilus-pie:"Piet Mondrian, Broadway Boogie-Woogie (1942)"}
+html[lang="en"]:has(link[rel=canonical][href$="/e/contemporanea.html"]),html[lang="en"]:has(link[rel=canonical][href$="/cu/contemporanea.html"]){--ilus-pie:"Piet Mondrian, Broadway Boogie Woogie (1942)"}
+html:has(link[rel=canonical][href$="/s/filosofia.html"]){--ilus-img:url(/img/ilus/Q2894005.jpg);--ilus-pie:"Pedro Pablo Rubens, Los cuatro fil\f3 sofos (1611)"}
+html[lang="en"]:has(link[rel=canonical][href$="/s/filosofia.html"]){--ilus-pie:"Peter Paul Rubens, The Four Philosophers (1611)"}
+html:has(link[rel=canonical][href$="/s/literatura.html"]){--ilus-img:url(/img/ilus/Q3178376.jpg);--ilus-pie:"\c9 douard Manet, La lectura (1865)"}
+html[lang="en"]:has(link[rel=canonical][href$="/s/literatura.html"]){--ilus-pie:"\c9 douard Manet, The Reading (1865)"}
+html:has(link[rel=canonical][href$="/s/psicologia.html"]){--ilus-img:url(/img/ilus/Q2317837.jpg);--ilus-pie:"Johann Heinrich F\fc ssli, La pesadilla (1781)"}
+html[lang="en"]:has(link[rel=canonical][href$="/s/psicologia.html"]){--ilus-pie:"Henry Fuseli, The Nightmare (1781)"}
+html:has(link[rel=canonical][href$="/obras.html"]){--ilus-img:url(/img/ilus/Q17021187.jpg);--ilus-pie:"Giuseppe Arcimboldo, El bibliotecario (1556)"}
+html[lang="en"]:has(link[rel=canonical][href$="/obras.html"]){--ilus-pie:"Giuseppe Arcimboldo, The Librarian (1556)"}
+html:has(link[rel=canonical][href$="/biblioteca.html"]){--ilus-img:url(/img/ilus/Q700251.jpg);--ilus-pie:"Johannes Vermeer, Muchacha leyendo una carta (1658)"}
+html[lang="en"]:has(link[rel=canonical][href$="/biblioteca.html"]){--ilus-pie:"Johannes Vermeer, Girl Reading a Letter at an Open Window (1658)"}
+html:has(link[rel=canonical][href$="/glosario.html"]){--ilus-img:url(/img/ilus/Q2404992.jpg);--ilus-pie:"Rembrandt, Arist\f3 teles contemplando el busto de Homero (1653)"}
+html[lang="en"]:has(link[rel=canonical][href$="/glosario.html"]){--ilus-pie:"Rembrandt, Aristotle with a Bust of Homer (1653)"}
+html:has(link[rel=canonical][href$="/corrientes.html"]){--ilus-img:url(/img/ilus/Q3225258.jpg);--ilus-pie:"Andrea Mantegna, Parnaso (1500)"}
+html[lang="en"]:has(link[rel=canonical][href$="/corrientes.html"]){--ilus-pie:"Andrea Mantegna, Parnassus (1500)"}
+html:has(link[rel=canonical][href$="/curiosidades.html"]){--ilus-img:url(/img/ilus/Q1652023.jpg);--ilus-pie:"Joseph Wright of Derby, El alquimista descubriendo el f\f3 sforo (1771)"}
+html[lang="en"]:has(link[rel=canonical][href$="/curiosidades.html"]){--ilus-pie:"Joseph Wright of Derby, The Alchemist Discovering Phosphorus (1771)"}
+html:has(link[rel=canonical][href$="/explorar.html"]){--ilus-img:url(/img/ilus/Q544315.jpg);--ilus-pie:"Johannes Vermeer, El astr\f3 nomo (1664)"}
+html[lang="en"]:has(link[rel=canonical][href$="/explorar.html"]){--ilus-pie:"Johannes Vermeer, The Astronomer (1664)"}
+html:has(link[rel=canonical][href$="/linea.html"]){--ilus-img:url(/img/ilus/Q45130.jpg);--ilus-pie:"Johannes Vermeer, El ge\f3 grafo (1668)"}
+html[lang="en"]:has(link[rel=canonical][href$="/linea.html"]){--ilus-pie:"Johannes Vermeer, The Geographer (1668)"}
+html:has(link[rel=canonical][href$="/influencias.html"]){--ilus-img:url(/img/ilus/Q2665048.jpg);--ilus-pie:"William-Adolphe Bouguereau, Dante y Virgilio en el infierno (1850)"}
+html[lang="en"]:has(link[rel=canonical][href$="/influencias.html"]){--ilus-pie:"William-Adolphe Bouguereau, Dante and Virgil in Hell (1850)"}
+html:has(link[rel=canonical][href$="/quiz.html"]){--ilus-img:url(/img/ilus/Q1651874.jpg);--ilus-pie:"Joseph Wright of Derby, Un fil\f3 sofo da una lecci\f3 n sobre el planetario de mesa (1766)"}
+html[lang="en"]:has(link[rel=canonical][href$="/quiz.html"]){--ilus-pie:"Joseph Wright of Derby, A Philosopher Lecturing on the Orrery (1766)"}
+/* === fin ilustraciones === */
