@@ -35,8 +35,82 @@ ART = {
                'The Strauss family, the 1939 origins of the concert, its great conductors and the rituals of the Blue Danube and the Radetzky March.', 8,
                ('https://www.facebook.com/groups/7719320188080233', 'Conductors and Instrumental Soloists')),
     },
+
+    'cecilia': {
+        'es': ('santa-cecilia-patrona-de-la-musica', 'Santa Cecilia, patrona de la música: las obras escritas en su honor',
+               'Por qué una mártir romana es la patrona de los músicos y qué música le dedicaron Purcell, Händel, Gounod, Parry y Britten.', 6,
+               ('https://www.facebook.com/groups/728139972810455', 'British Composers Group')),
+        'en': ('saint-cecilia-patron-saint-of-music', 'Saint Cecilia, patron saint of music: the works written in her honour',
+               'Why a Roman martyr became the patron saint of musicians, and the music Purcell, Handel, Gounod, Parry and Britten wrote for her day.', 6,
+               ('https://www.facebook.com/groups/728139972810455', 'British Composers Group')),
+    },
+    'vivaldi': {
+        'es': ('las-cuatro-estaciones-de-vivaldi-guia', 'Las cuatro estaciones de Vivaldi: qué escuchar en cada una',
+               'Los sonetos escondidos en la partitura, el castañeteo de dientes del «Invierno» y cuatro grabaciones muy distintas.', 6,
+               ('https://www.facebook.com/groups/7449623075076737', 'Baroque Composers Group')),
+        'en': ('vivaldi-four-seasons-listening-guide', "Vivaldi's Four Seasons: what to listen for in each one",
+               "The sonnets hidden in the score, the chattering teeth of 'Winter' and four very different recordings.", 6,
+               ('https://www.facebook.com/groups/7449623075076737', 'Baroque Composers Group')),
+    },
+    'requiem': {
+        'es': ('el-requiem-de-mozart-historia-y-leyendas', 'El Réquiem de Mozart: lo que sabemos y lo que es leyenda',
+               'El encargo anónimo del conde Walsegg, lo que Mozart dejó escrito, la versión de Süssmayr y el mito de Salieri.', 7,
+               ('https://www.facebook.com/groups/947844296853416', 'Mozart Group')),
+        'en': ('mozart-requiem-facts-and-legends', "Mozart's Requiem: what we know and what is legend",
+               "Count Walsegg's anonymous commission, what Mozart left on paper, Süssmayr's completion and the Salieri myth.", 7,
+               ('https://www.facebook.com/groups/947844296853416', 'Mozart Group')),
+    },
+    'boheme': {
+        'es': ('la-boheme-de-puccini-una-opera-de-nochebuena', 'La bohème de Puccini: una ópera que empieza en Nochebuena',
+               'La buhardilla de París, la vela de Mimì, el Café Momus y dos grabaciones legendarias de la ópera más navideña de Puccini.', 6,
+               ('https://www.facebook.com/groups/418368720846757', 'Opera Composers Group')),
+        'en': ('puccini-la-boheme-christmas-eve-opera', "Puccini's La bohème: an opera that begins on Christmas Eve",
+               "The Paris garret, Mimì's candle, the Café Momus and two legendary recordings of Puccini's most Christmassy opera.", 6,
+               ('https://www.facebook.com/groups/418368720846757', 'Opera Composers Group')),
+    },
+    'beethoven': {
+        'es': ('beethoven-10-curiosidades', 'Beethoven: 10 curiosidades en el aniversario de su nacimiento',
+               'Un padre que quería otro Mozart, la dedicatoria rota a Napoleón, los cuadernos de conversación y los aplausos de la Novena.', 7,
+               ('https://www.facebook.com/groups/1287031385586017', 'Beethoven Group')),
+        'en': ('beethoven-10-curiosities', 'Beethoven: 10 curiosities for his birthday',
+               'A father who wanted another Mozart, the torn dedication to Napoleon, the conversation books and the applause at the Ninth.', 7,
+               ('https://www.facebook.com/groups/1287031385586017', 'Beethoven Group')),
+    },
+    'bachnavidad': {
+        'es': ('oratorio-de-navidad-de-bach-guia', 'El Oratorio de Navidad de Bach: guía para escucharlo parte por parte',
+               'Seis cantatas para seis días de fiesta: qué escuchar en cada una, la música reciclada y las mejores grabaciones.', 7,
+               ('https://www.facebook.com/groups/1132523184552871', 'Bach Group')),
+        'en': ('bach-christmas-oratorio-guide', "Bach's Christmas Oratorio: a part-by-part listening guide",
+               'Six cantatas for six feast days: what to listen for in each, the recycled music and the best recordings.', 7,
+               ('https://www.facebook.com/groups/1132523184552871', 'Bach Group')),
+    },
+    'empezar': {
+        'es': ('como-empezar-a-escuchar-musica-clasica', 'Cómo empezar a escuchar música clásica: consejos y 10 obras',
+               'Cinco consejos prácticos y diez obras, de Vivaldi a Ravel, para quien quiere empezar a escuchar música clásica este año.', 6,
+               ('https://www.facebook.com/groups/680514517185744', 'Recordings Classic Music')),
+        'en': ('how-to-start-listening-to-classical-music', 'How to start listening to classical music: tips and 10 works',
+               'Five practical tips and ten works, from Vivaldi to Ravel, for anyone who wants to start listening to classical music this year.', 6,
+               ('https://www.facebook.com/groups/680514517185744', 'Recordings Classic Music')),
+    },
+    'reyes': {
+        'es': ('los-reyes-magos-en-la-musica-clasica', 'Los Reyes Magos en la música clásica',
+               'Del drama medieval de la estrella a Amahl, la primera ópera para televisión, pasando por Bach, Bizet, Cornelius y Respighi.', 6,
+               ('https://www.facebook.com/groups/2570606293398264', 'Sacred Music: From Gregorian Chant to the Modern Age')),
+        'en': ('the-three-kings-in-classical-music', 'The Three Kings in classical music',
+               'From the medieval drama of the star to Amahl, the first opera for television, by way of Bach, Bizet, Cornelius and Respighi.', 6,
+               ('https://www.facebook.com/groups/2570606293398264', 'Sacred Music: From Gregorian Chant to the Modern Age')),
+    },
 }
-ORDEN = ['mesias', 'navidad', 'anonuevo']
+ORDEN = ['mesias', 'navidad', 'anonuevo', 'cecilia', 'vivaldi', 'requiem', 'boheme', 'beethoven', 'bachnavidad', 'empezar', 'reyes']
+FECHAS = {'mesias': '2026-11-10', 'navidad': '2026-11-10', 'anonuevo': '2026-11-10', 'cecilia': '2026-11-17', 'vivaldi': '2026-11-24',
+          'requiem': '2026-12-01', 'boheme': '2026-12-08', 'beethoven': '2026-12-15', 'bachnavidad': '2026-12-22', 'empezar': '2026-12-29', 'reyes': '2027-01-05'}
+MESES = {'es': ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'],
+         'en': ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']}
+
+
+def ffecha(f, lang):
+    y, m, d = map(int, f.split('-'))
+    return f'{d} de {MESES[lang][m-1]} de {y}' if lang == 'es' else f'{d} {MESES[lang][m-1]} {y}'
 
 T = {
     'es': dict(lang='es', otro='en', inicio='Inicio', blog='Blog', fecha='10 de noviembre de 2026', por='Por', min='min de lectura',
@@ -110,6 +184,7 @@ CSS = """<style>
 </style>"""
 
 e = html.escape
+CLAVE = [None]
 
 
 def enlaces(texto, lang, bios):
@@ -120,6 +195,7 @@ def enlaces(texto, lang, bios):
         return f'<a href="../b/{slug}.html">{nombre}</a>'
 
     def a(m):
+        assert FECHAS[m.group(1)] <= FECHAS[CLAVE[0]], ('enlace a artículo futuro', CLAVE[0], m.group(1))
         return f'<a href="{ART[m.group(1)][lang][0]}.html">{m.group(2)}</a>'
     texto = re.sub(r'\{b:([a-z0-9-]+)\|([^}]+)\}', b, texto)
     texto = re.sub(r'\{art:([a-z]+)\|([^}]+)\}', a, texto)
@@ -215,20 +291,21 @@ def articulo(clave, lang):
     otro = t['otro']
     u, alt = url(lang, slug), url(otro, ART[clave][otro][0])
     bios = []
+    CLAVE[0] = clave
     cuerpo = enlaces((BASE / 'contenido' / lang / f'{clave}.html').read_text(), lang, bios)
     ld = {"@context": "https://schema.org", "@type": "BlogPosting", "headline": titulo, "description": desc,
-          "datePublished": FECHA, "dateModified": FECHA, "inLanguage": lang, "mainEntityOfPage": u,
+          "datePublished": FECHAS[clave], "dateModified": FECHAS[clave], "inLanguage": lang, "mainEntityOfPage": u,
           "image": "https://classicapedia.com/assets/og-classicapedia.png",
           "author": {"@type": "Person", "name": AUTOR, "url": "https://classicapedia.com/" + ('en/' if lang == 'en' else '') + "sobre.html"},
           "publisher": {"@type": "Organization", "name": "Classicapedia", "url": "https://classicapedia.com/"}}
-    extra = f'<meta property="article:published_time" content="{FECHA}">\n<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>\n'
+    extra = f'<meta property="article:published_time" content="{FECHAS[clave]}">\n<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>\n'
     h = cabecera(lang, titulo, desc, u, alt, 'article', extra)
-    otros = [k for k in ORDEN if k != clave]
-    mas = '\n'.join(f'<a class="blog-card" href="{ART[k][lang][0]}.html"><small>{t["fecha"]}</small><strong>{e(ART[k][lang][1])}</strong><em>{e(ART[k][lang][2])}</em></a>' for k in otros)
+    otros = sorted([k for k in ORDEN if k != clave and FECHAS[k] <= FECHAS[clave]], key=lambda k: (FECHAS[k], -ORDEN.index(k)), reverse=True)[:3]
+    mas = '\n'.join(f'<a class="blog-card" href="{ART[k][lang][0]}.html"><small>{ffecha(FECHAS[k], lang)}</small><strong>{e(ART[k][lang][1])}</strong><em>{e(ART[k][lang][2])}</em></a>' for k in otros)
     lb = '\n'.join(f'<li><a href="../b/{s}.html">{e(n)}</a></li>' for s, n in bios)
     h += f'''<article class="ficha post blog-art">
 <nav class="miga"><a href="../index.html">{t['inicio']}</a> › <a href="./">{t['blog']}</a></nav>
-<header><p class="fecha-post">{t['fecha']} · {mins} {t['min']}</p><h1>{e(titulo)}</h1>
+<header><p class="fecha-post">{ffecha(FECHAS[clave], lang)} · {mins} {t['min']}</p><h1>{e(titulo)}</h1>
 <p class="sub">{e(desc)}</p>
 <p class="autor">{t['por']} <a href="../sobre.html">{AUTOR}</a></p>
 {compartir(lang, titulo, u)}</header>
@@ -250,11 +327,11 @@ def articulo(clave, lang):
     return slug, h, bios
 
 
-def indice(lang):
+def indice(lang, hasta):
     t = T[lang]
     otro = t['otro']
     h = cabecera(lang, t['idx_t'], t['idx_d'], url(lang), url(otro), 'website')
-    cards = '\n'.join(f'<a class="blog-card" href="{ART[k][lang][0]}.html"><small>{t["fecha"]} · {ART[k][lang][3]} {t["min"]}</small><strong>{e(ART[k][lang][1])}</strong><em>{e(ART[k][lang][2])}</em><span class="leer">{t["leer"]} →</span></a>' for k in ORDEN)
+    cards = '\n'.join(f'<a class="blog-card" href="{ART[k][lang][0]}.html"><small>{ffecha(FECHAS[k], lang)} · {ART[k][lang][3]} {t["min"]}</small><strong>{e(ART[k][lang][1])}</strong><em>{e(ART[k][lang][2])}</em><span class="leer">{t["leer"]} →</span></a>' for k in sorted([k for k in ORDEN if FECHAS[k] <= hasta], key=lambda k: (FECHAS[k], -ORDEN.index(k)), reverse=True))
     h += f'''<section class="explorar blog-idx"><nav class="miga"><a href="../index.html">{t['inicio']}</a> › {t['blog']}</nav>
 <h1>{t['idx_t']}</h1><p class="entradilla">{t['idx_e']}</p>
 <div class="blog-lista">
@@ -269,22 +346,31 @@ def indice(lang):
 
 
 def main():
+    import shutil
+    if OUT.exists():
+        shutil.rmtree(OUT)
     todas = set()
+    fechas = sorted(set(FECHAS.values()))
+    manifiesto = {'articulos': [], 'indices': fechas}
     for lang in ('es', 'en'):
         d = OUT / ('en/blog' if lang == 'en' else 'blog')
         d.mkdir(parents=True, exist_ok=True)
-        (d / 'index.html').write_text(indice(lang))
+        di = OUT / 'indices' / lang
+        di.mkdir(parents=True, exist_ok=True)
+        for f in fechas:
+            (di / f'{f}.html').write_text(indice(lang, f))
+        (d / 'index.html').write_text(indice(lang, fechas[0]))
         for k in ORDEN:
             slug, h, bios = articulo(k, lang)
             (d / f'{slug}.html').write_text(h)
             todas.update(s for s, _ in bios)
+    for k in ORDEN:
+        manifiesto['articulos'].append({'clave': k, 'fecha': FECHAS[k],
+            'archivos': ['blog/' + ART[k]['es'][0] + '.html', 'en/blog/' + ART[k]['en'][0] + '.html'],
+            'urls': [url('es', ART[k]['es'][0]), url('en', ART[k]['en'][0])]})
+    (BASE / 'manifiesto.json').write_text(json.dumps(manifiesto, indent=1, ensure_ascii=False))
     (BASE / 'bios-enlazadas.txt').write_text('\n'.join(sorted(todas)) + '\n')
-    urls = []
-    for lang in ('es', 'en'):
-        urls.append(url(lang))
-        urls += [url(lang, ART[k][lang][0]) for k in ORDEN]
-    (BASE / 'urls.json').write_text(json.dumps(urls, indent=1))
-    print(len(todas), 'biografías enlazadas;', len(urls), 'páginas')
+    print(len(todas), 'biografías enlazadas;', len(ORDEN), 'artículos;', fechas)
 
 
 main()

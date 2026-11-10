@@ -1,0 +1,147 @@
+{
+ "articulos": [
+  {
+   "clave": "mesias",
+   "fecha": "2026-11-10",
+   "archivos": [
+    "blog/el-mesias-de-handel-guia-para-escucharlo.html",
+    "en/blog/handels-messiah-listening-guide.html"
+   ],
+   "urls": [
+    "https://classicapedia.com/blog/el-mesias-de-handel-guia-para-escucharlo.html",
+    "https://classicapedia.com/en/blog/handels-messiah-listening-guide.html"
+   ]
+  },
+  {
+   "clave": "navidad",
+   "fecha": "2026-11-10",
+   "archivos": [
+    "blog/musica-clasica-para-navidad-12-obras.html",
+    "en/blog/christmas-classical-music-12-works.html"
+   ],
+   "urls": [
+    "https://classicapedia.com/blog/musica-clasica-para-navidad-12-obras.html",
+    "https://classicapedia.com/en/blog/christmas-classical-music-12-works.html"
+   ]
+  },
+  {
+   "clave": "anonuevo",
+   "fecha": "2026-11-10",
+   "archivos": [
+    "blog/concierto-de-ano-nuevo-de-viena-historia.html",
+    "en/blog/vienna-new-years-concert-history.html"
+   ],
+   "urls": [
+    "https://classicapedia.com/blog/concierto-de-ano-nuevo-de-viena-historia.html",
+    "https://classicapedia.com/en/blog/vienna-new-years-concert-history.html"
+   ]
+  },
+  {
+   "clave": "cecilia",
+   "fecha": "2026-11-17",
+   "archivos": [
+    "blog/santa-cecilia-patrona-de-la-musica.html",
+    "en/blog/saint-cecilia-patron-saint-of-music.html"
+   ],
+   "urls": [
+    "https://classicapedia.com/blog/santa-cecilia-patrona-de-la-musica.html",
+    "https://classicapedia.com/en/blog/saint-cecilia-patron-saint-of-music.html"
+   ]
+  },
+  {
+   "clave": "vivaldi",
+   "fecha": "2026-11-24",
+   "archivos": [
+    "blog/las-cuatro-estaciones-de-vivaldi-guia.html",
+    "en/blog/vivaldi-four-seasons-listening-guide.html"
+   ],
+   "urls": [
+    "https://classicapedia.com/blog/las-cuatro-estaciones-de-vivaldi-guia.html",
+    "https://classicapedia.com/en/blog/vivaldi-four-seasons-listening-guide.html"
+   ]
+  },
+  {
+   "clave": "requiem",
+   "fecha": "2026-12-01",
+   "archivos": [
+    "blog/el-requiem-de-mozart-historia-y-leyendas.html",
+    "en/blog/mozart-requiem-facts-and-legends.html"
+   ],
+   "urls": [
+    "https://classicapedia.com/blog/el-requiem-de-mozart-historia-y-leyendas.html",
+    "https://classicapedia.com/en/blog/mozart-requiem-facts-and-legends.html"
+   ]
+  },
+  {
+   "clave": "boheme",
+   "fecha": "2026-12-08",
+   "archivos": [
+    "blog/la-boheme-de-puccini-una-opera-de-nochebuena.html",
+    "en/blog/puccini-la-boheme-christmas-eve-opera.html"
+   ],
+   "urls": [
+    "https://classicapedia.com/blog/la-boheme-de-puccini-una-opera-de-nochebuena.html",
+    "https://classicapedia.com/en/blog/puccini-la-boheme-christmas-eve-opera.html"
+   ]
+  },
+  {
+   "clave": "beethoven",
+   "fecha": "2026-12-15",
+   "archivos": [
+    "blog/beethoven-10-curiosidades.html",
+    "en/blog/beethoven-10-curiosities.html"
+   ],
+   "urls": [
+    "https://classicapedia.com/blog/beethoven-10-curiosidades.html",
+    "https://classicapedia.com/en/blog/beethoven-10-curiosities.html"
+   ]
+  },
+  {
+   "clave": "bachnavidad",
+   "fecha": "2026-12-22",
+   "archivos": [
+    "blog/oratorio-de-navidad-de-bach-guia.html",
+    "en/blog/bach-christmas-oratorio-guide.html"
+   ],
+   "urls": [
+    "https://classicapedia.com/blog/oratorio-de-navidad-de-bach-guia.html",
+    "https://classicapedia.com/en/blog/bach-christmas-oratorio-guide.html"
+   ]
+  },
+  {
+   "clave": "empezar",
+   "fecha": "2026-12-29",
+   "archivos": [
+    "blog/como-empezar-a-escuchar-musica-clasica.html",
+    "en/blog/how-to-start-listening-to-classical-music.html"
+   ],
+   "urls": [
+    "https://classicapedia.com/blog/como-empezar-a-escuchar-musica-clasica.html",
+    "https://classicapedia.com/en/blog/how-to-start-listening-to-classical-music.html"
+   ]
+  },
+  {
+   "clave": "reyes",
+   "fecha": "2027-01-05",
+   "archivos": [
+    "blog/los-reyes-magos-en-la-musica-clasica.html",
+    "en/blog/the-three-kings-in-classical-music.html"
+   ],
+   "urls": [
+    "https://classicapedia.com/blog/los-reyes-magos-en-la-musica-clasica.html",
+    "https://classicapedia.com/en/blog/the-three-kings-in-classical-music.html"
+   ]
+  }
+ ],
+ "indices": [
+  "2026-11-10",
+  "2026-11-17",
+  "2026-11-24",
+  "2026-12-01",
+  "2026-12-08",
+  "2026-12-15",
+  "2026-12-22",
+  "2026-12-29",
+  "2027-01-05"
+ ]
+}
