@@ -4,7 +4,7 @@ html body .cmp-wrap h1{margin-bottom:6px}
 html body .cmp-sel label{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--tinta)}
 html body .cmp-sel input{border:2px solid var(--tinta);border-radius:0;background:#fff;font-weight:600}
 html body .cmp-sel input:focus{border-color:var(--oro);box-shadow:4px 4px 0 var(--tinta)}
-html body .cmp-vs{font-family:'Bodoni Moda',Fraunces,Georgia,serif;font-weight:900;font-style:italic;font-size:2rem;line-height:1;color:var(--oro);padding-bottom:.3rem}
+html body .cmp-vs{font-family:Fraunces,Georgia,serif;font-weight:900;font-style:italic;font-size:2rem;line-height:1;color:var(--oro);padding-bottom:.3rem}
 html body .cmp-bot button{border:2px solid var(--tinta);border-radius:0;color:var(--tinta);background:#fff;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.06em}
 html body .cmp-bot button:hover{background:var(--tinta);color:#fff}
 html body .cmp-cards{gap:0;border:3px solid var(--tinta)}
@@ -14,10 +14,10 @@ html body .cmp-card>*{grid-column:2}
 html body .cmp-card .cmp-foto{grid-column:1;grid-row:1/span 5;width:120px;height:155px;border-radius:0;border:2px solid var(--tinta);margin:0}
 html body .cmp-card:first-child .cmp-foto{box-shadow:5px 5px 0 var(--oro)}
 html body .cmp-card:last-child .cmp-foto{box-shadow:5px 5px 0 var(--tinta)}
-html body .cmp-card h2{font-family:'Bodoni Moda',Fraunces,Georgia,serif;font-weight:900;font-size:1.55rem;letter-spacing:-.02em;line-height:1.05;margin:0 0 4px}
+html body .cmp-card h2{font-family:Fraunces,Georgia,serif;font-weight:900;font-size:1.55rem;letter-spacing:-.02em;line-height:1.05;margin:0 0 4px}
 html body .cmp-card h2 a{color:var(--tinta);text-decoration:none}
-html body .cmp-sin{color:var(--oro);font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;background:var(--blanco)}
-html body .cmp-wrap #cmp>h2{font-family:'Bodoni Moda',Fraunces,Georgia,serif;font-weight:900;font-size:1.9rem;letter-spacing:-.025em;border-bottom:3px solid var(--tinta);padding-bottom:6px;margin:40px 0 16px}
+html body .cmp-sin{color:var(--oro);font-family:Fraunces,serif;font-weight:900;background:var(--blanco)}
+html body .cmp-wrap #cmp>h2{font-family:Fraunces,Georgia,serif;font-weight:900;font-size:1.9rem;letter-spacing:-.025em;border-bottom:3px solid var(--tinta);padding-bottom:6px;margin:40px 0 16px}
 html body .cmp-tl{border:2px solid var(--tinta);border-radius:0;padding:18px}
 html body .cmp-vn{font-weight:700}
 html body .cmp-pista{border-radius:0;background:var(--blanco);height:20px}
@@ -36,22 +36,22 @@ html body .cmp-rel{border-left:4px solid var(--oro);padding-left:10px}
 /* --- Quiz --- */
 html body .quiz-wrap .qz-num,html body #quiz-semana{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--oro)}
 html body #quiz{border:3px solid var(--tinta);border-radius:0;padding:26px 24px;box-shadow:8px 8px 0 var(--tinta)}
-html body .qz-preg{font-family:'Bodoni Moda',Fraunces,Georgia,serif;font-weight:900;font-size:1.9rem;letter-spacing:-.025em;line-height:1.1}
+html body .qz-preg{font-family:Fraunces,Georgia,serif;font-weight:900;font-size:1.9rem;letter-spacing:-.025em;line-height:1.1}
 html body .qz-op{border:2px solid var(--tinta);border-radius:0;background:#fff;transition:transform .12s,box-shadow .12s}
 html body .qz-op:hover:not([disabled]){border-color:var(--tinta);transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--oro)}
-html body .qz-op strong{font-family:'Bodoni Moda',Fraunces,Georgia,serif;font-weight:900;font-size:1.25rem;letter-spacing:-.01em}
+html body .qz-op strong{font-family:Fraunces,Georgia,serif;font-weight:900;font-size:1.25rem;letter-spacing:-.01em}
 html body .qz-op span{color:var(--suave)}
-html body .qz-anyo{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;font-size:1.6rem}
+html body .qz-anyo{font-family:Fraunces,serif;font-weight:900;font-size:1.6rem}
 html body .qz-op.qz-si{border-color:#0f8a6a;background:#0f8a6a;color:#fff}html body .qz-op.qz-si span{color:rgba(255,255,255,.8)}
 html body .qz-op.qz-no{border-color:var(--tinta);background:var(--blanco);opacity:1}
-html body .qz-veredicto{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;font-size:1.5rem}
+html body .qz-veredicto{font-family:Fraunces,serif;font-weight:900;font-size:1.5rem}
 html body .qz-sig{background:var(--oro);border-radius:0;font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:.85rem;padding:.7rem 1.4rem;border:2px solid var(--tinta)}
 html body .qz-sig:hover{filter:none;background:var(--tinta)}
 /* --- Comunidad --- */
 html body .doble:has(.biblioteca){grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
 html body .doble:has(.biblioteca)>div:first-child{border:3px solid var(--tinta);padding:20px 22px}
 html body .doble h2{margin-top:0;line-height:1.1}
-html body .doble h2,html body .bloque:has(.grupos-fb)>h2{font-family:'Bodoni Moda',Fraunces,Georgia,serif;font-weight:900;letter-spacing:-.02em}
+html body .doble h2,html body .bloque:has(.grupos-fb)>h2{font-family:Fraunces,Georgia,serif;font-weight:900;letter-spacing:-.02em}
 html body .doble .obras{list-style:none;padding:0}
 html body .doble .obras li{border-top:2px solid var(--tinta);padding:.7em 0;font-weight:700}
 html body .doble .obras a{color:var(--tinta);text-decoration:none}html body .doble .obras a::after{content:' →';color:var(--oro)}
@@ -59,18 +59,18 @@ html body .doble .biblioteca{padding:22px 24px;margin:0}
 html body .grupos-fb{columns:auto;list-style:none;padding:0;counter-reset:g;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:0;border-top:2px solid var(--tinta);border-left:2px solid var(--tinta)}
 html body .grupos-fb li{margin:0;counter-increment:g;border-right:2px solid var(--tinta);border-bottom:2px solid var(--tinta)}
 html body .grupos-fb a{display:flex;gap:12px;align-items:baseline;padding:14px 16px;height:100%;box-sizing:border-box;color:var(--tinta);text-decoration:none;font-weight:700;line-height:1.25}
-html body .grupos-fb a::before{content:counter(g,decimal-leading-zero);font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;color:var(--oro);font-size:1.1rem}
+html body .grupos-fb a::before{content:counter(g,decimal-leading-zero);font-family:Fraunces,serif;font-weight:900;color:var(--oro);font-size:1.1rem}
 html body .grupos-fb a:hover{background:var(--tinta);color:#fff}
 @media (max-width:760px){html body .doble:has(.biblioteca){grid-template-columns:1fr}}
 /* --- Blog --- */
 html body .blog-card{border:2px solid var(--tinta);border-left:10px solid var(--oro);border-radius:0;background:#fff;padding:20px 22px}
 html body .blog-card small{color:var(--oro);font-weight:800;letter-spacing:.1em}
-html body .blog-card strong{font-family:'Bodoni Moda',Fraunces,Georgia,serif;font-weight:900;font-size:1.7rem;letter-spacing:-.025em;line-height:1.08}
+html body .blog-card strong{font-family:Fraunces,Georgia,serif;font-weight:900;font-size:1.7rem;letter-spacing:-.025em;line-height:1.08}
 html body .blog-card .leer{font-weight:800;text-transform:uppercase;font-size:.78rem;letter-spacing:.08em}
 html body .caja-com{border:3px solid var(--tinta);border-left:3px solid var(--tinta);border-radius:0;background:var(--blanco);box-shadow:8px 8px 0 #1877f2}
-html body .caja-com h2{font-family:'Bodoni Moda',Fraunces,Georgia,serif;font-weight:900!important;letter-spacing:-.02em}
+html body .caja-com h2{font-family:Fraunces,Georgia,serif;font-weight:900!important;letter-spacing:-.02em}
 html body .caja-com .botones-com a{border-radius:0;font-weight:800;text-transform:uppercase;letter-spacing:.05em;font-size:.78rem;padding:9px 14px}
 html body .caja-com .otro{border:2px solid var(--tinta)}
 html body .bios-citadas li a{border:2px solid var(--tinta);border-radius:0;background:#fff;font-weight:600}
-html body .bios-citadas h2,html body .mas-blog h2{font-family:'Bodoni Moda',Fraunces,Georgia,serif;font-weight:900;border-bottom:3px solid var(--tinta);padding-bottom:6px}
+html body .bios-citadas h2,html body .mas-blog h2{font-family:Fraunces,Georgia,serif;font-weight:900;border-bottom:3px solid var(--tinta);padding-bottom:6px}
 /* === fin diseño Comunidad, Comparador, Quiz y Blog === */

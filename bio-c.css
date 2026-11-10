@@ -5,7 +5,7 @@
 body:has(article.ficha[class*=" p-"]),body:has(article.ficha[class*=" p-"]):not([data-theme=light]){--papel:#ffffff;--tinta:#111111;--suave:#5c5c5c;--linea:#e6e6e6;--oro:#e8452c;--blanco:#f4f2ee;--marca:#e8452c;
 --medieval:#6b3fa0;--renacimiento:#0f8a6a;--barroco:#e08a00;--clasicismo:#2357d8;--romanticismo:#d6283c;--siglo-xx:#222222;--contemporaneo:#00a3b4}
 body:has(article.ficha[class*=" p-"]){background:#fff;color:var(--tinta);font-family:Inter,system-ui,sans-serif}
-body:has(article.ficha[class*=" p-"]) h1,body:has(article.ficha[class*=" p-"]) h2,body:has(article.ficha[class*=" p-"]) .marca{font-family:'Bodoni Moda',Fraunces,Georgia,serif}
+body:has(article.ficha[class*=" p-"]) h1,body:has(article.ficha[class*=" p-"]) h2,body:has(article.ficha[class*=" p-"]) .marca{font-family:Fraunces,Georgia,serif}
 body:has(article.ficha[class*=" p-"]) .cab{background:#fff;border-bottom:3px solid var(--tinta);padding:12px 32px}
 body:has(article.ficha[class*=" p-"]) .marca{font-weight:900;font-size:1.9rem;letter-spacing:-.03em}
 body:has(article.ficha[class*=" p-"]) .marca .logo{color:var(--oro)}
@@ -15,7 +15,7 @@ body:has(article.ficha[class*=" p-"]) .cab .menu .patreon{background:var(--tinta
 body:has(article.ficha[class*=" p-"]) .cab .menu a.facebook{border-radius:0}
 body:has(article.ficha[class*=" p-"]) .portada-top{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:0;padding:0;margin-top:32px;border:3px solid var(--tinta);align-items:stretch}
 body:has(article.ficha[class*=" p-"]) .hero{text-align:left;padding:40px 40px 34px!important;background:#fff;position:relative;overflow:hidden}
-body:has(article.ficha[class*=" p-"]) .hero::after{content:'22.403';position:absolute;right:-10px;bottom:-34px;font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;font-size:9rem;letter-spacing:-.05em;color:var(--blanco);z-index:0;line-height:1}
+body:has(article.ficha[class*=" p-"]) .hero::after{content:'22.403';position:absolute;right:-10px;bottom:-34px;font-family:Fraunces,serif;font-weight:900;font-size:9rem;letter-spacing:-.05em;color:var(--blanco);z-index:0;line-height:1}
 body:has(article.ficha[class*=" p-"]) .hero>*{position:relative;z-index:1}
 body:has(article.ficha[class*=" p-"]) .antetitulo{display:inline-block;background:var(--oro);color:#fff!important;padding:4px 10px;letter-spacing:.14em;font-size:.72rem}
 body:has(article.ficha[class*=" p-"]) .portada-top .hero h1{font-size:clamp(2.6rem,5.8vw,4.6rem);font-weight:900;letter-spacing:-.035em;line-height:.95;margin:18px 0 20px}
@@ -30,7 +30,7 @@ body:has(article.ficha[class*=" p-"]) .dia-personaje{border:0;border-left:3px so
 body:has(article.ficha[class*=" p-"]) .dp-tag{color:var(--oro);letter-spacing:.14em}
 body:has(article.ficha[class*=" p-"]) .dp-foto{margin:0 0 14px}
 body:has(article.ficha[class*=" p-"]) .dp-foto img{width:100%;height:230px;border-radius:0;box-shadow:none;filter:grayscale(1) contrast(1.1)}
-body:has(article.ficha[class*=" p-"]) .dia-personaje h2{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;letter-spacing:-.02em}
+body:has(article.ficha[class*=" p-"]) .dia-personaje h2{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.02em}
 body:has(article.ficha[class*=" p-"]) .dia-personaje h2 a,body:has(article.ficha[class*=" p-"]) .dp-sub{color:#fff}
 body:has(article.ficha[class*=" p-"]) .dp-sub{opacity:.7}
 body:has(article.ficha[class*=" p-"]) .dp-txt{opacity:.85}
@@ -43,54 +43,54 @@ body:has(article.ficha[class*=" p-"]) .galeria strong{position:absolute;left:0;r
 body:has(article.ficha[class*=" p-"]) .galeria span{display:none}
 body:has(article.ficha[class*=" p-"]) main{counter-reset:sec}
 body:has(article.ficha[class*=" p-"]) .titulo-bloque{border-bottom:3px solid var(--tinta);margin:64px 0 20px;padding-bottom:10px;counter-increment:sec}
-body:has(article.ficha[class*=" p-"]) .titulo-bloque h2{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;letter-spacing:-.03em;font-size:2.4rem}
+body:has(article.ficha[class*=" p-"]) .titulo-bloque h2{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.03em;font-size:2.4rem}
 body:has(article.ficha[class*=" p-"]) .titulo-bloque h2::before{content:counter(sec,decimal-leading-zero);color:var(--oro);font-family:Inter,sans-serif;font-size:.9rem;font-weight:800;vertical-align:top;margin-right:12px;letter-spacing:0}
 body:has(article.ficha[class*=" p-"]) .titulo-bloque a{font-weight:700;color:var(--tinta)}
 body:has(article.ficha[class*=" p-"]) .efe,body:has(article.ficha[class*=" p-"]) .gp,body:has(article.ficha[class*=" p-"]) .acard,body:has(article.ficha[class*=" p-"]) .region,body:has(article.ficha[class*=" p-"]) .familia,body:has(article.ficha[class*=" p-"]) .anecdota,body:has(article.ficha[class*=" p-"]) .post-t,body:has(article.ficha[class*=" p-"]) .blog-card{border-radius:0;border:2px solid var(--tinta);background:#fff;box-shadow:none;transition:transform .15s,box-shadow .15s}
 body:has(article.ficha[class*=" p-"]) .efe:hover,body:has(article.ficha[class*=" p-"]) .acard:hover,body:has(article.ficha[class*=" p-"]) .region:hover,body:has(article.ficha[class*=" p-"]) .familia:hover,body:has(article.ficha[class*=" p-"]) .post-t:hover,body:has(article.ficha[class*=" p-"]) .blog-card:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--tinta)}
 body:has(article.ficha[class*=" p-"]) .efe{border-left-width:2px;background:var(--c);color:#fff}
-body:has(article.ficha[class*=" p-"]) .efe .anyo{color:#fff;font-family:'Bodoni Moda',Fraunces,serif;font-weight:900}
+body:has(article.ficha[class*=" p-"]) .efe .anyo{color:#fff;font-family:Fraunces,serif;font-weight:900}
 body:has(article.ficha[class*=" p-"]) .efe em{color:rgba(255,255,255,.8)}
 body:has(article.ficha[class*=" p-"]) .gp{border-top:10px solid var(--c)}
-body:has(article.ficha[class*=" p-"]) .gp h3{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;color:var(--c)}
+body:has(article.ficha[class*=" p-"]) .gp h3{font-family:Fraunces,serif;font-weight:900;color:var(--c)}
 body:has(article.ficha[class*=" p-"]) .gp li img{border-radius:0;filter:grayscale(1)}
 body:has(article.ficha[class*=" p-"]) .linea{border-radius:0;border:3px solid var(--tinta);min-height:190px}
 body:has(article.ficha[class*=" p-"]) .tramo{border-right:2px solid var(--tinta)}
-body:has(article.ficha[class*=" p-"]) .tramo strong{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;font-size:1.4rem;letter-spacing:-.02em}
-body:has(article.ficha[class*=" p-"]) .tramo .num{font-size:1.4rem;font-weight:900;font-family:'Bodoni Moda',Fraunces,serif}
+body:has(article.ficha[class*=" p-"]) .tramo strong{font-family:Fraunces,serif;font-weight:900;font-size:1.4rem;letter-spacing:-.02em}
+body:has(article.ficha[class*=" p-"]) .tramo .num{font-size:1.4rem;font-weight:900;font-family:Fraunces,serif}
 body:has(article.ficha[class*=" p-"]) .acard{background:#fff}
 body:has(article.ficha[class*=" p-"]) .acard svg{stroke:var(--oro)}
 body:has(article.ficha[class*=" p-"]) .acard strong{font-weight:700}
 body:has(article.ficha[class*=" p-"]) .acard span{font-weight:800;color:var(--oro)}
-body:has(article.ficha[class*=" p-"]) .region strong,body:has(article.ficha[class*=" p-"]) .familia strong{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900}
+body:has(article.ficha[class*=" p-"]) .region strong,body:has(article.ficha[class*=" p-"]) .familia strong{font-family:Fraunces,serif;font-weight:900}
 body:has(article.ficha[class*=" p-"]) .region .num{color:var(--oro)}
 body:has(article.ficha[class*=" p-"]) .biblioteca{background:var(--oro);color:#fff;border-radius:0;border:3px solid var(--tinta);box-shadow:8px 8px 0 var(--tinta)}
-body:has(article.ficha[class*=" p-"]) .biblioteca h2{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900}
+body:has(article.ficha[class*=" p-"]) .biblioteca h2{font-family:Fraunces,serif;font-weight:900}
 body:has(article.ficha[class*=" p-"]) .biblioteca .antetitulo{background:var(--tinta)}
 body:has(article.ficha[class*=" p-"]) .boton{background:var(--tinta);border-radius:0}
 body:has(article.ficha[class*=" p-"]) .anecdota .tag{color:var(--oro);font-weight:800}
-body:has(article.ficha[class*=" p-"]) .anecdota h3{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900}
+body:has(article.ficha[class*=" p-"]) .anecdota h3{font-family:Fraunces,serif;font-weight:900}
 body:has(article.ficha[class*=" p-"]) .curio-foto{border-radius:0;filter:grayscale(1);border:2px solid var(--tinta)}
 body:has(article.ficha[class*=" p-"]) .pie{background:var(--tinta);color:#bbb;border:0;margin-top:72px;padding:40px 24px}
 body:has(article.ficha[class*=" p-"]) .pie a{color:#fff}
 body:has(article.ficha[class*=" p-"]) .periodo-tag{border-radius:0;padding:4px 12px;text-transform:uppercase;letter-spacing:.12em;font-size:.7rem}
-body:has(article.ficha[class*=" p-"]) .ficha h1{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;letter-spacing:-.035em;font-size:clamp(2.6rem,7vw,4.4rem);line-height:.95}
+body:has(article.ficha[class*=" p-"]) .ficha h1{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.035em;font-size:clamp(2.6rem,7vw,4.4rem);line-height:.95}
 body:has(article.ficha[class*=" p-"]) .ficha header{border-bottom:3px solid var(--tinta);padding-bottom:16px}
 body:has(article.ficha[class*=" p-"]) .ficha header .retrato img{border-radius:0;filter:grayscale(1) contrast(1.1);border:3px solid var(--tinta);box-shadow:8px 8px 0 var(--c)}
 body:has(article.ficha[class*=" p-"]) .chip{border-radius:0;border:2px solid var(--tinta);font-weight:600}
-body:has(article.ficha[class*=" p-"]) .texto{font-family:'Bodoni Moda',Fraunces,Georgia,serif;font-weight:300;font-size:1.15rem;line-height:1.75}
-body:has(article.ficha[class*=" p-"]) .texto p:first-child::first-letter{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;font-size:4.4rem;color:var(--c)}
+body:has(article.ficha[class*=" p-"]) .texto{font-family:Fraunces,Georgia,serif;font-weight:300;font-size:1.15rem;line-height:1.75}
+body:has(article.ficha[class*=" p-"]) .texto p:first-child::first-letter{font-family:Fraunces,serif;font-weight:900;font-size:4.4rem;color:var(--c)}
 body:has(article.ficha[class*=" p-"]) #bio h3,body:has(article.ficha[class*=" p-"]) .texto h2{font-family:Inter,sans-serif;font-weight:800;font-size:1.05rem;text-transform:uppercase;letter-spacing:.08em;color:var(--c)}
 body:has(article.ficha[class*=" p-"]) .compartir a{border-radius:0}
 body:has(article.ficha[class*=" p-"]) .curio{border-radius:0;border:2px solid var(--tinta);background:#fff}
-body:has(article.ficha[class*=" p-"]) .explorar h1{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;letter-spacing:-.04em;font-size:4rem;margin-bottom:6px}
+body:has(article.ficha[class*=" p-"]) .explorar h1{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.04em;font-size:4rem;margin-bottom:6px}
 body:has(article.ficha[class*=" p-"]) .chip.on{background:var(--oro);border-color:var(--tinta)}
 body:has(article.ficha[class*=" p-"]) .posts-busca input{border-radius:0;border:2px solid var(--tinta)}
 body:has(article.ficha[class*=" p-"]) .post-t img{border-radius:0;filter:grayscale(1)}
 body:has(article.ficha[class*=" p-"]) .post-t:hover img{filter:none}
-body:has(article.ficha[class*=" p-"]) .post-t strong{font-family:'Bodoni Moda',Fraunces,serif;font-weight:700}
+body:has(article.ficha[class*=" p-"]) .post-t strong{font-family:Fraunces,serif;font-weight:700}
 body:has(article.ficha[class*=" p-"]) .blog-card{border-left:10px solid var(--oro)}
-body:has(article.ficha[class*=" p-"]) .blog-card strong{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;letter-spacing:-.02em}
+body:has(article.ficha[class*=" p-"]) .blog-card strong{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.02em}
 body:has(article.ficha[class*=" p-"]) .blog-card .leer{color:var(--oro)}
 body:has(article.ficha[class*=" p-"]) .aviso-cookies{border-radius:0;border:2px solid var(--tinta)}
 body:has(article.ficha[class*=" p-"]) .aviso-cookies button{border-radius:0}
@@ -109,7 +109,7 @@ body:has(article.ficha[class*=" p-"]) .explorar h1{font-size:2.8rem}
 body:has(article.ficha[class*=" p-"]) .efe-lista{grid-template-columns:1fr}}
 body:has(article.ficha[class*=" p-"]) #quiz-semanal>a{border:3px solid var(--tinta)!important;border-radius:0!important;background:#ffd84a!important}
 body:has(article.ficha[class*=" p-"]) #quiz-semanal>a>span:last-child{background:var(--tinta)!important;border-radius:0!important;text-transform:uppercase;font-weight:800!important;letter-spacing:.06em}
-body:has(article.ficha[class*=" p-"]) #quiz-semanal>a>span:first-child{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;font-size:4rem!important;line-height:1}
+body:has(article.ficha[class*=" p-"]) #quiz-semanal>a>span:first-child{font-family:Fraunces,serif;font-weight:900;font-size:4rem!important;line-height:1}
 body:has(article.ficha[class*=" p-"]) .hero .antetitulo{color:#fff}
 body:has(article.ficha[class*=" p-"]) .hero::after{color:#f1eee8}
 body:has(article.ficha[class*=" p-"]) .portada-top .hero .antetitulo{color:#fff!important}
@@ -127,7 +127,7 @@ body:has(article.ficha[class*=" p-"]) .ficha header .sub{border-top:2px solid va
 body:has(article.ficha[class*=" p-"]) .ficha>.texto{grid-column:2;margin-top:0}
 body:has(article.ficha[class*=" p-"]) .texto{font-size:1.18rem}
 body:has(article.ficha[class*=" p-"]) #bio>h3:first-child{margin-top:0}
-body:has(article.ficha[class*=" p-"]) .texto h2{font-family:'Bodoni Moda',Fraunces,serif!important;font-weight:900;font-size:2rem!important;text-transform:none!important;letter-spacing:-.03em;color:var(--tinta)!important;background:var(--c);color:#fff!important;display:inline-block;padding:4px 14px;margin-top:52px}
+body:has(article.ficha[class*=" p-"]) .texto h2{font-family:Fraunces,serif!important;font-weight:900;font-size:2rem!important;text-transform:none!important;letter-spacing:-.03em;color:var(--tinta)!important;background:var(--c);color:#fff!important;display:inline-block;padding:4px 14px;margin-top:52px}
 body:has(article.ficha[class*=" p-"]) #catalogo{display:block}
 body:has(article.ficha[class*=" p-"]) #catalogo>details{display:inline-block;width:calc(50% - 6px);vertical-align:top;margin:0 0 10px;border:2px solid var(--tinta);border-radius:0;background:#fff}
 body:has(article.ficha[class*=" p-"]) #catalogo>details:nth-of-type(odd){margin-right:8px}

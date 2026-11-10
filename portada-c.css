@@ -7,7 +7,7 @@
 :root,:root:not([data-theme=light]){--papel:#ffffff;--tinta:#111111;--suave:#5c5c5c;--linea:#e6e6e6;--oro:#e8452c;--blanco:#f4f2ee;--marca:#e8452c;
 --medieval:#6b3fa0;--renacimiento:#0f8a6a;--barroco:#e08a00;--clasicismo:#2357d8;--romanticismo:#d6283c;--siglo-xx:#222222;--contemporaneo:#00a3b4}
 body{background:#fff;color:var(--tinta);font-family:Inter,system-ui,sans-serif}
-h1,h2,.marca{font-family:'Bodoni Moda',Fraunces,Georgia,serif}
+h1,h2,.marca{font-family:Fraunces,Georgia,serif}
 .cab{background:#fff;border-bottom:3px solid var(--tinta);padding:12px 32px}
 .marca{font-weight:900;font-size:1.9rem;letter-spacing:-.03em}
 .marca .logo{color:var(--oro)}
@@ -18,7 +18,7 @@ h1,h2,.marca{font-family:'Bodoni Moda',Fraunces,Georgia,serif}
 /* portada: gran titular y cifra */
 .portada-top{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:0;padding:0;margin-top:32px;border:3px solid var(--tinta);align-items:stretch}
 .hero{text-align:left;padding:40px 40px 34px!important;background:#fff;position:relative;overflow:hidden}
-.hero::after{content:'22.403';position:absolute;right:-10px;bottom:-34px;font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;font-size:9rem;letter-spacing:-.05em;color:var(--blanco);z-index:0;line-height:1}
+.hero::after{content:'22.403';position:absolute;right:-10px;bottom:-34px;font-family:Fraunces,serif;font-weight:900;font-size:9rem;letter-spacing:-.05em;color:var(--blanco);z-index:0;line-height:1}
 .hero>*{position:relative;z-index:1}
 .antetitulo{display:inline-block;background:var(--oro);color:#fff!important;padding:4px 10px;letter-spacing:.14em;font-size:.72rem}
 .portada-top .hero h1{font-size:clamp(2.6rem,5.8vw,4.6rem);font-weight:900;letter-spacing:-.035em;line-height:.95;margin:18px 0 20px}
@@ -31,7 +31,7 @@ h1,h2,.marca{font-family:'Bodoni Moda',Fraunces,Georgia,serif}
 .dia-personaje{border:0;border-left:3px solid var(--tinta);border-radius:0;box-shadow:none;background:var(--tinta);color:#fff;text-align:left;padding:28px}
 .dp-tag{color:var(--oro);letter-spacing:.14em}
 .dp-foto{margin:0 0 14px}.dp-foto img{width:100%;height:230px;border-radius:0;box-shadow:none;filter:grayscale(1) contrast(1.1)}
-.dia-personaje h2{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;letter-spacing:-.02em}
+.dia-personaje h2{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.02em}
 .dia-personaje h2 a,.dp-sub{color:#fff}.dp-sub{opacity:.7}
 .dp-txt{opacity:.85}
 .dp-leer{color:var(--oro)}
@@ -44,56 +44,56 @@ h1,h2,.marca{font-family:'Bodoni Moda',Fraunces,Georgia,serif}
 .galeria span{display:none}
 /* títulos con número grande */
 .titulo-bloque{border-bottom:3px solid var(--tinta);margin:64px 0 20px;padding-bottom:10px;}
-.titulo-bloque h2{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;letter-spacing:-.03em;font-size:2.4rem}
+.titulo-bloque h2{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.03em;font-size:2.4rem}
 .titulo-bloque h2::before{content:none}
 .titulo-bloque a{font-weight:700;color:var(--tinta)}
 .efe,.gp,.acard,.region,.familia,.anecdota,.post-t,.blog-card{border-radius:0;border:2px solid var(--tinta);background:#fff;box-shadow:none;transition:transform .15s,box-shadow .15s}
 .efe:hover,.acard:hover,.region:hover,.familia:hover,.post-t:hover,.blog-card:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--tinta)}
 .efe{border-left-width:2px;background:var(--c);color:#fff}
-.efe .anyo{color:#fff;font-family:'Bodoni Moda',Fraunces,serif;font-weight:900}
+.efe .anyo{color:#fff;font-family:Fraunces,serif;font-weight:900}
 .efe em{color:rgba(255,255,255,.8)}
 .gp{border-top:10px solid var(--c)}
-.gp h3{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;color:var(--c)}
+.gp h3{font-family:Fraunces,serif;font-weight:900;color:var(--c)}
 .gp li img{border-radius:0;filter:grayscale(1)}
 /* línea del tiempo: barras de color vivo */
 .linea{border-radius:0;border:3px solid var(--tinta);min-height:190px}
 .tramo{border-right:2px solid var(--tinta)}
-.tramo strong{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;font-size:1.4rem;letter-spacing:-.02em}
-.tramo .num{font-size:1.4rem;font-weight:900;font-family:'Bodoni Moda',Fraunces,serif}
+.tramo strong{font-family:Fraunces,serif;font-weight:900;font-size:1.4rem;letter-spacing:-.02em}
+.tramo .num{font-size:1.4rem;font-weight:900;font-family:Fraunces,serif}
 .acard{background:#fff}.acard svg{stroke:var(--oro)}
 .acard strong{font-weight:700}
 .acard span{font-weight:800;color:var(--oro)}
-.region strong,.familia strong{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900}
+.region strong,.familia strong{font-family:Fraunces,serif;font-weight:900}
 .region .num{color:var(--oro)}
 .biblioteca{background:var(--oro);color:#fff;border-radius:0;border:3px solid var(--tinta);box-shadow:8px 8px 0 var(--tinta)}
-.biblioteca h2{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900}
+.biblioteca h2{font-family:Fraunces,serif;font-weight:900}
 .biblioteca .antetitulo{background:var(--tinta)}
 .boton{background:var(--tinta);border-radius:0}
 .anecdota .tag{color:var(--oro);font-weight:800}
-.anecdota h3{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900}
+.anecdota h3{font-family:Fraunces,serif;font-weight:900}
 .curio-foto{border-radius:0;filter:grayscale(1);border:2px solid var(--tinta)}
 .pie{background:var(--tinta);color:#bbb;border:0;margin-top:72px;padding:40px 24px}
 .pie a{color:#fff}
 /* biografía */
 .periodo-tag{border-radius:0;padding:4px 12px;text-transform:uppercase;letter-spacing:.12em;font-size:.7rem}
-.ficha h1{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;letter-spacing:-.035em;font-size:clamp(2.6rem,7vw,4.4rem);line-height:.95}
+.ficha h1{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.035em;font-size:clamp(2.6rem,7vw,4.4rem);line-height:.95}
 .ficha header{border-bottom:3px solid var(--tinta);padding-bottom:16px}
 .ficha header .retrato img{border-radius:0;filter:grayscale(1) contrast(1.1);border:3px solid var(--tinta);box-shadow:8px 8px 0 var(--c)}
 .chip{border-radius:0;border:2px solid var(--tinta);font-weight:600}
-.texto{font-family:'Bodoni Moda',Fraunces,Georgia,serif;font-weight:300;font-size:1.15rem;line-height:1.75}
-.texto p:first-child::first-letter{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;font-size:4.4rem;color:var(--c)}
+.texto{font-family:Fraunces,Georgia,serif;font-weight:300;font-size:1.15rem;line-height:1.75}
+.texto p:first-child::first-letter{font-family:Fraunces,serif;font-weight:900;font-size:4.4rem;color:var(--c)}
 #bio h3,.texto h2{font-family:Inter,sans-serif;font-weight:800;font-size:1.05rem;text-transform:uppercase;letter-spacing:.08em;color:var(--c)}
 .compartir a{border-radius:0}
 .curio{border-radius:0;border:2px solid var(--tinta);background:#fff}
 /* posts y blog */
-.explorar h1{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;letter-spacing:-.04em;font-size:4rem;margin-bottom:6px}
+.explorar h1{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.04em;font-size:4rem;margin-bottom:6px}
 .chip.on{background:var(--oro);border-color:var(--tinta)}
 .posts-busca input{border-radius:0;border:2px solid var(--tinta)}
 .post-t img{border-radius:0;filter:grayscale(1)}
 .post-t:hover img{filter:none}
-.post-t strong{font-family:'Bodoni Moda',Fraunces,serif;font-weight:700}
+.post-t strong{font-family:Fraunces,serif;font-weight:700}
 .blog-card{border-left:10px solid var(--oro)}
-.blog-card strong{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;letter-spacing:-.02em}
+.blog-card strong{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.02em}
 .blog-card .leer{color:var(--oro)}
 .aviso-cookies{border-radius:0;border:2px solid var(--tinta)}.aviso-cookies button{border-radius:0}
 @media (max-width:860px){.cab .menu a:not(.patreon):not(.facebook){background:#fff!important;color:var(--tinta)!important;border:2px solid var(--tinta);border-radius:0!important;font-weight:700}
@@ -111,7 +111,7 @@ h1,h2,.marca{font-family:'Bodoni Moda',Fraunces,Georgia,serif}
 }
 #quiz-semanal>a{border:3px solid var(--tinta)!important;border-radius:0!important;background:#ffd84a!important}
 #quiz-semanal>a>span:last-child{background:var(--tinta)!important;border-radius:0!important;text-transform:uppercase;font-weight:800!important;letter-spacing:.06em}
-#quiz-semanal>a>span:first-child{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;font-size:4rem!important;line-height:1}
+#quiz-semanal>a>span:first-child{font-family:Fraunces,serif;font-weight:900;font-size:4rem!important;line-height:1}
 .hero .antetitulo{color:#fff}.hero::after{color:#f1eee8}
 .portada-top .hero .antetitulo{color:#fff!important}
 .galeria{background:var(--tinta)}

@@ -2,7 +2,7 @@
 body:has(.posts-busca),body:has(.posts-busca):not([data-theme=light]){--papel:#ffffff;--tinta:#111111;--suave:#5c5c5c;--linea:#e6e6e6;--oro:#e8452c;--blanco:#f4f2ee;--marca:#e8452c;
 --medieval:#6b3fa0;--renacimiento:#0f8a6a;--barroco:#e08a00;--clasicismo:#2357d8;--romanticismo:#d6283c;--siglo-xx:#222222;--contemporaneo:#00a3b4}
 body:has(.posts-busca){background:#fff;color:var(--tinta);font-family:Inter,system-ui,sans-serif}
-body:has(.posts-busca) h1,body:has(.posts-busca) h2,body:has(.posts-busca) .marca{font-family:'Bodoni Moda',Fraunces,Georgia,serif}
+body:has(.posts-busca) h1,body:has(.posts-busca) h2,body:has(.posts-busca) .marca{font-family:Fraunces,Georgia,serif}
 body:has(.posts-busca) .cab{background:#fff;border-bottom:3px solid var(--tinta);padding:12px 32px}
 body:has(.posts-busca) .marca{font-weight:900;font-size:1.9rem;letter-spacing:-.03em}
 body:has(.posts-busca) .marca .logo{color:var(--oro)}
@@ -12,7 +12,7 @@ body:has(.posts-busca) .cab .menu .patreon{background:var(--tinta);border-radius
 body:has(.posts-busca) .cab .menu a.facebook{border-radius:0}
 body:has(.posts-busca) .portada-top{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:0;padding:0;margin-top:32px;border:3px solid var(--tinta);align-items:stretch}
 body:has(.posts-busca) .hero{text-align:left;padding:40px 40px 34px!important;background:#fff;position:relative;overflow:hidden}
-body:has(.posts-busca) .hero::after{content:'22.403';position:absolute;right:-10px;bottom:-34px;font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;font-size:9rem;letter-spacing:-.05em;color:var(--blanco);z-index:0;line-height:1}
+body:has(.posts-busca) .hero::after{content:'22.403';position:absolute;right:-10px;bottom:-34px;font-family:Fraunces,serif;font-weight:900;font-size:9rem;letter-spacing:-.05em;color:var(--blanco);z-index:0;line-height:1}
 body:has(.posts-busca) .hero>*{position:relative;z-index:1}
 body:has(.posts-busca) .antetitulo{display:inline-block;background:var(--oro);color:#fff!important;padding:4px 10px;letter-spacing:.14em;font-size:.72rem}
 body:has(.posts-busca) .portada-top .hero h1{font-size:clamp(2.6rem,5.8vw,4.6rem);font-weight:900;letter-spacing:-.035em;line-height:.95;margin:18px 0 20px}
@@ -27,7 +27,7 @@ body:has(.posts-busca) .dia-personaje{border:0;border-left:3px solid var(--tinta
 body:has(.posts-busca) .dp-tag{color:var(--oro);letter-spacing:.14em}
 body:has(.posts-busca) .dp-foto{margin:0 0 14px}
 body:has(.posts-busca) .dp-foto img{width:100%;height:230px;border-radius:0;box-shadow:none;filter:grayscale(1) contrast(1.1)}
-body:has(.posts-busca) .dia-personaje h2{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;letter-spacing:-.02em}
+body:has(.posts-busca) .dia-personaje h2{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.02em}
 body:has(.posts-busca) .dia-personaje h2 a,body:has(.posts-busca) .dp-sub{color:#fff}
 body:has(.posts-busca) .dp-sub{opacity:.7}
 body:has(.posts-busca) .dp-txt{opacity:.85}
@@ -40,54 +40,54 @@ body:has(.posts-busca) .galeria strong{position:absolute;left:0;right:0;bottom:0
 body:has(.posts-busca) .galeria span{display:none}
 body:has(.posts-busca) main{counter-reset:sec}
 body:has(.posts-busca) .titulo-bloque{border-bottom:3px solid var(--tinta);margin:64px 0 20px;padding-bottom:10px;counter-increment:sec}
-body:has(.posts-busca) .titulo-bloque h2{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;letter-spacing:-.03em;font-size:2.4rem}
+body:has(.posts-busca) .titulo-bloque h2{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.03em;font-size:2.4rem}
 body:has(.posts-busca) .titulo-bloque h2::before{content:counter(sec,decimal-leading-zero);color:var(--oro);font-family:Inter,sans-serif;font-size:.9rem;font-weight:800;vertical-align:top;margin-right:12px;letter-spacing:0}
 body:has(.posts-busca) .titulo-bloque a{font-weight:700;color:var(--tinta)}
 body:has(.posts-busca) .efe,body:has(.posts-busca) .gp,body:has(.posts-busca) .acard,body:has(.posts-busca) .region,body:has(.posts-busca) .familia,body:has(.posts-busca) .anecdota,body:has(.posts-busca) .post-t,body:has(.posts-busca) .blog-card{border-radius:0;border:2px solid var(--tinta);background:#fff;box-shadow:none;transition:transform .15s,box-shadow .15s}
 body:has(.posts-busca) .efe:hover,body:has(.posts-busca) .acard:hover,body:has(.posts-busca) .region:hover,body:has(.posts-busca) .familia:hover,body:has(.posts-busca) .post-t:hover,body:has(.posts-busca) .blog-card:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--tinta)}
 body:has(.posts-busca) .efe{border-left-width:2px;background:var(--c);color:#fff}
-body:has(.posts-busca) .efe .anyo{color:#fff;font-family:'Bodoni Moda',Fraunces,serif;font-weight:900}
+body:has(.posts-busca) .efe .anyo{color:#fff;font-family:Fraunces,serif;font-weight:900}
 body:has(.posts-busca) .efe em{color:rgba(255,255,255,.8)}
 body:has(.posts-busca) .gp{border-top:10px solid var(--c)}
-body:has(.posts-busca) .gp h3{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;color:var(--c)}
+body:has(.posts-busca) .gp h3{font-family:Fraunces,serif;font-weight:900;color:var(--c)}
 body:has(.posts-busca) .gp li img{border-radius:0;filter:grayscale(1)}
 body:has(.posts-busca) .linea{border-radius:0;border:3px solid var(--tinta);min-height:190px}
 body:has(.posts-busca) .tramo{border-right:2px solid var(--tinta)}
-body:has(.posts-busca) .tramo strong{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;font-size:1.4rem;letter-spacing:-.02em}
-body:has(.posts-busca) .tramo .num{font-size:1.4rem;font-weight:900;font-family:'Bodoni Moda',Fraunces,serif}
+body:has(.posts-busca) .tramo strong{font-family:Fraunces,serif;font-weight:900;font-size:1.4rem;letter-spacing:-.02em}
+body:has(.posts-busca) .tramo .num{font-size:1.4rem;font-weight:900;font-family:Fraunces,serif}
 body:has(.posts-busca) .acard{background:#fff}
 body:has(.posts-busca) .acard svg{stroke:var(--oro)}
 body:has(.posts-busca) .acard strong{font-weight:700}
 body:has(.posts-busca) .acard span{font-weight:800;color:var(--oro)}
-body:has(.posts-busca) .region strong,body:has(.posts-busca) .familia strong{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900}
+body:has(.posts-busca) .region strong,body:has(.posts-busca) .familia strong{font-family:Fraunces,serif;font-weight:900}
 body:has(.posts-busca) .region .num{color:var(--oro)}
 body:has(.posts-busca) .biblioteca{background:var(--oro);color:#fff;border-radius:0;border:3px solid var(--tinta);box-shadow:8px 8px 0 var(--tinta)}
-body:has(.posts-busca) .biblioteca h2{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900}
+body:has(.posts-busca) .biblioteca h2{font-family:Fraunces,serif;font-weight:900}
 body:has(.posts-busca) .biblioteca .antetitulo{background:var(--tinta)}
 body:has(.posts-busca) .boton{background:var(--tinta);border-radius:0}
 body:has(.posts-busca) .anecdota .tag{color:var(--oro);font-weight:800}
-body:has(.posts-busca) .anecdota h3{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900}
+body:has(.posts-busca) .anecdota h3{font-family:Fraunces,serif;font-weight:900}
 body:has(.posts-busca) .curio-foto{border-radius:0;filter:grayscale(1);border:2px solid var(--tinta)}
 body:has(.posts-busca) .pie{background:var(--tinta);color:#bbb;border:0;margin-top:72px;padding:40px 24px}
 body:has(.posts-busca) .pie a{color:#fff}
 body:has(.posts-busca) .periodo-tag{border-radius:0;padding:4px 12px;text-transform:uppercase;letter-spacing:.12em;font-size:.7rem}
-body:has(.posts-busca) .ficha h1{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;letter-spacing:-.035em;font-size:clamp(2.6rem,7vw,4.4rem);line-height:.95}
+body:has(.posts-busca) .ficha h1{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.035em;font-size:clamp(2.6rem,7vw,4.4rem);line-height:.95}
 body:has(.posts-busca) .ficha header{border-bottom:3px solid var(--tinta);padding-bottom:16px}
 body:has(.posts-busca) .ficha header .retrato img{border-radius:0;filter:grayscale(1) contrast(1.1);border:3px solid var(--tinta);box-shadow:8px 8px 0 var(--c)}
 body:has(.posts-busca) .chip{border-radius:0;border:2px solid var(--tinta);font-weight:600}
-body:has(.posts-busca) .texto{font-family:'Bodoni Moda',Fraunces,Georgia,serif;font-weight:300;font-size:1.15rem;line-height:1.75}
-body:has(.posts-busca) .texto p:first-child::first-letter{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;font-size:4.4rem;color:var(--c)}
+body:has(.posts-busca) .texto{font-family:Fraunces,Georgia,serif;font-weight:300;font-size:1.15rem;line-height:1.75}
+body:has(.posts-busca) .texto p:first-child::first-letter{font-family:Fraunces,serif;font-weight:900;font-size:4.4rem;color:var(--c)}
 body:has(.posts-busca) #bio h3,body:has(.posts-busca) .texto h2{font-family:Inter,sans-serif;font-weight:800;font-size:1.05rem;text-transform:uppercase;letter-spacing:.08em;color:var(--c)}
 body:has(.posts-busca) .compartir a{border-radius:0}
 body:has(.posts-busca) .curio{border-radius:0;border:2px solid var(--tinta);background:#fff}
-body:has(.posts-busca) .explorar h1{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;letter-spacing:-.04em;font-size:4rem;margin-bottom:6px}
+body:has(.posts-busca) .explorar h1{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.04em;font-size:4rem;margin-bottom:6px}
 body:has(.posts-busca) .chip.on{background:var(--oro);border-color:var(--tinta)}
 body:has(.posts-busca) .posts-busca input{border-radius:0;border:2px solid var(--tinta)}
 body:has(.posts-busca) .post-t img{border-radius:0;filter:grayscale(1)}
 body:has(.posts-busca) .post-t:hover img{filter:none}
-body:has(.posts-busca) .post-t strong{font-family:'Bodoni Moda',Fraunces,serif;font-weight:700}
+body:has(.posts-busca) .post-t strong{font-family:Fraunces,serif;font-weight:700}
 body:has(.posts-busca) .blog-card{border-left:10px solid var(--oro)}
-body:has(.posts-busca) .blog-card strong{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;letter-spacing:-.02em}
+body:has(.posts-busca) .blog-card strong{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.02em}
 body:has(.posts-busca) .blog-card .leer{color:var(--oro)}
 body:has(.posts-busca) .aviso-cookies{border-radius:0;border:2px solid var(--tinta)}
 body:has(.posts-busca) .aviso-cookies button{border-radius:0}
@@ -106,11 +106,11 @@ body:has(.posts-busca) .explorar h1{font-size:2.8rem}
 body:has(.posts-busca) .efe-lista{grid-template-columns:1fr}}
 body:has(.posts-busca) #quiz-semanal>a{border:3px solid var(--tinta)!important;border-radius:0!important;background:#ffd84a!important}
 body:has(.posts-busca) #quiz-semanal>a>span:last-child{background:var(--tinta)!important;border-radius:0!important;text-transform:uppercase;font-weight:800!important;letter-spacing:.06em}
-body:has(.posts-busca) #quiz-semanal>a>span:first-child{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;font-size:4rem!important;line-height:1}
+body:has(.posts-busca) #quiz-semanal>a>span:first-child{font-family:Fraunces,serif;font-weight:900;font-size:4rem!important;line-height:1}
 body:has(.posts-busca) .hero .antetitulo{color:#fff}
 body:has(.posts-busca) .hero::after{color:#f1eee8}
 body:has(.posts-busca) .portada-top .hero .antetitulo{color:#fff!important}
-body:has(.posts-busca) .explorar h1{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;letter-spacing:-.04em;font-size:clamp(2.6rem,6vw,4.4rem);line-height:.95;margin:40px 0 14px}
+body:has(.posts-busca) .explorar h1{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.04em;font-size:clamp(2.6rem,6vw,4.4rem);line-height:.95;margin:40px 0 14px}
 body:has(.posts-busca) .explorar>.entradilla{margin:0 0 20px;max-width:680px;color:#333;font-size:1.05rem}
 body:has(.posts-busca) .explorar>.chips{gap:0;border:3px solid var(--tinta);display:inline-flex}
 body:has(.posts-busca) .explorar>.chips .chip{border:0;border-right:1px solid var(--tinta);border-radius:0;padding:10px 16px;font-weight:700;background:#fff}
@@ -130,7 +130,7 @@ body:has(.posts-busca) .post-t img,body:has(.posts-busca) .post-t .sin-img{grid-
 body:has(.posts-busca) .post-t:hover img{filter:none!important}
 body:has(.posts-busca) .post-t span{grid-column:1;grid-row:1}
 body:has(.posts-busca) .post-t small{font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.7rem;color:var(--oro)}
-body:has(.posts-busca) .post-t strong{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;font-size:1.8rem;letter-spacing:-.03em;line-height:1.05;margin:6px 0 8px;color:var(--tinta)}
+body:has(.posts-busca) .post-t strong{font-family:Fraunces,serif;font-weight:900;font-size:1.8rem;letter-spacing:-.03em;line-height:1.05;margin:6px 0 8px;color:var(--tinta)}
 body:has(.posts-busca) .post-t em{font-size:.95rem;color:#555;max-width:720px}
 @media (max-width:600px){body:has(.posts-busca) .post-t{grid-template-columns:minmax(0,1fr) 90px;gap:0 14px}
 body:has(.posts-busca) .post-t img,body:has(.posts-busca) .post-t .sin-img{width:90px!important;height:90px!important}
@@ -139,7 +139,7 @@ body:has(.posts-busca) .post-t em{display:none}}
 body:has(article.ficha.post),body:has(article.ficha.post):not([data-theme=light]){--papel:#ffffff;--tinta:#111111;--suave:#5c5c5c;--linea:#e6e6e6;--oro:#e8452c;--blanco:#f4f2ee;--marca:#e8452c;
 --medieval:#6b3fa0;--renacimiento:#0f8a6a;--barroco:#e08a00;--clasicismo:#2357d8;--romanticismo:#d6283c;--siglo-xx:#222222;--contemporaneo:#00a3b4}
 body:has(article.ficha.post){background:#fff;color:var(--tinta);font-family:Inter,system-ui,sans-serif}
-body:has(article.ficha.post) h1,body:has(article.ficha.post) h2,body:has(article.ficha.post) .marca{font-family:'Bodoni Moda',Fraunces,Georgia,serif}
+body:has(article.ficha.post) h1,body:has(article.ficha.post) h2,body:has(article.ficha.post) .marca{font-family:Fraunces,Georgia,serif}
 body:has(article.ficha.post) .cab{background:#fff;border-bottom:3px solid var(--tinta);padding:12px 32px}
 body:has(article.ficha.post) .marca{font-weight:900;font-size:1.9rem;letter-spacing:-.03em}
 body:has(article.ficha.post) .marca .logo{color:var(--oro)}
@@ -149,7 +149,7 @@ body:has(article.ficha.post) .cab .menu .patreon{background:var(--tinta);border-
 body:has(article.ficha.post) .cab .menu a.facebook{border-radius:0}
 body:has(article.ficha.post) .portada-top{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:0;padding:0;margin-top:32px;border:3px solid var(--tinta);align-items:stretch}
 body:has(article.ficha.post) .hero{text-align:left;padding:40px 40px 34px!important;background:#fff;position:relative;overflow:hidden}
-body:has(article.ficha.post) .hero::after{content:'22.403';position:absolute;right:-10px;bottom:-34px;font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;font-size:9rem;letter-spacing:-.05em;color:var(--blanco);z-index:0;line-height:1}
+body:has(article.ficha.post) .hero::after{content:'22.403';position:absolute;right:-10px;bottom:-34px;font-family:Fraunces,serif;font-weight:900;font-size:9rem;letter-spacing:-.05em;color:var(--blanco);z-index:0;line-height:1}
 body:has(article.ficha.post) .hero>*{position:relative;z-index:1}
 body:has(article.ficha.post) .antetitulo{display:inline-block;background:var(--oro);color:#fff!important;padding:4px 10px;letter-spacing:.14em;font-size:.72rem}
 body:has(article.ficha.post) .portada-top .hero h1{font-size:clamp(2.6rem,5.8vw,4.6rem);font-weight:900;letter-spacing:-.035em;line-height:.95;margin:18px 0 20px}
@@ -164,7 +164,7 @@ body:has(article.ficha.post) .dia-personaje{border:0;border-left:3px solid var(-
 body:has(article.ficha.post) .dp-tag{color:var(--oro);letter-spacing:.14em}
 body:has(article.ficha.post) .dp-foto{margin:0 0 14px}
 body:has(article.ficha.post) .dp-foto img{width:100%;height:230px;border-radius:0;box-shadow:none;filter:grayscale(1) contrast(1.1)}
-body:has(article.ficha.post) .dia-personaje h2{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;letter-spacing:-.02em}
+body:has(article.ficha.post) .dia-personaje h2{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.02em}
 body:has(article.ficha.post) .dia-personaje h2 a,body:has(article.ficha.post) .dp-sub{color:#fff}
 body:has(article.ficha.post) .dp-sub{opacity:.7}
 body:has(article.ficha.post) .dp-txt{opacity:.85}
@@ -177,54 +177,54 @@ body:has(article.ficha.post) .galeria strong{position:absolute;left:0;right:0;bo
 body:has(article.ficha.post) .galeria span{display:none}
 body:has(article.ficha.post) main{counter-reset:sec}
 body:has(article.ficha.post) .titulo-bloque{border-bottom:3px solid var(--tinta);margin:64px 0 20px;padding-bottom:10px;counter-increment:sec}
-body:has(article.ficha.post) .titulo-bloque h2{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;letter-spacing:-.03em;font-size:2.4rem}
+body:has(article.ficha.post) .titulo-bloque h2{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.03em;font-size:2.4rem}
 body:has(article.ficha.post) .titulo-bloque h2::before{content:counter(sec,decimal-leading-zero);color:var(--oro);font-family:Inter,sans-serif;font-size:.9rem;font-weight:800;vertical-align:top;margin-right:12px;letter-spacing:0}
 body:has(article.ficha.post) .titulo-bloque a{font-weight:700;color:var(--tinta)}
 body:has(article.ficha.post) .efe,body:has(article.ficha.post) .gp,body:has(article.ficha.post) .acard,body:has(article.ficha.post) .region,body:has(article.ficha.post) .familia,body:has(article.ficha.post) .anecdota,body:has(article.ficha.post) .post-t,body:has(article.ficha.post) .blog-card{border-radius:0;border:2px solid var(--tinta);background:#fff;box-shadow:none;transition:transform .15s,box-shadow .15s}
 body:has(article.ficha.post) .efe:hover,body:has(article.ficha.post) .acard:hover,body:has(article.ficha.post) .region:hover,body:has(article.ficha.post) .familia:hover,body:has(article.ficha.post) .post-t:hover,body:has(article.ficha.post) .blog-card:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--tinta)}
 body:has(article.ficha.post) .efe{border-left-width:2px;background:var(--c);color:#fff}
-body:has(article.ficha.post) .efe .anyo{color:#fff;font-family:'Bodoni Moda',Fraunces,serif;font-weight:900}
+body:has(article.ficha.post) .efe .anyo{color:#fff;font-family:Fraunces,serif;font-weight:900}
 body:has(article.ficha.post) .efe em{color:rgba(255,255,255,.8)}
 body:has(article.ficha.post) .gp{border-top:10px solid var(--c)}
-body:has(article.ficha.post) .gp h3{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;color:var(--c)}
+body:has(article.ficha.post) .gp h3{font-family:Fraunces,serif;font-weight:900;color:var(--c)}
 body:has(article.ficha.post) .gp li img{border-radius:0;filter:grayscale(1)}
 body:has(article.ficha.post) .linea{border-radius:0;border:3px solid var(--tinta);min-height:190px}
 body:has(article.ficha.post) .tramo{border-right:2px solid var(--tinta)}
-body:has(article.ficha.post) .tramo strong{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;font-size:1.4rem;letter-spacing:-.02em}
-body:has(article.ficha.post) .tramo .num{font-size:1.4rem;font-weight:900;font-family:'Bodoni Moda',Fraunces,serif}
+body:has(article.ficha.post) .tramo strong{font-family:Fraunces,serif;font-weight:900;font-size:1.4rem;letter-spacing:-.02em}
+body:has(article.ficha.post) .tramo .num{font-size:1.4rem;font-weight:900;font-family:Fraunces,serif}
 body:has(article.ficha.post) .acard{background:#fff}
 body:has(article.ficha.post) .acard svg{stroke:var(--oro)}
 body:has(article.ficha.post) .acard strong{font-weight:700}
 body:has(article.ficha.post) .acard span{font-weight:800;color:var(--oro)}
-body:has(article.ficha.post) .region strong,body:has(article.ficha.post) .familia strong{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900}
+body:has(article.ficha.post) .region strong,body:has(article.ficha.post) .familia strong{font-family:Fraunces,serif;font-weight:900}
 body:has(article.ficha.post) .region .num{color:var(--oro)}
 body:has(article.ficha.post) .biblioteca{background:var(--oro);color:#fff;border-radius:0;border:3px solid var(--tinta);box-shadow:8px 8px 0 var(--tinta)}
-body:has(article.ficha.post) .biblioteca h2{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900}
+body:has(article.ficha.post) .biblioteca h2{font-family:Fraunces,serif;font-weight:900}
 body:has(article.ficha.post) .biblioteca .antetitulo{background:var(--tinta)}
 body:has(article.ficha.post) .boton{background:var(--tinta);border-radius:0}
 body:has(article.ficha.post) .anecdota .tag{color:var(--oro);font-weight:800}
-body:has(article.ficha.post) .anecdota h3{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900}
+body:has(article.ficha.post) .anecdota h3{font-family:Fraunces,serif;font-weight:900}
 body:has(article.ficha.post) .curio-foto{border-radius:0;filter:grayscale(1);border:2px solid var(--tinta)}
 body:has(article.ficha.post) .pie{background:var(--tinta);color:#bbb;border:0;margin-top:72px;padding:40px 24px}
 body:has(article.ficha.post) .pie a{color:#fff}
 body:has(article.ficha.post) .periodo-tag{border-radius:0;padding:4px 12px;text-transform:uppercase;letter-spacing:.12em;font-size:.7rem}
-body:has(article.ficha.post) .ficha h1{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;letter-spacing:-.035em;font-size:clamp(2.6rem,7vw,4.4rem);line-height:.95}
+body:has(article.ficha.post) .ficha h1{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.035em;font-size:clamp(2.6rem,7vw,4.4rem);line-height:.95}
 body:has(article.ficha.post) .ficha header{border-bottom:3px solid var(--tinta);padding-bottom:16px}
 body:has(article.ficha.post) .ficha header .retrato img{border-radius:0;filter:grayscale(1) contrast(1.1);border:3px solid var(--tinta);box-shadow:8px 8px 0 var(--c)}
 body:has(article.ficha.post) .chip{border-radius:0;border:2px solid var(--tinta);font-weight:600}
-body:has(article.ficha.post) .texto{font-family:'Bodoni Moda',Fraunces,Georgia,serif;font-weight:300;font-size:1.15rem;line-height:1.75}
-body:has(article.ficha.post) .texto p:first-child::first-letter{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;font-size:4.4rem;color:var(--c)}
+body:has(article.ficha.post) .texto{font-family:Fraunces,Georgia,serif;font-weight:300;font-size:1.15rem;line-height:1.75}
+body:has(article.ficha.post) .texto p:first-child::first-letter{font-family:Fraunces,serif;font-weight:900;font-size:4.4rem;color:var(--c)}
 body:has(article.ficha.post) #bio h3,body:has(article.ficha.post) .texto h2{font-family:Inter,sans-serif;font-weight:800;font-size:1.05rem;text-transform:uppercase;letter-spacing:.08em;color:var(--c)}
 body:has(article.ficha.post) .compartir a{border-radius:0}
 body:has(article.ficha.post) .curio{border-radius:0;border:2px solid var(--tinta);background:#fff}
-body:has(article.ficha.post) .explorar h1{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;letter-spacing:-.04em;font-size:4rem;margin-bottom:6px}
+body:has(article.ficha.post) .explorar h1{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.04em;font-size:4rem;margin-bottom:6px}
 body:has(article.ficha.post) .chip.on{background:var(--oro);border-color:var(--tinta)}
 body:has(article.ficha.post) .posts-busca input{border-radius:0;border:2px solid var(--tinta)}
 body:has(article.ficha.post) .post-t img{border-radius:0;filter:grayscale(1)}
 body:has(article.ficha.post) .post-t:hover img{filter:none}
-body:has(article.ficha.post) .post-t strong{font-family:'Bodoni Moda',Fraunces,serif;font-weight:700}
+body:has(article.ficha.post) .post-t strong{font-family:Fraunces,serif;font-weight:700}
 body:has(article.ficha.post) .blog-card{border-left:10px solid var(--oro)}
-body:has(article.ficha.post) .blog-card strong{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;letter-spacing:-.02em}
+body:has(article.ficha.post) .blog-card strong{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.02em}
 body:has(article.ficha.post) .blog-card .leer{color:var(--oro)}
 body:has(article.ficha.post) .aviso-cookies{border-radius:0;border:2px solid var(--tinta)}
 body:has(article.ficha.post) .aviso-cookies button{border-radius:0}
@@ -243,15 +243,15 @@ body:has(article.ficha.post) .explorar h1{font-size:2.8rem}
 body:has(article.ficha.post) .efe-lista{grid-template-columns:1fr}}
 body:has(article.ficha.post) #quiz-semanal>a{border:3px solid var(--tinta)!important;border-radius:0!important;background:#ffd84a!important}
 body:has(article.ficha.post) #quiz-semanal>a>span:last-child{background:var(--tinta)!important;border-radius:0!important;text-transform:uppercase;font-weight:800!important;letter-spacing:.06em}
-body:has(article.ficha.post) #quiz-semanal>a>span:first-child{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;font-size:4rem!important;line-height:1}
+body:has(article.ficha.post) #quiz-semanal>a>span:first-child{font-family:Fraunces,serif;font-weight:900;font-size:4rem!important;line-height:1}
 body:has(article.ficha.post) .hero .antetitulo{color:#fff}
 body:has(article.ficha.post) .hero::after{color:#f1eee8}
 body:has(article.ficha.post) .portada-top .hero .antetitulo{color:#fff!important}
 body:has(article.ficha.post) .post .fecha-post{display:inline-block;background:var(--oro);color:#fff;padding:4px 10px;font-weight:800;font-size:.7rem;letter-spacing:.14em}
-body:has(article.ficha.post) .post h1{font-family:'Bodoni Moda',Fraunces,serif;font-weight:900;letter-spacing:-.035em;line-height:1;font-size:clamp(2.2rem,5vw,3.6rem);margin:14px 0 14px}
+body:has(article.ficha.post) .post h1{font-family:Fraunces,serif;font-weight:900;letter-spacing:-.035em;line-height:1;font-size:clamp(2.2rem,5vw,3.6rem);margin:14px 0 14px}
 body:has(article.ficha.post) .post header .nota{font-size:.92rem;color:#444}
 body:has(article.ficha.post) .post header .nota a{color:var(--tinta);font-weight:700}
-body:has(article.ficha.post) .post .texto{font-family:'Bodoni Moda',Fraunces,Georgia,serif;font-weight:300;font-size:1.15rem;line-height:1.75}
+body:has(article.ficha.post) .post .texto{font-family:Fraunces,Georgia,serif;font-weight:300;font-size:1.15rem;line-height:1.75}
 body:has(article.ficha.post) .post .texto h3{font:800 1rem Inter,sans-serif;letter-spacing:.08em;color:var(--oro);margin:34px 0 8px}
 body:has(article.ficha.post) .post .post-foto img{border-radius:0;border:3px solid var(--tinta);box-shadow:8px 8px 0 var(--oro)}
 body:has(article.ficha.post) .post .boton{background:var(--tinta);border-radius:0;font-family:Inter,sans-serif;font-weight:800}
