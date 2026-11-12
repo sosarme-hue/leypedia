@@ -27,7 +27,7 @@ foreach (['assets/estilo.css', 'en/assets/estilo.css', 'assets/portada-c.css', '
   $c = file_get_contents($t); if ($c === false) { $err[] = "$p: no se puede leer"; continue; }
   copy($t, "$aqui/copias/" . str_replace('/', '_', $p) . ".antes13");
   $tot = 0; foreach ($pares as $pr) { $c = str_replace($pr[0], $pr[1], $c, $n); $tot += $n; }
-  if (substr($p, -9) === 'estilo.css') {
+  if (substr($p, -10) === 'estilo.css') {
     $a = strpos($c, $ini); $b = strpos($c, $fin);
     if ($a !== false && $b !== false) $c = substr($c, 0, $a) . $nuevo . substr($c, $b + strlen($fin));
     else $c = rtrim($c) . "\n" . $nuevo . "\n";
