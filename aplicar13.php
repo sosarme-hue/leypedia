@@ -9,7 +9,7 @@ $ini = "/* === tema Atril (nov 2026) === */"; $fin = "/* === fin tema Atril === 
 $nuevo = trim(file_get_contents("$aqui/atril-c.css"));
 if (strpos($nuevo, $ini) !== 0) exit("atril-c.css no empieza por la marca\n");
 $pares = [
-  ['--papel:#ffffff;--tinta:#111111;--suave:#5c5c5c;--linea:#e6e6e6;--oro:#e8452c;--blanco:#f4f2ee;--marca:#e8452c;', '--papel:#f5efe3;--tinta:#1c1712;--suave:#6b5f50;--linea:#d9cdb8;--oro:#7b1e2e;--blanco:#fbf8f1;--marca:#a8823a;'],
+  ['--papel:#ffffff;--tinta:#111111;--suave:#5c5c5c;--linea:#e6e6e6;--oro:#e8452c;--blanco:#f4f2ee;--marca:#e8452c;', '--papel:#f5efe3;--tinta:#1c1712;--suave:#4f4538;--linea:#d9cdb8;--oro:#7b1e2e;--blanco:#fbf8f1;--marca:#a8823a;'],
   ['--medieval:#6b3fa0;--renacimiento:#0f8a6a;--barroco:#e08a00;--clasicismo:#2357d8;--romanticismo:#d6283c;--siglo-xx:#222222;--contemporaneo:#00a3b4', '--medieval:#7a4b8c;--renacimiento:#2f6f5e;--barroco:#9a5b1f;--clasicismo:#2d5d8f;--romanticismo:#a3333d;--siglo-xx:#4a4a4a;--contemporaneo:#1d7f8c'],
   ['{background:#fff;color:var(--tinta)', '{background:var(--papel);color:var(--tinta)'],
   ['background:#fff', 'background:var(--blanco)'],

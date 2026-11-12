@@ -2,5 +2,11 @@
 html body .dia-personaje:not(#_):not(#_){background:var(--blanco);color:var(--tinta);border:1px solid var(--linea);box-shadow:none}
 html body .dia-personaje h2 a:not(#_):not(#_),html body .dia-personaje .dp-sub:not(#_):not(#_){color:var(--tinta)}
 html body #foto-dia>a:not(#_):not(#_){background:var(--blanco)!important;color:var(--tinta)!important;border-color:var(--linea)!important}
-html body #foto-dia>a *:not(#_):not(#_){color:inherit}
+html body #foto-dia span[style*="667"]:not(#_):not(#_){color:var(--suave)!important}
+html body #foto-dia span[style*="font-weight:600"]:not(#_):not(#_){color:var(--oro)!important}
+/* lectura cómoda: texto de biografías más grueso y grande */
+html body .texto:not(#_):not(#_){font-weight:400;font-size:1.2rem;line-height:1.75}
+/* Cormorant solo en títulos grandes; en tamaños pequeños, letra más robusta */
+html body :is(.gp h3,.region strong,.familia strong,.anecdota h3,.tramo strong,.inst strong,.curio h3,.qz-op strong,.lista strong,.cmp-card h2,.dia-personaje h2):not(#_):not(#_){font-family:Fraunces,Georgia,serif;font-weight:600;letter-spacing:-.01em}
+html body .lista strong:not(#_):not(#_){font-size:1.3rem}
 /* === fin tema Atril === */
