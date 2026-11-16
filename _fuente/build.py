@@ -18,6 +18,20 @@ if os.path.isdir(OUT):
     shutil.rmtree(OUT)
 os.makedirs(OUT)
 
+CC_TXT = {
+    "es": ("Contenido bajo licencia", "salvo indicación en contrario"),
+    "ca": ("Contingut sota llicència", "llevat que s'indiqui el contrari"),
+    "en": ("Content licensed under", "unless otherwise noted"),
+}
+
+
+def cc_line(lang):
+    """Pie de autoría y licencia (CC BY-NC 4.0) en el idioma de la página."""
+    a, b = CC_TXT.get(lang, CC_TXT["es"])
+    return (f'© 2026 Alejandro Rosàs · {a} <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.{lang}" '
+            f'rel="license noopener" style="display:inline">CC BY-NC 4.0</a>, {b}')
+
+
 def rel(from_route, to_route):
     depth = from_route.count("/")
     if PREVIEW:
@@ -119,7 +133,7 @@ def page(pid, lang):
 </main>
 <footer><div class="wrap">
 <div><p>{ui["aviso"]}</p><p>{ui["fuentes"]}</p></div>
-<div><p>{legal}</p><p>© 2026 Leypedia</p></div>
+<div><p>{legal}</p><p>{cc_line(lang)}</p></div>
 </div></footer>
 </body>
 </html>
