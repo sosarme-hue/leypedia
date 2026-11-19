@@ -1,0 +1,149 @@
+{
+ "articulos": [
+  {
+   "clave": "voyager",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/voyager-1-a-un-dia-luz-de-la-tierra.html",
+    "en/blog/voyager-1-one-light-day-from-earth.html"
+   ],
+   "urls": [
+    "https://planetpedia.net/blog/voyager-1-a-un-dia-luz-de-la-tierra.html",
+    "https://planetpedia.net/en/blog/voyager-1-one-light-day-from-earth.html"
+   ]
+  },
+  {
+   "clave": "cielo",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/por-que-el-cielo-es-azul.html",
+    "en/blog/why-is-the-sky-blue.html"
+   ],
+   "urls": [
+    "https://planetpedia.net/blog/por-que-el-cielo-es-azul.html",
+    "https://planetpedia.net/en/blog/why-is-the-sky-blue.html"
+   ]
+  },
+  {
+   "clave": "extremos",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/los-lugares-mas-extremos-de-la-tierra.html",
+    "en/blog/the-most-extreme-places-on-earth.html"
+   ],
+   "urls": [
+    "https://planetpedia.net/blog/los-lugares-mas-extremos-de-la-tierra.html",
+    "https://planetpedia.net/en/blog/the-most-extreme-places-on-earth.html"
+   ]
+  },
+  {
+   "clave": "darwin",
+   "fecha": "2026-11-24",
+   "archivos": [
+    "blog/darwin-y-el-origen-de-las-especies.html",
+    "en/blog/darwin-and-on-the-origin-of-species.html"
+   ],
+   "urls": [
+    "https://planetpedia.net/blog/darwin-y-el-origen-de-las-especies.html",
+    "https://planetpedia.net/en/blog/darwin-and-on-the-origin-of-species.html"
+   ]
+  },
+  {
+   "clave": "nubes",
+   "fecha": "2026-12-01",
+   "archivos": [
+    "blog/como-reconocer-las-nubes.html",
+    "en/blog/how-to-identify-clouds.html"
+   ],
+   "urls": [
+    "https://planetpedia.net/blog/como-reconocer-las-nubes.html",
+    "https://planetpedia.net/en/blog/how-to-identify-clouds.html"
+   ]
+  },
+  {
+   "clave": "geminidas",
+   "fecha": "2026-12-08",
+   "archivos": [
+    "blog/geminidas-la-mejor-lluvia-de-estrellas-del-ano.html",
+    "en/blog/geminids-the-best-meteor-shower-of-the-year.html"
+   ],
+   "urls": [
+    "https://planetpedia.net/blog/geminidas-la-mejor-lluvia-de-estrellas-del-ano.html",
+    "https://planetpedia.net/en/blog/geminids-the-best-meteor-shower-of-the-year.html"
+   ]
+  },
+  {
+   "clave": "lapalma",
+   "fecha": "2026-12-15",
+   "archivos": [
+    "blog/la-palma-cinco-anos-despues-del-volcan.html",
+    "en/blog/la-palma-five-years-after-the-volcano.html"
+   ],
+   "urls": [
+    "https://planetpedia.net/blog/la-palma-cinco-anos-despues-del-volcan.html",
+    "https://planetpedia.net/en/blog/la-palma-five-years-after-the-volcano.html"
+   ]
+  },
+  {
+   "clave": "solsticio",
+   "fecha": "2026-12-22",
+   "archivos": [
+    "blog/el-solsticio-de-invierno.html",
+    "en/blog/the-winter-solstice.html"
+   ],
+   "urls": [
+    "https://planetpedia.net/blog/el-solsticio-de-invierno.html",
+    "https://planetpedia.net/en/blog/the-winter-solstice.html"
+   ]
+  },
+  {
+   "clave": "apolo8",
+   "fecha": "2026-12-29",
+   "archivos": [
+    "blog/apolo-8-la-nochebuena-que-vimos-la-tierra-desde-la-luna.html",
+    "en/blog/apollo-8-the-christmas-eve-we-saw-earth-from-the-moon.html"
+   ],
+   "urls": [
+    "https://planetpedia.net/blog/apolo-8-la-nochebuena-que-vimos-la-tierra-desde-la-luna.html",
+    "https://planetpedia.net/en/blog/apollo-8-the-christmas-eve-we-saw-earth-from-the-moon.html"
+   ]
+  },
+  {
+   "clave": "perihelio",
+   "fecha": "2027-01-05",
+   "archivos": [
+    "blog/el-perihelio-en-enero-estamos-mas-cerca-del-sol.html",
+    "en/blog/perihelion-in-january-we-are-closest-to-the-sun.html"
+   ],
+   "urls": [
+    "https://planetpedia.net/blog/el-perihelio-en-enero-estamos-mas-cerca-del-sol.html",
+    "https://planetpedia.net/en/blog/perihelion-in-january-we-are-closest-to-the-sun.html"
+   ]
+  },
+  {
+   "clave": "antartida",
+   "fecha": "2027-01-12",
+   "archivos": [
+    "blog/antartida-el-continente-helado.html",
+    "en/blog/antarctica-the-frozen-continent.html"
+   ],
+   "urls": [
+    "https://planetpedia.net/blog/antartida-el-continente-helado.html",
+    "https://planetpedia.net/en/blog/antarctica-the-frozen-continent.html"
+   ]
+  }
+ ],
+ "indices": [
+  "2026-11-19",
+  "2026-11-24",
+  "2026-12-01",
+  "2026-12-08",
+  "2026-12-15",
+  "2026-12-22",
+  "2026-12-29",
+  "2027-01-05",
+  "2027-01-12"
+ ],
+ "dominio": "planetpedia.net",
+ "no_tocar_web": true
+}

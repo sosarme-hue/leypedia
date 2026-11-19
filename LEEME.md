@@ -17,3 +17,7 @@ La carpeta no es accesible desde la web (`.htaccess`). Cada web usa solo su subc
 - Filopedia (`_blog/filopedia/`, JS `assets/busca.js`) y enfermeria.si (`_blog/enfermeria/`, solo en español) se añadieron el 19-11-2026, con el mismo calendario.
   enfermeria.si se despliega desde Git (repositorio enfermeria-si): su `publicar.php` (opción `no_tocar_web` del manifiesto) solo escribe `blog/` y `sitemap-blog.xml`;
   el enlace «Blog» del menú y la línea de `robots.txt` van en ese repositorio.
+- Planetpedia (`_blog/planetpedia/`, español e inglés) y Escolapedia (`_blog/escolapedia/`, solo en español) se añadieron el 19-11-2026, con el mismo calendario.
+  Las dos se despliegan desde Git, así que usan `no_tocar_web`; el enlace «Blog» del menú y la línea de `robots.txt` van en sus repositorios.
+  Escolapedia se sirve desde `public_html/dist/` (el `.htaccess` reescribe todo ahí): su manifiesto lleva `"raiz": "dist"`, y el blog queda en `dist/blog/`.
+  Las fotos de Escolapedia se enlazan desde Unsplash (images.unsplash.com), con el autor al pie.

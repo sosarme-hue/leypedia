@@ -1,0 +1,131 @@
+{
+ "articulos": [
+  {
+   "clave": "infancia",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/dia-del-nino-y-derechos-de-la-infancia.html"
+   ],
+   "urls": [
+    "https://escolapedia.com/blog/dia-del-nino-y-derechos-de-la-infancia.html"
+   ]
+  },
+  {
+   "clave": "tecnicas",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/tecnicas-de-estudio-que-funcionan.html"
+   ],
+   "urls": [
+    "https://escolapedia.com/blog/tecnicas-de-estudio-que-funcionan.html"
+   ]
+  },
+  {
+   "clave": "deberes",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/como-ayudar-con-los-deberes-sin-hacerlos.html"
+   ],
+   "urls": [
+    "https://escolapedia.com/blog/como-ayudar-con-los-deberes-sin-hacerlos.html"
+   ]
+  },
+  {
+   "clave": "esquema",
+   "fecha": "2026-11-24",
+   "archivos": [
+    "blog/como-hacer-un-buen-esquema.html"
+   ],
+   "urls": [
+    "https://escolapedia.com/blog/como-hacer-un-buen-esquema.html"
+   ]
+  },
+  {
+   "clave": "leer",
+   "fecha": "2026-12-01",
+   "archivos": [
+    "blog/ideas-para-animar-a-leer-en-casa.html"
+   ],
+   "urls": [
+    "https://escolapedia.com/blog/ideas-para-animar-a-leer-en-casa.html"
+   ]
+  },
+  {
+   "clave": "examenes",
+   "fecha": "2026-12-08",
+   "archivos": [
+    "blog/preparar-los-examenes-de-la-primera-evaluacion.html"
+   ],
+   "urls": [
+    "https://escolapedia.com/blog/preparar-los-examenes-de-la-primera-evaluacion.html"
+   ]
+  },
+  {
+   "clave": "notas",
+   "fecha": "2026-12-15",
+   "archivos": [
+    "blog/las-notas-de-la-primera-evaluacion-que-hacer.html"
+   ],
+   "urls": [
+    "https://escolapedia.com/blog/las-notas-de-la-primera-evaluacion-que-hacer.html"
+   ]
+  },
+  {
+   "clave": "jugando",
+   "fecha": "2026-12-22",
+   "archivos": [
+    "blog/aprender-jugando-en-vacaciones-de-navidad.html"
+   ],
+   "urls": [
+    "https://escolapedia.com/blog/aprender-jugando-en-vacaciones-de-navidad.html"
+   ]
+  },
+  {
+   "clave": "cocina",
+   "fecha": "2026-12-29",
+   "archivos": [
+    "blog/matematicas-en-la-cocina.html"
+   ],
+   "urls": [
+    "https://escolapedia.com/blog/matematicas-en-la-cocina.html"
+   ]
+  },
+  {
+   "clave": "reyes",
+   "fecha": "2027-01-05",
+   "archivos": [
+    "blog/regalos-de-reyes-que-ayudan-a-aprender.html"
+   ],
+   "urls": [
+    "https://escolapedia.com/blog/regalos-de-reyes-que-ayudan-a-aprender.html"
+   ]
+  },
+  {
+   "clave": "rutina",
+   "fecha": "2027-01-12",
+   "archivos": [
+    "blog/volver-a-la-rutina-despues-de-navidad.html"
+   ],
+   "urls": [
+    "https://escolapedia.com/blog/volver-a-la-rutina-despues-de-navidad.html"
+   ]
+  }
+ ],
+ "indices": [
+  "2026-11-19",
+  "2026-11-24",
+  "2026-12-01",
+  "2026-12-08",
+  "2026-12-15",
+  "2026-12-22",
+  "2026-12-29",
+  "2027-01-05",
+  "2027-01-12"
+ ],
+ "dominio": "escolapedia.com",
+ "idiomas": [
+  "es"
+ ],
+ "no_tocar_web": true,
+ "raiz": "dist"
+}

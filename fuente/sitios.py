@@ -141,3 +141,4 @@ SITIOS.update(TN)
 from sitios_cm import CM  # noqa: E402  Cinematopedia y Medicapedia
 SITIOS.update(CM)
 from sitios_fe import FE; SITIOS.update(FE)
+from sitios_ep import EP; SITIOS.update(EP)

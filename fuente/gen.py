@@ -102,7 +102,7 @@ class Sitio:
 {(c["head"][lang] if isinstance(c["head"], dict) else c["head"]).replace("{I}", I)}
 <style>{c["css"]}</style>{extra}
 </head>
-<body>
+<body{c.get("body", {}).get(lang, "").replace("{I}", I)}>
 {c["cab"][lang].replace("{R}", self.raiz(lang)).replace("{I}", I).replace("{ALT}", ("../../blog/" if lang == "en" else "../en/blog/") + ("" if alt_url.endswith("/") else alt_url.rsplit("/", 1)[1]))}
 '''
 
@@ -201,6 +201,8 @@ class Sitio:
             manif['idiomas'] = self.idiomas
         if self.c.get('no_tocar_web'):
             manif['no_tocar_web'] = True
+        if self.c.get('raiz_fisica'):
+            manif['raiz'] = self.c['raiz_fisica']
         imgs = self.dir / 'imagenes'
         if imgs.exists():
             dimg = out / 'blog' / 'img'
