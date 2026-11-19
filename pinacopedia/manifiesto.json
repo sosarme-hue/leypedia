@@ -1,0 +1,149 @@
+{
+ "articulos": [
+  {
+   "clave": "magos",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/la-adoracion-de-los-magos-en-ocho-cuadros.html",
+    "en/blog/the-adoration-of-the-magi-in-eight-paintings.html"
+   ],
+   "urls": [
+    "https://pinacopedia.com/blog/la-adoracion-de-los-magos-en-ocho-cuadros.html",
+    "https://pinacopedia.com/en/blog/the-adoration-of-the-magi-in-eight-paintings.html"
+   ]
+  },
+  {
+   "clave": "nieve",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/paisajes-de-invierno-los-cuadros-de-nieve-mas-famosos.html",
+    "en/blog/winter-landscapes-the-most-famous-snow-paintings.html"
+   ],
+   "urls": [
+    "https://pinacopedia.com/blog/paisajes-de-invierno-los-cuadros-de-nieve-mas-famosos.html",
+    "https://pinacopedia.com/en/blog/winter-landscapes-the-most-famous-snow-paintings.html"
+   ]
+  },
+  {
+   "clave": "mirar",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/como-mirar-un-cuadro-en-diez-minutos.html",
+    "en/blog/how-to-look-at-a-painting-in-ten-minutes.html"
+   ],
+   "urls": [
+    "https://pinacopedia.com/blog/como-mirar-un-cuadro-en-diez-minutos.html",
+    "https://pinacopedia.com/en/blog/how-to-look-at-a-painting-in-ten-minutes.html"
+   ]
+  },
+  {
+   "clave": "vermeer",
+   "fecha": "2026-11-24",
+   "archivos": [
+    "blog/la-joven-de-la-perla-el-misterio-de-vermeer.html",
+    "en/blog/girl-with-a-pearl-earring-vermeers-mystery.html"
+   ],
+   "urls": [
+    "https://pinacopedia.com/blog/la-joven-de-la-perla-el-misterio-de-vermeer.html",
+    "https://pinacopedia.com/en/blog/girl-with-a-pearl-earring-vermeers-mystery.html"
+   ]
+  },
+  {
+   "clave": "bosco",
+   "fecha": "2026-12-01",
+   "archivos": [
+    "blog/el-jardin-de-las-delicias-guia-para-perderse.html",
+    "en/blog/the-garden-of-earthly-delights-a-guide.html"
+   ],
+   "urls": [
+    "https://pinacopedia.com/blog/el-jardin-de-las-delicias-guia-para-perderse.html",
+    "https://pinacopedia.com/en/blog/the-garden-of-earthly-delights-a-guide.html"
+   ]
+  },
+  {
+   "clave": "proverbios",
+   "fecha": "2026-12-08",
+   "archivos": [
+    "blog/los-proverbios-flamencos-refranes-en-un-cuadro.html",
+    "en/blog/netherlandish-proverbs-a-hundred-sayings-in-one-painting.html"
+   ],
+   "urls": [
+    "https://pinacopedia.com/blog/los-proverbios-flamencos-refranes-en-un-cuadro.html",
+    "https://pinacopedia.com/en/blog/netherlandish-proverbs-a-hundred-sayings-in-one-painting.html"
+   ]
+  },
+  {
+   "clave": "noche",
+   "fecha": "2026-12-15",
+   "archivos": [
+    "blog/la-noche-estrellada-de-van-gogh.html",
+    "en/blog/the-starry-night-by-van-gogh.html"
+   ],
+   "urls": [
+    "https://pinacopedia.com/blog/la-noche-estrellada-de-van-gogh.html",
+    "https://pinacopedia.com/en/blog/the-starry-night-by-van-gogh.html"
+   ]
+  },
+  {
+   "clave": "fiestas",
+   "fecha": "2026-12-22",
+   "archivos": [
+    "blog/banquetes-y-fiestas-en-la-pintura.html",
+    "en/blog/feasts-and-parties-in-painting.html"
+   ],
+   "urls": [
+    "https://pinacopedia.com/blog/banquetes-y-fiestas-en-la-pintura.html",
+    "https://pinacopedia.com/en/blog/feasts-and-parties-in-painting.html"
+   ]
+  },
+  {
+   "clave": "juegos",
+   "fecha": "2026-12-29",
+   "archivos": [
+    "blog/juego-de-ninos-de-brueghel.html",
+    "en/blog/childrens-games-by-bruegel.html"
+   ],
+   "urls": [
+    "https://pinacopedia.com/blog/juego-de-ninos-de-brueghel.html",
+    "https://pinacopedia.com/en/blog/childrens-games-by-bruegel.html"
+   ]
+  },
+  {
+   "clave": "gioconda",
+   "fecha": "2027-01-05",
+   "archivos": [
+    "blog/diez-curiosidades-sobre-la-gioconda.html",
+    "en/blog/ten-curious-facts-about-the-mona-lisa.html"
+   ],
+   "urls": [
+    "https://pinacopedia.com/blog/diez-curiosidades-sobre-la-gioconda.html",
+    "https://pinacopedia.com/en/blog/ten-curious-facts-about-the-mona-lisa.html"
+   ]
+  },
+  {
+   "clave": "libertad",
+   "fecha": "2027-01-12",
+   "archivos": [
+    "blog/la-libertad-guiando-al-pueblo-de-delacroix.html",
+    "en/blog/liberty-leading-the-people-by-delacroix.html"
+   ],
+   "urls": [
+    "https://pinacopedia.com/blog/la-libertad-guiando-al-pueblo-de-delacroix.html",
+    "https://pinacopedia.com/en/blog/liberty-leading-the-people-by-delacroix.html"
+   ]
+  }
+ ],
+ "indices": [
+  "2026-11-19",
+  "2026-11-24",
+  "2026-12-01",
+  "2026-12-08",
+  "2026-12-15",
+  "2026-12-22",
+  "2026-12-29",
+  "2027-01-05",
+  "2027-01-12"
+ ],
+ "dominio": "pinacopedia.com",
+ "js_menu": "assets/busca.js"
+}

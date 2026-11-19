@@ -1,0 +1,2 @@
+/* enlace Blog en el menu */
+(function(){function b(){var m=document.querySelector('.cab .menu');if(!m||m.querySelector('a.menu-blog'))return;var en=document.documentElement.lang==='en';var a=document.createElement('a');a.className='menu-blog';a.href=en?'/en/blog/':'/blog/';a.textContent='Blog';m.appendChild(a);}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',b);else b();})();

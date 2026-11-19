@@ -1,0 +1,152 @@
+{
+ "articulos": [
+  {
+   "clave": "turron",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/historia-del-turron.html",
+    "en/blog/the-history-of-turron.html"
+   ],
+   "urls": [
+    "https://culinapedia.com/blog/historia-del-turron.html",
+    "https://culinapedia.com/en/blog/the-history-of-turron.html"
+   ]
+  },
+  {
+   "clave": "menus",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/la-mesa-de-navidad-en-diez-paises.html",
+    "en/blog/the-christmas-table-in-ten-countries.html"
+   ],
+   "urls": [
+    "https://culinapedia.com/blog/la-mesa-de-navidad-en-diez-paises.html",
+    "https://culinapedia.com/en/blog/the-christmas-table-in-ten-countries.html"
+   ]
+  },
+  {
+   "clave": "roscon",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/el-roscon-de-reyes-origen-y-tradicion.html",
+    "en/blog/the-roscon-de-reyes-origins-and-tradition.html"
+   ],
+   "urls": [
+    "https://culinapedia.com/blog/el-roscon-de-reyes-origen-y-tradicion.html",
+    "https://culinapedia.com/en/blog/the-roscon-de-reyes-origins-and-tradition.html"
+   ]
+  },
+  {
+   "clave": "churros",
+   "fecha": "2026-11-24",
+   "archivos": [
+    "blog/churros-con-chocolate-historia.html",
+    "en/blog/churros-and-chocolate-history.html"
+   ],
+   "urls": [
+    "https://culinapedia.com/blog/churros-con-chocolate-historia.html",
+    "https://culinapedia.com/en/blog/churros-and-chocolate-history.html"
+   ]
+  },
+  {
+   "clave": "mazapan",
+   "fecha": "2026-12-01",
+   "archivos": [
+    "blog/el-mazapan-de-toledo-a-lubeck.html",
+    "en/blog/marzipan-from-toledo-to-lubeck.html"
+   ],
+   "urls": [
+    "https://culinapedia.com/blog/el-mazapan-de-toledo-a-lubeck.html",
+    "https://culinapedia.com/en/blog/marzipan-from-toledo-to-lubeck.html"
+   ]
+  },
+  {
+   "clave": "dulceseuropa",
+   "fecha": "2026-12-08",
+   "archivos": [
+    "blog/dulces-navidenos-de-europa.html",
+    "en/blog/christmas-sweets-of-europe.html"
+   ],
+   "urls": [
+    "https://culinapedia.com/blog/dulces-navidenos-de-europa.html",
+    "https://culinapedia.com/en/blog/christmas-sweets-of-europe.html"
+   ]
+  },
+  {
+   "clave": "pandulce",
+   "fecha": "2026-12-15",
+   "archivos": [
+    "blog/panettone-y-pan-dulce-de-milan-a-lima.html",
+    "en/blog/panettone-and-pan-dulce-from-milan-to-lima.html"
+   ],
+   "urls": [
+    "https://culinapedia.com/blog/panettone-y-pan-dulce-de-milan-a-lima.html",
+    "https://culinapedia.com/en/blog/panettone-and-pan-dulce-from-milan-to-lima.html"
+   ]
+  },
+  {
+   "clave": "sobras",
+   "fecha": "2026-12-22",
+   "archivos": [
+    "blog/cocina-de-aprovechamiento-las-sobras-de-navidad.html",
+    "en/blog/leftover-cooking-christmas-leftovers.html"
+   ],
+   "urls": [
+    "https://culinapedia.com/blog/cocina-de-aprovechamiento-las-sobras-de-navidad.html",
+    "https://culinapedia.com/en/blog/leftover-cooking-christmas-leftovers.html"
+   ]
+  },
+  {
+   "clave": "uvas",
+   "fecha": "2026-12-29",
+   "archivos": [
+    "blog/las-doce-uvas-de-nochevieja.html",
+    "en/blog/the-twelve-grapes-of-new-years-eve.html"
+   ],
+   "urls": [
+    "https://culinapedia.com/blog/las-doce-uvas-de-nochevieja.html",
+    "https://culinapedia.com/en/blog/the-twelve-grapes-of-new-years-eve.html"
+   ]
+  },
+  {
+   "clave": "reyes",
+   "fecha": "2027-01-05",
+   "archivos": [
+    "blog/dulces-de-reyes-en-el-mundo.html",
+    "en/blog/epiphany-sweets-around-the-world.html"
+   ],
+   "urls": [
+    "https://culinapedia.com/blog/dulces-de-reyes-en-el-mundo.html",
+    "https://culinapedia.com/en/blog/epiphany-sweets-around-the-world.html"
+   ]
+  },
+  {
+   "clave": "cocido",
+   "fecha": "2027-01-12",
+   "archivos": [
+    "blog/el-cocido-madrileno-y-sus-primos.html",
+    "en/blog/cocido-madrileno-and-its-cousins.html"
+   ],
+   "urls": [
+    "https://culinapedia.com/blog/el-cocido-madrileno-y-sus-primos.html",
+    "https://culinapedia.com/en/blog/cocido-madrileno-and-its-cousins.html"
+   ]
+  }
+ ],
+ "indices": [
+  "2026-11-19",
+  "2026-11-24",
+  "2026-12-01",
+  "2026-12-08",
+  "2026-12-15",
+  "2026-12-22",
+  "2026-12-29",
+  "2027-01-05",
+  "2027-01-12"
+ ],
+ "dominio": "culinapedia.com",
+ "imagenes": [
+  "blog/img/roscon-de-reyes.webp"
+ ],
+ "js_menu": "assets/familia.js"
+}

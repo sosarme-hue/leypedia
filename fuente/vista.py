@@ -1,0 +1,42 @@
+"""Vista previa: copia el payload y convierte las rutas a la web real en absolutas (CSS e imágenes cargan de la web)."""
+import re, shutil, sys, json
+from pathlib import Path
+from urllib.parse import urljoin
+BASE = Path(__file__).parent
+out = BASE / 'vista-previa'
+if out.exists(): shutil.rmtree(out)
+for sitio in ('pinacopedia', 'culinapedia'):
+    d = BASE / sitio / 'payload'
+    m = json.loads((BASE / sitio / 'manifiesto.json').read_text())
+    dom = m['dominio']
+    ult = m['indices'][-1]
+    pags = {}
+    for lang, carp in (('es', 'blog'), ('en', 'en/blog')):
+        for f in (d / carp).glob('*.html'):
+            pags[f'{carp}/{f.name}'] = f.read_text()
+        pags[f'{carp}/index.html'] = (d / 'indices' / lang / f'{ult}.html').read_text()
+    for rel, h in pags.items():
+        live = f'https://{dom}/{rel}'
+        carp = rel.rsplit('/', 1)[0]
+        def fix(mm):
+            attr, q, v = mm.group(1), mm.group(2), mm.group(3)
+            if v.startswith(('http', '#', 'mailto')): return mm.group(0)
+            if v in ('./', ''): return f'{attr}={q}index.html{q}'
+            if '/' not in v and v.endswith('.html'): return mm.group(0)  # otra página del blog
+            ab = urljoin(live, v)
+            # enlaces al blog del otro idioma: dentro de la vista previa
+            for c in ('blog', 'en/blog'):
+                pre = f'https://{dom}/{c}/'
+                if ab.startswith(pre):
+                    dest = ab[len(pre):] or 'index.html'
+                    up = '../' * carp.count('/') if c == 'blog' else ('../' * (carp.count('/') + 1) + 'en/' if carp == 'blog' else '')
+                    if carp == c: return f'{attr}={q}{dest}{q}'
+                    return f'{attr}={q}{"../en/blog/" if c=="en/blog" else "../../blog/"}{dest}{q}'
+            return f'{attr}={q}{ab}{q}'
+        h2 = re.sub(r'\b(href|src|action)=(["\'])([^"\']*)\2', fix, h)
+        p = out / sitio / rel
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(h2)
+    if (d / 'blog' / 'img').exists():
+        shutil.copytree(d / 'blog' / 'img', out / sitio / 'blog' / 'img')
+print('ok', sorted(str(p.relative_to(out)) for p in out.rglob('*.html')))
