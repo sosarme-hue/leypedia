@@ -135,3 +135,6 @@ SITIOS = {
   },
  },
 }
+
+from sitios_tn import TN  # noqa: E402  Tenispedia y Newtonpedia
+SITIOS.update(TN)

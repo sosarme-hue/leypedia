@@ -1,0 +1,149 @@
+{
+ "articulos": [
+  {
+   "clave": "relatividad",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/einstein-y-la-relatividad-general.html",
+    "en/blog/einstein-and-general-relativity.html"
+   ],
+   "urls": [
+    "https://newtonpedia.com/blog/einstein-y-la-relatividad-general.html",
+    "https://newtonpedia.com/en/blog/einstein-and-general-relativity.html"
+   ]
+  },
+  {
+   "clave": "curie",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/marie-curie-y-sus-dos-premios-nobel.html",
+    "en/blog/marie-curie-and-her-two-nobel-prizes.html"
+   ],
+   "urls": [
+    "https://newtonpedia.com/blog/marie-curie-y-sus-dos-premios-nobel.html",
+    "https://newtonpedia.com/en/blog/marie-curie-and-her-two-nobel-prizes.html"
+   ]
+  },
+  {
+   "clave": "lovelace",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/ada-lovelace-y-el-primer-programa.html",
+    "en/blog/ada-lovelace-and-the-first-computer-program.html"
+   ],
+   "urls": [
+    "https://newtonpedia.com/blog/ada-lovelace-y-el-primer-programa.html",
+    "https://newtonpedia.com/en/blog/ada-lovelace-and-the-first-computer-program.html"
+   ]
+  },
+  {
+   "clave": "darwin",
+   "fecha": "2026-11-24",
+   "archivos": [
+    "blog/darwin-y-el-origen-de-las-especies.html",
+    "en/blog/darwin-and-on-the-origin-of-species.html"
+   ],
+   "urls": [
+    "https://newtonpedia.com/blog/darwin-y-el-origen-de-las-especies.html",
+    "https://newtonpedia.com/en/blog/darwin-and-on-the-origin-of-species.html"
+   ]
+  },
+  {
+   "clave": "penicilina",
+   "fecha": "2026-12-01",
+   "archivos": [
+    "blog/fleming-y-la-penicilina.html",
+    "en/blog/fleming-and-penicillin.html"
+   ],
+   "urls": [
+    "https://newtonpedia.com/blog/fleming-y-la-penicilina.html",
+    "https://newtonpedia.com/en/blog/fleming-and-penicillin.html"
+   ]
+  },
+  {
+   "clave": "nobel",
+   "fecha": "2026-12-08",
+   "archivos": [
+    "blog/historia-de-los-premios-nobel.html",
+    "en/blog/the-history-of-the-nobel-prizes.html"
+   ],
+   "urls": [
+    "https://newtonpedia.com/blog/historia-de-los-premios-nobel.html",
+    "https://newtonpedia.com/en/blog/the-history-of-the-nobel-prizes.html"
+   ]
+  },
+  {
+   "clave": "wright",
+   "fecha": "2026-12-15",
+   "archivos": [
+    "blog/los-hermanos-wright-y-el-primer-vuelo.html",
+    "en/blog/the-wright-brothers-and-the-first-flight.html"
+   ],
+   "urls": [
+    "https://newtonpedia.com/blog/los-hermanos-wright-y-el-primer-vuelo.html",
+    "https://newtonpedia.com/en/blog/the-wright-brothers-and-the-first-flight.html"
+   ]
+  },
+  {
+   "clave": "newton",
+   "fecha": "2026-12-22",
+   "archivos": [
+    "blog/isaac-newton-nacido-el-dia-de-navidad.html",
+    "en/blog/isaac-newton-born-on-christmas-day.html"
+   ],
+   "urls": [
+    "https://newtonpedia.com/blog/isaac-newton-nacido-el-dia-de-navidad.html",
+    "https://newtonpedia.com/en/blog/isaac-newton-born-on-christmas-day.html"
+   ]
+  },
+  {
+   "clave": "earthrise",
+   "fecha": "2026-12-29",
+   "archivos": [
+    "blog/salida-de-la-tierra-la-foto-del-apolo-8.html",
+    "en/blog/earthrise-the-apollo-8-photograph.html"
+   ],
+   "urls": [
+    "https://newtonpedia.com/blog/salida-de-la-tierra-la-foto-del-apolo-8.html",
+    "https://newtonpedia.com/en/blog/earthrise-the-apollo-8-photograph.html"
+   ]
+  },
+  {
+   "clave": "galileo",
+   "fecha": "2027-01-05",
+   "archivos": [
+    "blog/galileo-y-las-lunas-de-jupiter.html",
+    "en/blog/galileo-and-the-moons-of-jupiter.html"
+   ],
+   "urls": [
+    "https://newtonpedia.com/blog/galileo-y-las-lunas-de-jupiter.html",
+    "https://newtonpedia.com/en/blog/galileo-and-the-moons-of-jupiter.html"
+   ]
+  },
+  {
+   "clave": "cajal",
+   "fecha": "2027-01-12",
+   "archivos": [
+    "blog/ramon-y-cajal-y-la-neurona.html",
+    "en/blog/ramon-y-cajal-and-the-neuron.html"
+   ],
+   "urls": [
+    "https://newtonpedia.com/blog/ramon-y-cajal-y-la-neurona.html",
+    "https://newtonpedia.com/en/blog/ramon-y-cajal-and-the-neuron.html"
+   ]
+  }
+ ],
+ "indices": [
+  "2026-11-19",
+  "2026-11-24",
+  "2026-12-01",
+  "2026-12-08",
+  "2026-12-15",
+  "2026-12-22",
+  "2026-12-29",
+  "2027-01-05",
+  "2027-01-12"
+ ],
+ "dominio": "newtonpedia.com",
+ "js_menu": "assets/newton.js"
+}

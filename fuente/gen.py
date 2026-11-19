@@ -63,12 +63,12 @@ class Sitio:
             k = m.group(1)
             return f'<a href="{self.art[k][lang][0]}.html">{m.group(2)}</a>'
         t = re.sub(r'\{art:([a-z0-9]+)\|([^}]+)\}', art, t)
-        pref = {'o': 'o/', 'b': 'b/', 'm': 'm/', 'p': 'p/', 'u': ''}
+        pref = dict(self.c.get('pref', {'o': 'o/', 'b': 'b/', 'm': 'm/', 'p': 'p/'}), u='')
         def enl(m):
             k, slug, txt = m.group(1), m.group(2), m.group(3)
             dest = slug if k == 'u' else f'{pref[k]}{slug}.html'
             return f'<a href="{R}{dest}">{txt}</a>'
-        t = re.sub(r'\{([obmpu]):([^|}]+)\|([^}]+)\}', enl, t)
+        t = re.sub(r'\{([' + ''.join(pref) + r']):([^|}]+)\|([^}]+)\}', enl, t)
         assert '{' not in re.sub(r'<script.*?</script>', '', t, flags=re.S), 'marca sin resolver'
         return t
 
@@ -79,7 +79,7 @@ class Sitio:
         es_url, en_url = (url, alt_url) if lang == 'es' else (alt_url, url)
         og = f'<meta property="og:image" content="https://{self.dom}/{og_img}">' if og_img else ''
         return f'''<!doctype html>
-<html lang="{lang}" data-raiz="{I}">
+<html lang="{lang}" data-raiz="{c.get('data_raiz', {}).get(lang, I)}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -87,7 +87,7 @@ class Sitio:
 <meta name="description" content="{esc(desc)}">
 <meta property="og:type" content="{og_type}"><meta property="og:site_name" content="{c["nombre"]}"><meta property="og:title" content="{esc(titulo)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{url}">{og}<meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="{url}"><link rel="alternate" hreflang="es" href="{es_url}"><link rel="alternate" hreflang="en" href="{en_url}">
-{c["head"].replace("{I}", I)}
+{(c["head"][lang] if isinstance(c["head"], dict) else c["head"]).replace("{I}", I)}
 <style>{c["css"]}</style>{extra}
 </head>
 <body>

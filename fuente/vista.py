@@ -3,9 +3,10 @@ import re, shutil, sys, json
 from pathlib import Path
 from urllib.parse import urljoin
 BASE = Path(__file__).parent
-out = BASE / 'vista-previa'
+SITIOS_V = sys.argv[1:] or ['pinacopedia', 'culinapedia']
+out = BASE / ('vista-previa' if not sys.argv[1:] else 'vista-previa-' + '-'.join(SITIOS_V))
 if out.exists(): shutil.rmtree(out)
-for sitio in ('pinacopedia', 'culinapedia'):
+for sitio in SITIOS_V:
     d = BASE / sitio / 'payload'
     m = json.loads((BASE / sitio / 'manifiesto.json').read_text())
     dom = m['dominio']

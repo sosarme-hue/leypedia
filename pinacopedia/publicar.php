@@ -58,10 +58,17 @@ if ($f) {
     if (file_put_contents($t, $x) !== false) $log[] = 'sitemap-blog.xml'; else $err[] = 'no se pudo escribir sitemap-blog.xml';
   }
   $c = file_get_contents("$raiz/sitemap.xml"); $loc = "https://$dom/sitemap-blog.xml";
-  if (strpos($c, $loc) === false) {
-    $p = strrpos($c, '</sitemapindex>');
-    if ($p === false) $err[] = 'sitemap.xml no es un índice';
-    else {
+  $p = strrpos($c, '</sitemapindex>');
+  if ($p === false) {
+    // sitemap.xml es una lista de URL (no un índice): se anuncia sitemap-blog.xml en robots.txt
+    $rb = file_exists("$raiz/robots.txt") ? file_get_contents("$raiz/robots.txt") : '';
+    if (strpos($rb, $loc) === false) {
+      if ($rb !== '') $copia('robots.txt');
+      if (file_put_contents("$raiz/robots.txt", rtrim($rb) . ($rb === '' ? '' : "\n") . "Sitemap: $loc\n") !== false) $log[] = 'robots.txt: añadido sitemap-blog.xml';
+      else $err[] = 'no se pudo escribir robots.txt';
+    }
+  } elseif (strpos($c, $loc) === false) {
+    {
       $copia('sitemap.xml');
       if (file_put_contents("$raiz/sitemap.xml", substr($c, 0, $p) . "<sitemap><loc>$loc</loc></sitemap>\n" . substr($c, $p)) !== false) $log[] = 'sitemap.xml: añadido sitemap-blog.xml';
       else $err[] = 'no se pudo escribir sitemap.xml';

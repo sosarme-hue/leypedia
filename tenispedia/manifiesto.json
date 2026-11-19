@@ -1,0 +1,149 @@
+{
+ "articulos": [
+  {
+   "clave": "davis",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/historia-de-la-copa-davis.html",
+    "en/blog/the-history-of-the-davis-cup.html"
+   ],
+   "urls": [
+    "https://tenispedia.com/blog/historia-de-la-copa-davis.html",
+    "https://tenispedia.com/en/blog/the-history-of-the-davis-cup.html"
+   ]
+  },
+  {
+   "clave": "borgmcenroe",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/borg-contra-mcenroe-hielo-y-fuego.html",
+    "en/blog/borg-v-mcenroe-ice-and-fire.html"
+   ],
+   "urls": [
+    "https://tenispedia.com/blog/borg-contra-mcenroe-hielo-y-fuego.html",
+    "https://tenispedia.com/en/blog/borg-v-mcenroe-ice-and-fire.html"
+   ]
+  },
+  {
+   "clave": "lenglen",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/suzanne-lenglen-y-el-partido-del-siglo.html",
+    "en/blog/suzanne-lenglen-and-the-match-of-the-century.html"
+   ],
+   "urls": [
+    "https://tenispedia.com/blog/suzanne-lenglen-y-el-partido-del-siglo.html",
+    "https://tenispedia.com/en/blog/suzanne-lenglen-and-the-match-of-the-century.html"
+   ]
+  },
+  {
+   "clave": "laver",
+   "fecha": "2026-11-24",
+   "archivos": [
+    "blog/rod-laver-y-el-grand-slam-de-1969.html",
+    "en/blog/rod-laver-and-the-1969-grand-slam.html"
+   ],
+   "urls": [
+    "https://tenispedia.com/blog/rod-laver-y-el-grand-slam-de-1969.html",
+    "https://tenispedia.com/en/blog/rod-laver-and-the-1969-grand-slam.html"
+   ]
+  },
+  {
+   "clave": "gibson",
+   "fecha": "2026-12-01",
+   "archivos": [
+    "blog/althea-gibson-la-pionera.html",
+    "en/blog/althea-gibson-the-pioneer.html"
+   ],
+   "urls": [
+    "https://tenispedia.com/blog/althea-gibson-la-pionera.html",
+    "https://tenispedia.com/en/blog/althea-gibson-the-pioneer.html"
+   ]
+  },
+  {
+   "clave": "origenes",
+   "fecha": "2026-12-08",
+   "archivos": [
+    "blog/del-juego-de-pelota-a-wimbledon-1877.html",
+    "en/blog/from-real-tennis-to-wimbledon-1877.html"
+   ],
+   "urls": [
+    "https://tenispedia.com/blog/del-juego-de-pelota-a-wimbledon-1877.html",
+    "https://tenispedia.com/en/blog/from-real-tennis-to-wimbledon-1877.html"
+   ]
+  },
+  {
+   "clave": "santana",
+   "fecha": "2026-12-15",
+   "archivos": [
+    "blog/manolo-santana-y-el-tenis-espanol.html",
+    "en/blog/manolo-santana-and-the-rise-of-spanish-tennis.html"
+   ],
+   "urls": [
+    "https://tenispedia.com/blog/manolo-santana-y-el-tenis-espanol.html",
+    "https://tenispedia.com/en/blog/manolo-santana-and-the-rise-of-spanish-tennis.html"
+   ]
+  },
+  {
+   "clave": "raqueta",
+   "fecha": "2026-12-22",
+   "archivos": [
+    "blog/de-la-madera-al-grafito-historia-de-la-raqueta.html",
+    "en/blog/from-wood-to-graphite-the-history-of-the-racket.html"
+   ],
+   "urls": [
+    "https://tenispedia.com/blog/de-la-madera-al-grafito-historia-de-la-raqueta.html",
+    "https://tenispedia.com/en/blog/from-wood-to-graphite-the-history-of-the-racket.html"
+   ]
+  },
+  {
+   "clave": "sexos",
+   "fecha": "2026-12-29",
+   "archivos": [
+    "blog/la-batalla-de-los-sexos-king-contra-riggs.html",
+    "en/blog/the-battle-of-the-sexes-king-v-riggs.html"
+   ],
+   "urls": [
+    "https://tenispedia.com/blog/la-batalla-de-los-sexos-king-contra-riggs.html",
+    "https://tenispedia.com/en/blog/the-battle-of-the-sexes-king-v-riggs.html"
+   ]
+  },
+  {
+   "clave": "fedal",
+   "fecha": "2027-01-05",
+   "archivos": [
+    "blog/federer-contra-nadal-la-rivalidad.html",
+    "en/blog/federer-v-nadal-the-rivalry.html"
+   ],
+   "urls": [
+    "https://tenispedia.com/blog/federer-contra-nadal-la-rivalidad.html",
+    "https://tenispedia.com/en/blog/federer-v-nadal-the-rivalry.html"
+   ]
+  },
+  {
+   "clave": "australia",
+   "fecha": "2027-01-12",
+   "archivos": [
+    "blog/historia-del-open-de-australia.html",
+    "en/blog/the-history-of-the-australian-open.html"
+   ],
+   "urls": [
+    "https://tenispedia.com/blog/historia-del-open-de-australia.html",
+    "https://tenispedia.com/en/blog/the-history-of-the-australian-open.html"
+   ]
+  }
+ ],
+ "indices": [
+  "2026-11-19",
+  "2026-11-24",
+  "2026-12-01",
+  "2026-12-08",
+  "2026-12-15",
+  "2026-12-22",
+  "2026-12-29",
+  "2027-01-05",
+  "2027-01-12"
+ ],
+ "dominio": "tenispedia.com",
+ "js_menu": "assets/tenis.js"
+}
