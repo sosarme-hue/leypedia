@@ -48,6 +48,12 @@ class Sitio:
     def rimg(self, lang):  # de la página del blog a la raíz física (img, assets)
         return '../../' if lang == 'en' else '../'
 
+    def src(self, img, lang):  # imagen local (relativa a la raiz) o URL absoluta
+        return img if img.startswith('http') else self.rimg(lang) + img
+
+    def absimg(self, img):
+        return img if img.startswith('http') else f'https://{self.dom}/{img}'
+
     def contenido(self, clave, lang):
         p = self.dir / 'contenido' / lang / f'{clave}.html'
         return p.read_text() if p.exists() else None
@@ -56,7 +62,7 @@ class Sitio:
         R, I = self.raiz(lang), self.rimg(lang)
         def fig(m):
             src, enl, cap = m.group(1), m.group(2), m.group(3)
-            return (f'<figure class="{self.c["clase_fig"]}"><a href="{R}{enl}"><img src="{I}{src}" alt="{esc(cap.split(".")[0])}" loading="lazy"></a>'
+            return (f'<figure class="{self.c["clase_fig"]}"><a href="{R}{enl}"><img src="{self.src(src, lang)}" alt="{esc(cap.split(".")[0])}" loading="lazy"></a>'
                     f'<figcaption>{cap}</figcaption></figure>')
         t = re.sub(r'\{fig:([^|}]+)\|([^|}]+)\|([^}]+)\}', fig, t)
         def art(m):
@@ -77,7 +83,7 @@ class Sitio:
         I = self.rimg(lang)
         alt_lang = 'en' if lang == 'es' else 'es'
         es_url, en_url = (url, alt_url) if lang == 'es' else (alt_url, url)
-        og = f'<meta property="og:image" content="https://{self.dom}/{og_img}">' if og_img else ''
+        og = f'<meta property="og:image" content="{self.absimg(og_img)}">' if og_img else ''
         return f'''<!doctype html>
 <html lang="{lang}" data-raiz="{c.get('data_raiz', {}).get(lang, I)}">
 <head>
@@ -106,7 +112,7 @@ class Sitio:
     def tarjeta(self, k, lang, rel=''):
         slug, tit, desc, mins = self.art[k][lang][:4]
         img = self.art[k]['img']
-        return (f'<a class="blog-card" href="{rel}{slug}.html"><img src="{self.rimg(lang)}{img}" alt="" loading="lazy">'
+        return (f'<a class="blog-card" href="{rel}{slug}.html"><img src="{self.src(img, lang)}" alt="" loading="lazy">'
                 f'<span class="blog-fecha">{ffecha(self.art[k]["fecha"], lang)}</span><b>{esc(tit)}</b><span>{esc(desc)}</span></a>')
 
     def articulo(self, k, lang):
@@ -117,7 +123,7 @@ class Sitio:
         cuerpo = self.marcas(self.contenido(k, lang), lang)
         ld = {"@context": "https://schema.org", "@type": "BlogPosting", "headline": tit, "description": desc, "inLanguage": lang,
               "datePublished": a['fecha'], "author": {"@type": "Person", "name": self.c['autor']},
-              "image": f'https://{self.dom}/{a["img"]}', "mainEntityOfPage": u,
+              "image": self.absimg(a["img"]), "mainEntityOfPage": u,
               "publisher": {"@type": "Organization", "name": self.c['nombre']}}
         extra = f'\n<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
         previas = [x for x in reversed(self.orden) if x != k and self.art[x]['fecha'] <= a['fecha']][:3]

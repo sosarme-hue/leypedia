@@ -1,4 +1,4 @@
-# Blogs de Pinacopedia y Culinapedia (rama de subida, no fusionar)
+# Blogs de Pinacopedia, Culinapedia, Tenispedia, Newtonpedia, Cinematopedia y Medicapedia (rama de subida, no fusionar)
 
 Se despliega con hosting_git_deploy-website-repository en la carpeta `_blog/` de pinacopedia.com y de culinapedia.com.
 La carpeta no es accesible desde la web (`.htaccess`). Cada web usa solo su subcarpeta: `_blog/pinacopedia/` o `_blog/culinapedia/`.
@@ -12,3 +12,5 @@ La carpeta no es accesible desde la web (`.htaccess`). Cada web usa solo su subc
 - `fuente/`: textos (`<web>/contenido/es|en/<clave>.html`), configuración (`sitios.py`) y generador (`gen.py <web>`, `vista.py`).
   Para añadir artículos: escribir los textos, darlos de alta en `sitios.py`, `python3 gen.py <web>`, copiar payload y manifiesto (con `js_menu`) y volver a desplegar.
 - Para deshacer: restaurar desde `copias/` el JS y `sitemap.xml`, y borrar `/blog/`, `/en/blog/` y `sitemap-blog.xml`.
+
+- Cinematopedia (`_blog/cinematopedia/`, JS `assets/cine.js`) y Medicapedia (`_blog/medicapedia/`, JS `assets/busca.js`) se añadieron el 19-11-2026, con el mismo calendario.

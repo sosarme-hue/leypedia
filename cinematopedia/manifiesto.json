@@ -1,0 +1,149 @@
+{
+ "articulos": [
+  {
+   "clave": "casablanca",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/casablanca-la-pelicula-que-nadie-esperaba.html",
+    "en/blog/casablanca-the-film-nobody-expected.html"
+   ],
+   "urls": [
+    "https://cinematopedia.com/blog/casablanca-la-pelicula-que-nadie-esperaba.html",
+    "https://cinematopedia.com/en/blog/casablanca-the-film-nobody-expected.html"
+   ]
+  },
+  {
+   "clave": "hitchcock",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/hitchcock-y-el-arte-del-suspense.html",
+    "en/blog/hitchcock-and-the-art-of-suspense.html"
+   ],
+   "urls": [
+    "https://cinematopedia.com/blog/hitchcock-y-el-arte-del-suspense.html",
+    "https://cinematopedia.com/en/blog/hitchcock-and-the-art-of-suspense.html"
+   ]
+  },
+  {
+   "clave": "kurosawa",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/kurosawa-y-los-siete-samurais.html",
+    "en/blog/kurosawa-and-seven-samurai.html"
+   ],
+   "urls": [
+    "https://cinematopedia.com/blog/kurosawa-y-los-siete-samurais.html",
+    "https://cinematopedia.com/en/blog/kurosawa-and-seven-samurai.html"
+   ]
+  },
+  {
+   "clave": "bunuel",
+   "fecha": "2026-11-24",
+   "archivos": [
+    "blog/luis-bunuel-de-un-perro-andaluz-a-viridiana.html",
+    "en/blog/luis-bunuel-from-un-chien-andalou-to-viridiana.html"
+   ],
+   "urls": [
+    "https://cinematopedia.com/blog/luis-bunuel-de-un-perro-andaluz-a-viridiana.html",
+    "https://cinematopedia.com/en/blog/luis-bunuel-from-un-chien-andalou-to-viridiana.html"
+   ]
+  },
+  {
+   "clave": "kubrick",
+   "fecha": "2026-12-01",
+   "archivos": [
+    "blog/kubrick-y-2001-una-odisea-del-espacio.html",
+    "en/blog/kubrick-and-2001-a-space-odyssey.html"
+   ],
+   "urls": [
+    "https://cinematopedia.com/blog/kubrick-y-2001-una-odisea-del-espacio.html",
+    "https://cinematopedia.com/en/blog/kubrick-and-2001-a-space-odyssey.html"
+   ]
+  },
+  {
+   "clave": "viento",
+   "fecha": "2026-12-08",
+   "archivos": [
+    "blog/lo-que-el-viento-se-llevo-historia-de-un-rodaje.html",
+    "en/blog/gone-with-the-wind-the-story-of-an-impossible-shoot.html"
+   ],
+   "urls": [
+    "https://cinematopedia.com/blog/lo-que-el-viento-se-llevo-historia-de-un-rodaje.html",
+    "https://cinematopedia.com/en/blog/gone-with-the-wind-the-story-of-an-impossible-shoot.html"
+   ]
+  },
+  {
+   "clave": "blancanieves",
+   "fecha": "2026-12-15",
+   "archivos": [
+    "blog/blancanieves-el-primer-largometraje-de-disney.html",
+    "en/blog/snow-white-disneys-first-feature.html"
+   ],
+   "urls": [
+    "https://cinematopedia.com/blog/blancanieves-el-primer-largometraje-de-disney.html",
+    "https://cinematopedia.com/en/blog/snow-white-disneys-first-feature.html"
+   ]
+  },
+  {
+   "clave": "navidad",
+   "fecha": "2026-12-22",
+   "archivos": [
+    "blog/que-bello-es-vivir-y-el-cine-de-navidad.html",
+    "en/blog/its-a-wonderful-life-and-christmas-films.html"
+   ],
+   "urls": [
+    "https://cinematopedia.com/blog/que-bello-es-vivir-y-el-cine-de-navidad.html",
+    "https://cinematopedia.com/en/blog/its-a-wonderful-life-and-christmas-films.html"
+   ]
+  },
+  {
+   "clave": "lumiere",
+   "fecha": "2026-12-29",
+   "archivos": [
+    "blog/los-lumiere-y-la-primera-sesion-de-cine.html",
+    "en/blog/the-lumieres-and-the-first-film-show.html"
+   ],
+   "urls": [
+    "https://cinematopedia.com/blog/los-lumiere-y-la-primera-sesion-de-cine.html",
+    "https://cinematopedia.com/en/blog/the-lumieres-and-the-first-film-show.html"
+   ]
+  },
+  {
+   "clave": "chaplin",
+   "fecha": "2027-01-05",
+   "archivos": [
+    "blog/chaplin-y-charlot.html",
+    "en/blog/chaplin-and-the-tramp.html"
+   ],
+   "urls": [
+    "https://cinematopedia.com/blog/chaplin-y-charlot.html",
+    "https://cinematopedia.com/en/blog/chaplin-and-the-tramp.html"
+   ]
+  },
+  {
+   "clave": "oscar",
+   "fecha": "2027-01-12",
+   "archivos": [
+    "blog/historia-de-los-oscar.html",
+    "en/blog/the-history-of-the-oscars.html"
+   ],
+   "urls": [
+    "https://cinematopedia.com/blog/historia-de-los-oscar.html",
+    "https://cinematopedia.com/en/blog/the-history-of-the-oscars.html"
+   ]
+  }
+ ],
+ "indices": [
+  "2026-11-19",
+  "2026-11-24",
+  "2026-12-01",
+  "2026-12-08",
+  "2026-12-15",
+  "2026-12-22",
+  "2026-12-29",
+  "2027-01-05",
+  "2027-01-12"
+ ],
+ "dominio": "cinematopedia.com",
+ "js_menu": "assets/cine.js"
+}

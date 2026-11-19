@@ -1,0 +1,149 @@
+{
+ "articulos": [
+  {
+   "clave": "jenner",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/jenner-y-la-primera-vacuna.html",
+    "en/blog/jenner-and-the-first-vaccine.html"
+   ],
+   "urls": [
+    "https://medicapedia.org/blog/jenner-y-la-primera-vacuna.html",
+    "https://medicapedia.org/en/blog/jenner-and-the-first-vaccine.html"
+   ]
+  },
+  {
+   "clave": "semmelweis",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/semmelweis-y-el-lavado-de-manos.html",
+    "en/blog/semmelweis-and-handwashing.html"
+   ],
+   "urls": [
+    "https://medicapedia.org/blog/semmelweis-y-el-lavado-de-manos.html",
+    "https://medicapedia.org/en/blog/semmelweis-and-handwashing.html"
+   ]
+  },
+  {
+   "clave": "gripe1918",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/la-gripe-de-1918.html",
+    "en/blog/the-1918-flu.html"
+   ],
+   "urls": [
+    "https://medicapedia.org/blog/la-gripe-de-1918.html",
+    "https://medicapedia.org/en/blog/the-1918-flu.html"
+   ]
+  },
+  {
+   "clave": "balmis",
+   "fecha": "2026-11-24",
+   "archivos": [
+    "blog/la-expedicion-balmis.html",
+    "en/blog/the-balmis-expedition.html"
+   ],
+   "urls": [
+    "https://medicapedia.org/blog/la-expedicion-balmis.html",
+    "https://medicapedia.org/en/blog/the-balmis-expedition.html"
+   ]
+  },
+  {
+   "clave": "sida",
+   "fecha": "2026-12-01",
+   "archivos": [
+    "blog/historia-del-sida.html",
+    "en/blog/the-history-of-aids.html"
+   ],
+   "urls": [
+    "https://medicapedia.org/blog/historia-del-sida.html",
+    "https://medicapedia.org/en/blog/the-history-of-aids.html"
+   ]
+  },
+  {
+   "clave": "laennec",
+   "fecha": "2026-12-08",
+   "archivos": [
+    "blog/laennec-y-el-estetoscopio.html",
+    "en/blog/laennec-and-the-stethoscope.html"
+   ],
+   "urls": [
+    "https://medicapedia.org/blog/laennec-y-el-estetoscopio.html",
+    "https://medicapedia.org/en/blog/laennec-and-the-stethoscope.html"
+   ]
+  },
+  {
+   "clave": "anestesia",
+   "fecha": "2026-12-15",
+   "archivos": [
+    "blog/el-nacimiento-de-la-anestesia.html",
+    "en/blog/the-birth-of-anaesthesia.html"
+   ],
+   "urls": [
+    "https://medicapedia.org/blog/el-nacimiento-de-la-anestesia.html",
+    "https://medicapedia.org/en/blog/the-birth-of-anaesthesia.html"
+   ]
+  },
+  {
+   "clave": "rontgen",
+   "fecha": "2026-12-22",
+   "archivos": [
+    "blog/rontgen-y-la-primera-radiografia.html",
+    "en/blog/rontgen-and-the-first-x-ray.html"
+   ],
+   "urls": [
+    "https://medicapedia.org/blog/rontgen-y-la-primera-radiografia.html",
+    "https://medicapedia.org/en/blog/rontgen-and-the-first-x-ray.html"
+   ]
+  },
+  {
+   "clave": "pasteur",
+   "fecha": "2026-12-29",
+   "archivos": [
+    "blog/pasteur-y-la-vacuna-de-la-rabia.html",
+    "en/blog/pasteur-and-the-rabies-vaccine.html"
+   ],
+   "urls": [
+    "https://medicapedia.org/blog/pasteur-y-la-vacuna-de-la-rabia.html",
+    "https://medicapedia.org/en/blog/pasteur-and-the-rabies-vaccine.html"
+   ]
+  },
+  {
+   "clave": "hipocrates",
+   "fecha": "2027-01-05",
+   "archivos": [
+    "blog/hipocrates-y-el-juramento.html",
+    "en/blog/hippocrates-and-the-oath.html"
+   ],
+   "urls": [
+    "https://medicapedia.org/blog/hipocrates-y-el-juramento.html",
+    "https://medicapedia.org/en/blog/hippocrates-and-the-oath.html"
+   ]
+  },
+  {
+   "clave": "insulina",
+   "fecha": "2027-01-12",
+   "archivos": [
+    "blog/banting-y-la-insulina.html",
+    "en/blog/banting-and-insulin.html"
+   ],
+   "urls": [
+    "https://medicapedia.org/blog/banting-y-la-insulina.html",
+    "https://medicapedia.org/en/blog/banting-and-insulin.html"
+   ]
+  }
+ ],
+ "indices": [
+  "2026-11-19",
+  "2026-11-24",
+  "2026-12-01",
+  "2026-12-08",
+  "2026-12-15",
+  "2026-12-22",
+  "2026-12-29",
+  "2027-01-05",
+  "2027-01-12"
+ ],
+ "dominio": "medicapedia.org",
+ "js_menu": "assets/busca.js"
+}
