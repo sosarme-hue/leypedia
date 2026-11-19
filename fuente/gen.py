@@ -38,17 +38,18 @@ class Sitio:
         self.dom = self.c['dominio']
         self.art = self.c['articulos']
         self.idiomas = self.c.get('idiomas', ['es', 'en'])
+        self.carp = self.c.get('carpetas', {'es': '', 'en': 'en/'})  # carpeta de cada idioma (p. ej. es/)
         self.env = self.c.get('envoltura', ('', ''))
         self.orden = sorted(self.art, key=lambda k: (self.art[k]['fecha'], list(self.art).index(k)))
 
     def url(self, lang, slug=''):
-        return f'https://{self.dom}/' + ('en/' if lang == 'en' else '') + 'blog/' + (f'{slug}.html' if slug else '')
+        return f'https://{self.dom}/' + self.carp[lang] + 'blog/' + (f'{slug}.html' if slug else '')
 
     def raiz(self, lang):  # de la página del blog a la raíz del idioma
         return '../'
 
     def rimg(self, lang):  # de la página del blog a la raíz física (img, assets)
-        return '../../' if lang == 'en' else '../'
+        return '../' * (1 + self.carp[lang].count('/'))
 
     def hreflang(self, es_url, en_url):
         if len(self.idiomas) < 2: return ''
@@ -103,7 +104,7 @@ class Sitio:
 <style>{c["css"]}</style>{extra}
 </head>
 <body{c.get("body", {}).get(lang, "").replace("{I}", I)}>
-{c["cab"][lang].replace("{R}", self.raiz(lang)).replace("{I}", I).replace("{ALT}", ("../../blog/" if lang == "en" else "../en/blog/") + ("" if alt_url.endswith("/") else alt_url.rsplit("/", 1)[1]))}
+{c["cab"][lang].replace("{R}", self.raiz(lang)).replace("{I}", I).replace("{ALT}", I + self.carp["es" if lang == "en" else "en"] + "blog/" + ("" if alt_url.endswith("/") else alt_url.rsplit("/", 1)[1]))}
 '''
 
     def pie(self, lang):
@@ -183,7 +184,7 @@ class Sitio:
                 faltan.append(k)
                 continue
             for lang in self.idiomas:
-                rel = ('en/' if lang == 'en' else '') + f'blog/{self.art[k][lang][0]}.html'
+                rel = self.carp[lang] + f'blog/{self.art[k][lang][0]}.html'
                 p = out / rel
                 p.parent.mkdir(parents=True, exist_ok=True)
                 p.write_text(self.articulo(k, lang))
@@ -201,6 +202,8 @@ class Sitio:
             manif['idiomas'] = self.idiomas
         if self.c.get('no_tocar_web'):
             manif['no_tocar_web'] = True
+        if 'carpetas' in self.c:
+            manif['carpetas'] = self.carp
         if self.c.get('raiz_fisica'):
             manif['raiz'] = self.c['raiz_fisica']
         imgs = self.dir / 'imagenes'

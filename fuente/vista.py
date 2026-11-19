@@ -1,5 +1,5 @@
 """Vista previa: copia el payload y convierte las rutas a la web real en absolutas (CSS e imágenes cargan de la web)."""
-import re, shutil, sys, json
+import re, shutil, sys, json, os
 from pathlib import Path
 from urllib.parse import urljoin
 BASE = Path(__file__).parent
@@ -12,7 +12,9 @@ for sitio in SITIOS_V:
     dom = m['dominio']
     ult = m['indices'][-1]
     pags = {}
-    for lang, carp in [x for x in (('es', 'blog'), ('en', 'en/blog')) if x[0] in m.get('idiomas', ['es', 'en'])]:
+    cps = {**{'es': '', 'en': 'en/'}, **m.get('carpetas', {})}
+    CARPS = [cps[l] + 'blog' for l in m.get('idiomas', ['es', 'en'])]
+    for lang, carp in [(l, cps[l] + 'blog') for l in m.get('idiomas', ['es', 'en'])]:
         for f in (d / carp).glob('*.html'):
             pags[f'{carp}/{f.name}'] = f.read_text()
         pags[f'{carp}/index.html'] = (d / 'indices' / lang / f'{ult}.html').read_text()
@@ -26,13 +28,12 @@ for sitio in SITIOS_V:
             if '/' not in v and v.endswith('.html'): return mm.group(0)  # otra página del blog
             ab = urljoin(live, v)
             # enlaces al blog del otro idioma: dentro de la vista previa
-            for c in ('blog', 'en/blog'):
+            for c in CARPS:
                 pre = f'https://{dom}/{c}/'
                 if ab.startswith(pre):
                     dest = ab[len(pre):] or 'index.html'
-                    up = '../' * carp.count('/') if c == 'blog' else ('../' * (carp.count('/') + 1) + 'en/' if carp == 'blog' else '')
                     if carp == c: return f'{attr}={q}{dest}{q}'
-                    return f'{attr}={q}{"../en/blog/" if c=="en/blog" else "../../blog/"}{dest}{q}'
+                    return f'{attr}={q}{os.path.relpath(c, carp)}/{dest}{q}'
             return f'{attr}={q}{ab}{q}'
         h2 = re.sub(r'\b(href|src|action)=(["\'])([^"\']*)\2', fix, h)
         p = out / sitio / rel

@@ -21,3 +21,9 @@ La carpeta no es accesible desde la web (`.htaccess`). Cada web usa solo su subc
   Las dos se despliegan desde Git, así que usan `no_tocar_web`; el enlace «Blog» del menú y la línea de `robots.txt` van en sus repositorios.
   Escolapedia se sirve desde `public_html/dist/` (el `.htaccess` reescribe todo ahí): su manifiesto lleva `"raiz": "dist"`, y el blog queda en `dist/blog/`.
   Las fotos de Escolapedia se enlazan desde Unsplash (images.unsplash.com), con el autor al pie.
+- Mythicapedia (`_blog/mythicapedia/`, español e inglés, JS `assets/buscador.js`) se añadió el 19-11-2026, con el mismo calendario.
+  Las imágenes son las de la web (`img/p/`) y dos de Wikimedia Commons.
+- celebraciones.org (`_blog/celebraciones/`) se sirve con una carpeta por idioma (`es/`, `en/`, `ca/`): su manifiesto lleva `carpetas`
+  y el blog queda en `es/blog/`, `en/blog/` y `ca/blog/`. El enlace «Blog» se añade al final de `estatico/sitio.js`.
+  Las fotos se enlazan desde Unsplash, con el autor al pie, o son de la propia web (`estatico/fotos/`).
+  `herramientas/extraer.php` copia la cabecera y el pie de una página sin claves, correos ni teléfonos (las páginas llevan una clave de Google).

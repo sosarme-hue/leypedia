@@ -1,0 +1,149 @@
+{
+ "articulos": [
+  {
+   "clave": "odin",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/odin-el-dios-que-dio-un-ojo-por-la-sabiduria.html",
+    "en/blog/odin-the-god-who-gave-an-eye-for-wisdom.html"
+   ],
+   "urls": [
+    "https://mythicapedia.com/blog/odin-el-dios-que-dio-un-ojo-por-la-sabiduria.html",
+    "https://mythicapedia.com/en/blog/odin-the-god-who-gave-an-eye-for-wisdom.html"
+   ]
+  },
+  {
+   "clave": "medusa",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/medusa-de-monstruo-a-simbolo.html",
+    "en/blog/medusa-from-monster-to-symbol.html"
+   ],
+   "urls": [
+    "https://mythicapedia.com/blog/medusa-de-monstruo-a-simbolo.html",
+    "https://mythicapedia.com/en/blog/medusa-from-monster-to-symbol.html"
+   ]
+  },
+  {
+   "clave": "egipto",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/los-dioses-mas-importantes-de-egipto.html",
+    "en/blog/the-most-important-gods-of-ancient-egypt.html"
+   ],
+   "urls": [
+    "https://mythicapedia.com/blog/los-dioses-mas-importantes-de-egipto.html",
+    "https://mythicapedia.com/en/blog/the-most-important-gods-of-ancient-egypt.html"
+   ]
+  },
+  {
+   "clave": "persefone",
+   "fecha": "2026-11-24",
+   "archivos": [
+    "blog/persefone-y-el-origen-de-las-estaciones.html",
+    "en/blog/persephone-and-the-origin-of-the-seasons.html"
+   ],
+   "urls": [
+    "https://mythicapedia.com/blog/persefone-y-el-origen-de-las-estaciones.html",
+    "https://mythicapedia.com/en/blog/persephone-and-the-origin-of-the-seasons.html"
+   ]
+  },
+  {
+   "clave": "krampus",
+   "fecha": "2026-12-01",
+   "archivos": [
+    "blog/krampus-y-los-seres-temibles-de-diciembre.html",
+    "en/blog/krampus-and-the-fearsome-beings-of-december.html"
+   ],
+   "urls": [
+    "https://mythicapedia.com/blog/krampus-y-los-seres-temibles-de-diciembre.html",
+    "https://mythicapedia.com/en/blog/krampus-and-the-fearsome-beings-of-december.html"
+   ]
+  },
+  {
+   "clave": "pleyades",
+   "fecha": "2026-12-08",
+   "archivos": [
+    "blog/las-pleyades-siete-hermanas-en-el-cielo.html",
+    "en/blog/the-pleiades-seven-sisters-in-the-sky.html"
+   ],
+   "urls": [
+    "https://mythicapedia.com/blog/las-pleyades-siete-hermanas-en-el-cielo.html",
+    "https://mythicapedia.com/en/blog/the-pleiades-seven-sisters-in-the-sky.html"
+   ]
+  },
+  {
+   "clave": "saturnales",
+   "fecha": "2026-12-15",
+   "archivos": [
+    "blog/las-saturnales-la-navidad-de-los-romanos.html",
+    "en/blog/the-saturnalia-the-romans-christmas.html"
+   ],
+   "urls": [
+    "https://mythicapedia.com/blog/las-saturnales-la-navidad-de-los-romanos.html",
+    "https://mythicapedia.com/en/blog/the-saturnalia-the-romans-christmas.html"
+   ]
+  },
+  {
+   "clave": "solsticio",
+   "fecha": "2026-12-22",
+   "archivos": [
+    "blog/el-solsticio-en-los-mitos.html",
+    "en/blog/the-solstice-in-myth.html"
+   ],
+   "urls": [
+    "https://mythicapedia.com/blog/el-solsticio-en-los-mitos.html",
+    "https://mythicapedia.com/en/blog/the-solstice-in-myth.html"
+   ]
+  },
+  {
+   "clave": "jano",
+   "fecha": "2026-12-29",
+   "archivos": [
+    "blog/jano-el-dios-de-dos-caras-que-da-nombre-a-enero.html",
+    "en/blog/janus-the-two-faced-god-who-named-january.html"
+   ],
+   "urls": [
+    "https://mythicapedia.com/blog/jano-el-dios-de-dos-caras-que-da-nombre-a-enero.html",
+    "https://mythicapedia.com/en/blog/janus-the-two-faced-god-who-named-january.html"
+   ]
+  },
+  {
+   "clave": "reyes",
+   "fecha": "2027-01-05",
+   "archivos": [
+    "blog/los-reyes-magos-entre-la-historia-y-la-leyenda.html",
+    "en/blog/the-three-wise-men-between-history-and-legend.html"
+   ],
+   "urls": [
+    "https://mythicapedia.com/blog/los-reyes-magos-entre-la-historia-y-la-leyenda.html",
+    "https://mythicapedia.com/en/blog/the-three-wise-men-between-history-and-legend.html"
+   ]
+  },
+  {
+   "clave": "quetzalcoatl",
+   "fecha": "2027-01-12",
+   "archivos": [
+    "blog/quetzalcoatl-la-serpiente-emplumada.html",
+    "en/blog/quetzalcoatl-the-feathered-serpent.html"
+   ],
+   "urls": [
+    "https://mythicapedia.com/blog/quetzalcoatl-la-serpiente-emplumada.html",
+    "https://mythicapedia.com/en/blog/quetzalcoatl-the-feathered-serpent.html"
+   ]
+  }
+ ],
+ "indices": [
+  "2026-11-19",
+  "2026-11-24",
+  "2026-12-01",
+  "2026-12-08",
+  "2026-12-15",
+  "2026-12-22",
+  "2026-12-29",
+  "2027-01-05",
+  "2027-01-12"
+ ],
+ "dominio": "mythicapedia.com",
+ "js_menu": "assets/buscador.js"
+}
