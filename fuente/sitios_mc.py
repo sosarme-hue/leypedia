@@ -58,13 +58,15 @@ MC = {
  },
  'celebraciones': {
   'nombre': 'celebraciones.org', 'dominio': 'celebraciones.org', 'autor': 'Alejandro Rosàs',
-  'carpetas': {'es': 'es/', 'en': 'en/'},
+  'idiomas': ['es', 'en', 'ca'],
+  'carpetas': {'es': 'es/', 'en': 'en/', 'ca': 'ca/'},
   'js_menu': 'estatico/sitio.js', 'clase_fig': 'blog-fig', 'clase_miga': 'miga',
   'envoltura': ('<div class="wrap">', '</div>'),
   'pref': {},
   'css': css('var(--vino)', 'var(--suave)', 'var(--tinta)', 'var(--papel)', 'var(--linea)', 'var(--linea)'),
   'head': CE['head'], 'cab': CE['cab'], 'pie': CE['pie'],
   'indice': {'es': ('El blog de celebraciones.org', 'Ideas y consejos para organizar bodas, despedidas y fiestas. Un artículo nuevo cada martes.'),
+             'ca': ('El blog de celebraciones.org', 'Idees i consells per organitzar casaments, comiats i festes. Un article nou cada dimarts.'),
              'en': ('The celebraciones.org blog', 'Ideas and tips for planning weddings, hen and stag parties and celebrations. A new post every Tuesday.')},
   'articulos': {
    'organizar': A(F0, UN + 'photo-1758810411905-04fb6f9396e1' + UQ,
@@ -103,3 +105,20 @@ MC = {
   },
  },
 }
+
+# Catalán (celebraciones.org)
+CA = {
+ 'organizar': ('com-organitzar-un-casament-mes-a-mes', 'Com organitzar un casament mes a mes', 'Una guia amb tot el que cal fer, des d\'un any abans fins al gran dia.', 5),
+ 'masia': ('com-triar-una-masia-o-finca-per-al-casament', 'Com triar una masia o finca per al casament', 'Les preguntes que convé fer abans de reservar: capacitat, pla B, càtering, horaris i preu.', 4),
+ 'despedida': ('idees-per-a-un-comiat-de-solter-diferent', 'Idees per a un comiat de solter diferent', 'Aventura, mar, spa o sopar amb espectacle: plans perquè tot el grup en gaudeixi.', 4),
+ 'empresa': ('idees-per-al-sopar-d-empresa-de-nadal', "Idees per al sopar d'empresa de Nadal", 'On celebrar-lo, com fer-lo diferent i una llista de comprovació perquè surti bé.', 4),
+ 'invierno': ('casaments-d-hivern-avantatges-i-idees', "Casaments d'hivern: avantatges i idees", "Millors preus, més disponibilitat i un ambient íntim. El que cal saber per casar-se a l'hivern.", 4),
+ 'presupuesto': ('com-fer-el-pressupost-del-casament', 'Com fer el pressupost del casament', 'Cinc passos per fixar quant gastar, repartir-ho bé i estalviar sense que es noti.', 4),
+ 'fotografo': ('com-triar-fotograf-de-casament', 'Com triar fotògraf de casament', "L'estil, les preguntes clau i per què convé reservar aviat.", 4),
+ 'nochevieja': ('idees-per-celebrar-cap-d-any-en-grup', "Idees per celebrar Cap d'Any en grup", "Restaurant, masia o a casa: plans per acomiadar l'any amb amics o en família.", 4),
+ 'pedida': ('demanar-matrimoni-per-nadal-idees', 'Demanar matrimoni per Nadal: idees', 'Idees i consells per a una petició de mà inoblidable aquestes festes.', 4),
+ 'catering': ('com-triar-el-menu-i-el-catering-del-casament', 'Com triar el menú i el càtering del casament', 'Càtering propi o extern, formats de banquet, preguntes clau i la prova de menú.', 4),
+ 'tendencias': ('tendencies-de-casaments-per-al-2027', 'Les tendències de casaments per al 2027', 'Casaments més petits, celebracions de diversos dies, sostenibilitat i més: el que ve.', 4),
+}
+for _k, _v in CA.items():
+    MC['celebraciones']['articulos'][_k]['ca'] = _v

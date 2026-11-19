@@ -1,0 +1,181 @@
+{
+ "articulos": [
+  {
+   "clave": "organizar",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "es/blog/como-organizar-una-boda-mes-a-mes.html",
+    "en/blog/how-to-plan-a-wedding-month-by-month.html",
+    "ca/blog/com-organitzar-un-casament-mes-a-mes.html"
+   ],
+   "urls": [
+    "https://celebraciones.org/es/blog/como-organizar-una-boda-mes-a-mes.html",
+    "https://celebraciones.org/en/blog/how-to-plan-a-wedding-month-by-month.html",
+    "https://celebraciones.org/ca/blog/com-organitzar-un-casament-mes-a-mes.html"
+   ]
+  },
+  {
+   "clave": "masia",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "es/blog/como-elegir-una-masia-o-finca-para-la-boda.html",
+    "en/blog/how-to-choose-a-farmhouse-or-estate-for-your-wedding.html",
+    "ca/blog/com-triar-una-masia-o-finca-per-al-casament.html"
+   ],
+   "urls": [
+    "https://celebraciones.org/es/blog/como-elegir-una-masia-o-finca-para-la-boda.html",
+    "https://celebraciones.org/en/blog/how-to-choose-a-farmhouse-or-estate-for-your-wedding.html",
+    "https://celebraciones.org/ca/blog/com-triar-una-masia-o-finca-per-al-casament.html"
+   ]
+  },
+  {
+   "clave": "despedida",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "es/blog/ideas-para-una-despedida-de-soltero-diferente.html",
+    "en/blog/ideas-for-a-different-hen-or-stag-party.html",
+    "ca/blog/idees-per-a-un-comiat-de-solter-diferent.html"
+   ],
+   "urls": [
+    "https://celebraciones.org/es/blog/ideas-para-una-despedida-de-soltero-diferente.html",
+    "https://celebraciones.org/en/blog/ideas-for-a-different-hen-or-stag-party.html",
+    "https://celebraciones.org/ca/blog/idees-per-a-un-comiat-de-solter-diferent.html"
+   ]
+  },
+  {
+   "clave": "empresa",
+   "fecha": "2026-11-24",
+   "archivos": [
+    "es/blog/ideas-para-la-cena-de-empresa-de-navidad.html",
+    "en/blog/ideas-for-the-company-christmas-dinner.html",
+    "ca/blog/idees-per-al-sopar-d-empresa-de-nadal.html"
+   ],
+   "urls": [
+    "https://celebraciones.org/es/blog/ideas-para-la-cena-de-empresa-de-navidad.html",
+    "https://celebraciones.org/en/blog/ideas-for-the-company-christmas-dinner.html",
+    "https://celebraciones.org/ca/blog/idees-per-al-sopar-d-empresa-de-nadal.html"
+   ]
+  },
+  {
+   "clave": "invierno",
+   "fecha": "2026-12-01",
+   "archivos": [
+    "es/blog/bodas-de-invierno-ventajas-e-ideas.html",
+    "en/blog/winter-weddings-advantages-and-ideas.html",
+    "ca/blog/casaments-d-hivern-avantatges-i-idees.html"
+   ],
+   "urls": [
+    "https://celebraciones.org/es/blog/bodas-de-invierno-ventajas-e-ideas.html",
+    "https://celebraciones.org/en/blog/winter-weddings-advantages-and-ideas.html",
+    "https://celebraciones.org/ca/blog/casaments-d-hivern-avantatges-i-idees.html"
+   ]
+  },
+  {
+   "clave": "presupuesto",
+   "fecha": "2026-12-08",
+   "archivos": [
+    "es/blog/como-hacer-el-presupuesto-de-la-boda.html",
+    "en/blog/how-to-plan-your-wedding-budget.html",
+    "ca/blog/com-fer-el-pressupost-del-casament.html"
+   ],
+   "urls": [
+    "https://celebraciones.org/es/blog/como-hacer-el-presupuesto-de-la-boda.html",
+    "https://celebraciones.org/en/blog/how-to-plan-your-wedding-budget.html",
+    "https://celebraciones.org/ca/blog/com-fer-el-pressupost-del-casament.html"
+   ]
+  },
+  {
+   "clave": "fotografo",
+   "fecha": "2026-12-15",
+   "archivos": [
+    "es/blog/como-elegir-fotografo-de-boda.html",
+    "en/blog/how-to-choose-a-wedding-photographer.html",
+    "ca/blog/com-triar-fotograf-de-casament.html"
+   ],
+   "urls": [
+    "https://celebraciones.org/es/blog/como-elegir-fotografo-de-boda.html",
+    "https://celebraciones.org/en/blog/how-to-choose-a-wedding-photographer.html",
+    "https://celebraciones.org/ca/blog/com-triar-fotograf-de-casament.html"
+   ]
+  },
+  {
+   "clave": "nochevieja",
+   "fecha": "2026-12-22",
+   "archivos": [
+    "es/blog/ideas-para-celebrar-la-nochevieja-en-grupo.html",
+    "en/blog/ideas-for-celebrating-new-years-eve-as-a-group.html",
+    "ca/blog/idees-per-celebrar-cap-d-any-en-grup.html"
+   ],
+   "urls": [
+    "https://celebraciones.org/es/blog/ideas-para-celebrar-la-nochevieja-en-grupo.html",
+    "https://celebraciones.org/en/blog/ideas-for-celebrating-new-years-eve-as-a-group.html",
+    "https://celebraciones.org/ca/blog/idees-per-celebrar-cap-d-any-en-grup.html"
+   ]
+  },
+  {
+   "clave": "pedida",
+   "fecha": "2026-12-29",
+   "archivos": [
+    "es/blog/pedir-matrimonio-en-navidad-ideas.html",
+    "en/blog/proposing-at-christmas-ideas.html",
+    "ca/blog/demanar-matrimoni-per-nadal-idees.html"
+   ],
+   "urls": [
+    "https://celebraciones.org/es/blog/pedir-matrimonio-en-navidad-ideas.html",
+    "https://celebraciones.org/en/blog/proposing-at-christmas-ideas.html",
+    "https://celebraciones.org/ca/blog/demanar-matrimoni-per-nadal-idees.html"
+   ]
+  },
+  {
+   "clave": "catering",
+   "fecha": "2027-01-05",
+   "archivos": [
+    "es/blog/como-elegir-el-menu-y-el-catering-de-la-boda.html",
+    "en/blog/how-to-choose-the-wedding-menu-and-caterer.html",
+    "ca/blog/com-triar-el-menu-i-el-catering-del-casament.html"
+   ],
+   "urls": [
+    "https://celebraciones.org/es/blog/como-elegir-el-menu-y-el-catering-de-la-boda.html",
+    "https://celebraciones.org/en/blog/how-to-choose-the-wedding-menu-and-caterer.html",
+    "https://celebraciones.org/ca/blog/com-triar-el-menu-i-el-catering-del-casament.html"
+   ]
+  },
+  {
+   "clave": "tendencias",
+   "fecha": "2027-01-12",
+   "archivos": [
+    "es/blog/tendencias-de-bodas-para-2027.html",
+    "en/blog/wedding-trends-for-2027.html",
+    "ca/blog/tendencies-de-casaments-per-al-2027.html"
+   ],
+   "urls": [
+    "https://celebraciones.org/es/blog/tendencias-de-bodas-para-2027.html",
+    "https://celebraciones.org/en/blog/wedding-trends-for-2027.html",
+    "https://celebraciones.org/ca/blog/tendencies-de-casaments-per-al-2027.html"
+   ]
+  }
+ ],
+ "indices": [
+  "2026-11-19",
+  "2026-11-24",
+  "2026-12-01",
+  "2026-12-08",
+  "2026-12-15",
+  "2026-12-22",
+  "2026-12-29",
+  "2027-01-05",
+  "2027-01-12"
+ ],
+ "dominio": "celebraciones.org",
+ "idiomas": [
+  "es",
+  "en",
+  "ca"
+ ],
+ "carpetas": {
+  "es": "es/",
+  "en": "en/",
+  "ca": "ca/"
+ },
+ "js_menu": "estatico/sitio.js"
+}

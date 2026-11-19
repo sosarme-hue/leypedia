@@ -12,17 +12,23 @@ sys.path.insert(0, str(BASE))
 from sitios import SITIOS  # noqa: E402
 
 MESES = {'es': ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'],
+         'ca': ['gener', 'febrer', 'març', 'abril', 'maig', 'juny', 'juliol', 'agost', 'setembre', 'octubre', 'novembre', 'desembre'],
          'en': ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']}
 T = {
     'es': {'blog': 'Blog', 'inicio': 'Inicio', 'min': 'min de lectura', 'por': 'Por', 'mas': 'Más del blog', 'compartir': 'Compartir:',
            'todos': 'Ver todos los artículos', 'leer': 'Leer artículo →', 'otro': 'English'},
     'en': {'blog': 'Blog', 'inicio': 'Home', 'min': 'min read', 'por': 'By', 'mas': 'More from the blog', 'compartir': 'Share:',
            'todos': 'See all posts', 'leer': 'Read post →', 'otro': 'Español'},
+    'ca': {'blog': 'Blog', 'inicio': 'Inici', 'min': 'min de lectura', 'por': 'Per', 'mas': 'Més del blog', 'compartir': 'Comparteix:',
+           'todos': 'Tots els articles', 'leer': 'Llegeix l\'article →', 'otro': 'Español'},
 }
 
 
 def ffecha(f, lang):
     y, m, d = map(int, f.split('-'))
+    if lang == 'ca':
+        mes = MESES['ca'][m-1]
+        return f'{d} ' + ("d'" if mes[0] in 'ao' else 'de ') + f'{mes} de {y}'
     return f'{d} de {MESES["es"][m-1]} de {y}' if lang == 'es' else f'{d} {MESES["en"][m-1]} {y}'
 
 
@@ -85,12 +91,19 @@ class Sitio:
         assert '{' not in re.sub(r'<script.*?</script>', '', t, flags=re.S), 'marca sin resolver'
         return t
 
-    def cabecera(self, lang, titulo, desc, url, alt_url, og_img, og_type, extra=''):
+    def cabecera(self, lang, titulo, desc, url, alt_url, og_img, og_type, extra='', todas=None):
         c = self.c
         I = self.rimg(lang)
         alt_lang = 'en' if lang == 'es' else 'es'
         es_url, en_url = (url, alt_url) if lang == 'es' else (alt_url, url)
         og = f'<meta property="og:image" content="{self.absimg(og_img)}">' if og_img else ''
+        hl = self.hreflang(es_url, en_url)
+        cab = c["cab"][lang]
+        if todas and len(self.idiomas) > 2:  # tres idiomas o más: un enlace por idioma ({ALT_xx} en la cabecera)
+            hl = ''.join(f'<link rel="alternate" hreflang="{l}" href="{todas[l]}">' for l in self.idiomas) + \
+                 f'<link rel="alternate" hreflang="x-default" href="{todas[self.idiomas[0]]}">'
+            for l in self.idiomas:
+                cab = cab.replace('{ALT_' + l + '}', I + self.carp[l] + 'blog/' + ('' if todas[l].endswith('/') else todas[l].rsplit('/', 1)[1]))
         return f'''<!doctype html>
 <html lang="{lang}" data-raiz="{c.get('data_raiz', {}).get(lang, I)}">
 <head>
@@ -99,12 +112,12 @@ class Sitio:
 <title>{esc(titulo)} · {c["nombre"]}</title>
 <meta name="description" content="{esc(desc)}">
 <meta property="og:type" content="{og_type}"><meta property="og:site_name" content="{c["nombre"]}"><meta property="og:title" content="{esc(titulo)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{url}">{og}<meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="{url}">{self.hreflang(es_url, en_url)}
+<link rel="canonical" href="{url}">{hl}
 {(c["head"][lang] if isinstance(c["head"], dict) else c["head"]).replace("{I}", I)}
 <style>{c["css"]}</style>{extra}
 </head>
 <body{c.get("body", {}).get(lang, "").replace("{I}", I)}>
-{c["cab"][lang].replace("{R}", self.raiz(lang)).replace("{I}", I).replace("{ALT}", I + self.carp["es" if lang == "en" else "en"] + "blog/" + ("" if alt_url.endswith("/") else alt_url.rsplit("/", 1)[1]))}
+{cab.replace("{R}", self.raiz(lang)).replace("{I}", I).replace("{ALT}", I + self.carp["es" if lang == "en" else "en"] + "blog/" + ("" if alt_url.endswith("/") else alt_url.rsplit("/", 1)[1]))}
 '''
 
     def pie(self, lang):
@@ -139,7 +152,7 @@ class Sitio:
             mas = f'<section class="blog-mas"><h2>{T[lang]["mas"]}</h2><div class="blog-lista">' + ''.join(self.tarjeta(x, lang) for x in previas) + \
                   f'</div><p><a class="blog-todos" href="./">{T[lang]["todos"]}</a></p></section>'
         R = self.raiz(lang)
-        h = self.cabecera(lang, tit, desc, u, au, a['img'], 'article', extra)
+        h = self.cabecera(lang, tit, desc, u, au, a['img'], 'article', extra, {l: self.url(l, a[l][0]) for l in self.idiomas})
         h += f'''<main>{self.env[0]}
 <article class="blog-art">
 <nav class="{self.c["clase_miga"]}"><a href="{R}index.html">{T[lang]["inicio"]}</a> › <a href="./">Blog</a></nav>
@@ -160,7 +173,7 @@ class Sitio:
         ks = [x for x in reversed(self.orden) if self.art[x]['fecha'] <= hasta]
         c = self.c['indice'][lang]
         alt = 'en' if lang == 'es' else 'es'
-        h = self.cabecera(lang, c[0], c[1], self.url(lang), self.url(alt), self.art[ks[0]]['img'], 'website')
+        h = self.cabecera(lang, c[0], c[1], self.url(lang), self.url(alt), self.art[ks[0]]['img'], 'website', '', {l: self.url(l) for l in self.idiomas})
         R = self.raiz(lang)
         h += f'''<main>{self.env[0]}
 <nav class="{self.c["clase_miga"]}"><a href="{R}index.html">{T[lang]["inicio"]}</a> › Blog</nav>

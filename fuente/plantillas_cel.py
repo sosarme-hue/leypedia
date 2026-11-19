@@ -1,15 +1,24 @@
 # Generado por build_tpl_cel.py
-PLANT = {'celebraciones': {'cab': {'en': '<header><div class="wrap top"><a class="logo" href="/en/"><img src="/estatico/logo.svg" alt="" width="30" height="30">celebraciones<b>.org</b></a>\n'
+PLANT = {'celebraciones': {'cab': {'ca': '<header><div class="wrap top"><a class="logo" href="/ca/"><img src="/estatico/logo.svg" alt="" width="30" height="30">celebraciones<b>.org</b></a>\n'
+                                 '<nav class="menu"><a href="/ca/espais/">Espais</a><a href="/ca/proveidors/">Proveïdors</a><a href="/ca/comiats-de-solter/">Comiats</a><a '
+                                 'href="/ca/zones/">Comarques</a><a href="/ca/professionals/">Soc professional</a><a href="/ca/blog/" aria-current="page">Blog</a></nav>\n'
+                                 '<div class="acc"><span class="idioma"><a href="{ALT_es}" hreflang="es">ES</a> · <b>CA</b> · <a href="{ALT_en}" hreflang="en">EN</a></span><a class="btn" '
+                                 'href="/ca/demanar-pressupost/">Demanar pressupost</a></div></div></header>',
+                           'en': '<header><div class="wrap top"><a class="logo" href="/en/"><img src="/estatico/logo.svg" alt="" width="30" height="30">celebraciones<b>.org</b></a>\n'
                                  '<nav class="menu"><a href="/en/venues/">Venues</a><a href="/en/suppliers/">Suppliers</a><a href="/en/hen-and-stag-parties/">Hen & stag</a><a '
                                  'href="/en/areas/">Areas</a><a href="/en/for-businesses/">For businesses</a><a href="/en/blog/" aria-current="page">Blog</a></nav>\n'
-                                 '<div class="acc"><span class="idioma"><a href="{ALT}" hreflang="es">ES</a> · <a href="/ca/" hreflang="ca">CA</a> · <b>EN</b></span><a class="btn" '
+                                 '<div class="acc"><span class="idioma"><a href="{ALT_es}" hreflang="es">ES</a> · <a href="{ALT_ca}" hreflang="ca">CA</a> · <b>EN</b></span><a class="btn" '
                                  'href="/en/get-quotes/">Get a quote</a></div></div></header>',
                            'es': '<header><div class="wrap top"><a class="logo" href="/es/"><img src="/estatico/logo.svg" alt="" width="30" height="30">celebraciones<b>.org</b></a>\n'
                                  '<nav class="menu"><a href="/es/espacios/">Espacios</a><a href="/es/proveedores/">Proveedores</a><a href="/es/despedidas-de-soltero/">Despedidas</a><a '
                                  'href="/es/zonas/">Comarcas</a><a href="/es/profesionales/">Soy profesional</a><a href="/es/blog/" aria-current="page">Blog</a></nav>\n'
-                                 '<div class="acc"><span class="idioma"><b>ES</b> · <a href="/ca/" hreflang="ca">CA</a> · <a href="{ALT}" hreflang="en">EN</a></span><a class="btn" '
+                                 '<div class="acc"><span class="idioma"><b>ES</b> · <a href="{ALT_ca}" hreflang="ca">CA</a> · <a href="{ALT_en}" hreflang="en">EN</a></span><a class="btn" '
                                  'href="/es/pedir-presupuesto/">Pedir presupuesto</a></div></div></header>'},
-                   'head': {'en': '<link rel="icon" href="/estatico/favicon.svg" type="image/svg+xml">\n'
+                   'head': {'ca': '<link rel="icon" href="/estatico/favicon.svg" type="image/svg+xml">\n'
+                                  '<link rel="preconnect" href="https://fonts.googleapis.com"><link '
+                                  'href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">\n'
+                                  '<link rel="stylesheet" href="/estatico/estilo.css?v=mw8dg1qx">',
+                            'en': '<link rel="icon" href="/estatico/favicon.svg" type="image/svg+xml">\n'
                                   '<link rel="preconnect" href="https://fonts.googleapis.com"><link '
                                   'href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">\n'
                                   '<link rel="stylesheet" href="/estatico/estilo.css?v=mw8dg1qx">',
@@ -17,7 +26,21 @@ PLANT = {'celebraciones': {'cab': {'en': '<header><div class="wrap top"><a class
                                   '<link rel="preconnect" href="https://fonts.googleapis.com"><link '
                                   'href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">\n'
                                   '<link rel="stylesheet" href="/estatico/estilo.css?v=mw8dg1qx">'},
-                   'pie': {'en': '<footer><div class="wrap pies"><div><div class="logo" style="color:#fff"><img src="/estatico/logo-blanco.svg" alt="" width="30" '
+                   'pie': {'ca': '<footer><div class="wrap pies"><div><div class="logo" style="color:#fff"><img src="/estatico/logo-blanco.svg" alt="" width="30" '
+                                 'height="30">celebraciones<b>.org</b></div><p style="margin-top:8px">Guia independent d\'espais i proveïdors per a casaments, banquets i esdeveniments a '
+                                 'Espanya.</p></div>\n'
+                                 '<div><h4>Espais</h4><ul><li><a href="/ca/masies-i-finques/">Masies i finques</a></li><li><a href="/ca/hotels/">Hotels per a esdeveniments</a></li><li><a '
+                                 'href="/ca/restaurants/">Restaurants per a banquets</a></li><li><a href="/ca/salons-i-sales-de-festes/">Salons i sales de '
+                                 'festes</a></li></ul></div><div><h4>Proveïdors</h4><ul><li><a href="/ca/catering/">Càtering i banquets</a></li><li><a href="/ca/fotografia-i-video/">Fotografia i '
+                                 'vídeo</a></li><li><a href="/ca/musica-i-animacio/">Música, DJ i animació</a></li><li><a href="/ca/wedding-planners-i-organitzacio/">Wedding planners i '
+                                 'organització</a></li><li><a href="/ca/flors-i-decoracio/">Flors i decoració</a></li><li><a href="/ca/so-i-il-luminacio/">So, llum i audiovisual</a></li></ul></div>\n'
+                                 '<div><h4>Soc professional</h4><ul><li><a href="/ca/completa-la-fitxa/">Alta gratuïta</a></li><li><a href="/ca/qui-som/">Qui som</a></li><li><a '
+                                 'href="/ca/avis-legal/">Avís legal</a></li><li><a href="/ca/privacitat/">Política de privacitat</a></li><li><a href="/ca/galetes/">Galetes</a></li></ul></div></div>\n'
+                                 '<div class="wrap legalpie">© 2026 Alejandro Rosàs · Contingut sota llicència <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.ca" rel="license noopener" '
+                                 'style="display:inline">CC BY-NC 4.0</a>, llevat que s\'indiqui el contrari · Dades de fitxes no reclamades provinents de fonts públiques. Hi ha algun error? '
+                                 'Escriu-nos.</div></footer>\n'
+                                 '<script src="/estatico/sitio.js?v=mw8dg1qx" defer></script>',
+                           'en': '<footer><div class="wrap pies"><div><div class="logo" style="color:#fff"><img src="/estatico/logo-blanco.svg" alt="" width="30" '
                                  'height="30">celebraciones<b>.org</b></div><p style="margin-top:8px">Independent guide to venues and suppliers for weddings, banquets and events in Spain.</p></div>\n'
                                  '<div><h4>Venues</h4><ul><li><a href="/en/farmhouses-and-estates/">Farmhouses and estates</a></li><li><a href="/en/hotels/">Hotels for events</a></li><li><a '
                                  'href="/en/restaurants/">Restaurants for banquets</a></li><li><a href="/en/banquet-and-party-halls/">Banquet and party '

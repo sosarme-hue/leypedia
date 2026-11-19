@@ -1,0 +1,2 @@
+/* enlace Blog en el menu */
+(function(){function b(){var l=document.documentElement.lang;if(l!=='en'&&l!=='ca')l='es';var h='/'+l+'/blog/';var ms=document.querySelectorAll('nav.menu');for(var i=0;i<ms.length;i++){var m=ms[i];if(m.querySelector('a.menu-blog, a[href$="/blog/"]'))continue;var a=document.createElement('a');a.className='menu-blog';a.href=h;a.textContent='Blog';m.appendChild(a);}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',b);else b();})();
