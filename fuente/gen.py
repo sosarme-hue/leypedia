@@ -37,6 +37,8 @@ class Sitio:
         self.dir = BASE / nombre
         self.dom = self.c['dominio']
         self.art = self.c['articulos']
+        self.idiomas = self.c.get('idiomas', ['es', 'en'])
+        self.env = self.c.get('envoltura', ('', ''))
         self.orden = sorted(self.art, key=lambda k: (self.art[k]['fecha'], list(self.art).index(k)))
 
     def url(self, lang, slug=''):
@@ -47,6 +49,10 @@ class Sitio:
 
     def rimg(self, lang):  # de la página del blog a la raíz física (img, assets)
         return '../../' if lang == 'en' else '../'
+
+    def hreflang(self, es_url, en_url):
+        if len(self.idiomas) < 2: return ''
+        return f'<link rel="alternate" hreflang="es" href="{es_url}"><link rel="alternate" hreflang="en" href="{en_url}">'
 
     def src(self, img, lang):  # imagen local (relativa a la raiz) o URL absoluta
         return img if img.startswith('http') else self.rimg(lang) + img
@@ -92,7 +98,7 @@ class Sitio:
 <title>{esc(titulo)} · {c["nombre"]}</title>
 <meta name="description" content="{esc(desc)}">
 <meta property="og:type" content="{og_type}"><meta property="og:site_name" content="{c["nombre"]}"><meta property="og:title" content="{esc(titulo)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{url}">{og}<meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="{url}"><link rel="alternate" hreflang="es" href="{es_url}"><link rel="alternate" hreflang="en" href="{en_url}">
+<link rel="canonical" href="{url}">{self.hreflang(es_url, en_url)}
 {(c["head"][lang] if isinstance(c["head"], dict) else c["head"]).replace("{I}", I)}
 <style>{c["css"]}</style>{extra}
 </head>
@@ -133,7 +139,7 @@ class Sitio:
                   f'</div><p><a class="blog-todos" href="./">{T[lang]["todos"]}</a></p></section>'
         R = self.raiz(lang)
         h = self.cabecera(lang, tit, desc, u, au, a['img'], 'article', extra)
-        h += f'''<main>
+        h += f'''<main>{self.env[0]}
 <article class="blog-art">
 <nav class="{self.c["clase_miga"]}"><a href="{R}index.html">{T[lang]["inicio"]}</a> › <a href="./">Blog</a></nav>
 <h1>{esc(tit)}</h1>
@@ -145,7 +151,7 @@ class Sitio:
 {self.compartir(lang, tit, u)}
 </article>
 {mas}
-</main>
+{self.env[1]}</main>
 '''
         return h + self.pie(lang)
 
@@ -155,11 +161,11 @@ class Sitio:
         alt = 'en' if lang == 'es' else 'es'
         h = self.cabecera(lang, c[0], c[1], self.url(lang), self.url(alt), self.art[ks[0]]['img'], 'website')
         R = self.raiz(lang)
-        h += f'''<main>
+        h += f'''<main>{self.env[0]}
 <nav class="{self.c["clase_miga"]}"><a href="{R}index.html">{T[lang]["inicio"]}</a> › Blog</nav>
 <section class="blog-cab"><h1>{c[0]}</h1><p>{c[1]}</p></section>
 <div class="blog-lista blog-portada">{"".join(self.tarjeta(x, lang) for x in ks)}</div>
-</main>
+{self.env[1]}</main>
 '''
         return h + self.pie(lang)
 
@@ -172,11 +178,11 @@ class Sitio:
         faltan = []
         for k in self.orden:
             arch, urls = [], []
-            ok = all(self.contenido(k, l) for l in ('es', 'en'))
+            ok = all(self.contenido(k, l) for l in self.idiomas)
             if not ok:
                 faltan.append(k)
                 continue
-            for lang in ('es', 'en'):
+            for lang in self.idiomas:
                 rel = ('en/' if lang == 'en' else '') + f'blog/{self.art[k][lang][0]}.html'
                 p = out / rel
                 p.parent.mkdir(parents=True, exist_ok=True)
@@ -185,12 +191,16 @@ class Sitio:
             manif['articulos'].append({'clave': k, 'fecha': self.art[k]['fecha'], 'archivos': arch, 'urls': urls})
         fechas = sorted({self.art[k]['fecha'] for k in self.orden if k not in faltan})
         for f in fechas:
-            for lang in ('es', 'en'):
+            for lang in self.idiomas:
                 p = out / 'indices' / lang / f'{f}.html'
                 p.parent.mkdir(parents=True, exist_ok=True)
                 p.write_text(self.indice(lang, f))
         manif['indices'] = fechas
         manif['dominio'] = self.dom
+        if self.idiomas != ['es', 'en']:
+            manif['idiomas'] = self.idiomas
+        if self.c.get('no_tocar_web'):
+            manif['no_tocar_web'] = True
         imgs = self.dir / 'imagenes'
         if imgs.exists():
             dimg = out / 'blog' / 'img'

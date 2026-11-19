@@ -1,0 +1,149 @@
+{
+ "articulos": [
+  {
+   "clave": "socrates",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/socrates-el-filosofo-que-solo-sabia-que-no-sabia-nada.html",
+    "en/blog/socrates-the-philosopher-who-knew-he-knew-nothing.html"
+   ],
+   "urls": [
+    "https://filopedia.com/blog/socrates-el-filosofo-que-solo-sabia-que-no-sabia-nada.html",
+    "https://filopedia.com/en/blog/socrates-the-philosopher-who-knew-he-knew-nothing.html"
+   ]
+  },
+  {
+   "clave": "cervantes",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/cervantes-y-el-quijote.html",
+    "en/blog/cervantes-and-don-quixote.html"
+   ],
+   "urls": [
+    "https://filopedia.com/blog/cervantes-y-el-quijote.html",
+    "https://filopedia.com/en/blog/cervantes-and-don-quixote.html"
+   ]
+  },
+  {
+   "clave": "beauvoir",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/simone-de-beauvoir-y-el-segundo-sexo.html",
+    "en/blog/simone-de-beauvoir-and-the-second-sex.html"
+   ],
+   "urls": [
+    "https://filopedia.com/blog/simone-de-beauvoir-y-el-segundo-sexo.html",
+    "https://filopedia.com/en/blog/simone-de-beauvoir-and-the-second-sex.html"
+   ]
+  },
+  {
+   "clave": "spinoza",
+   "fecha": "2026-11-24",
+   "archivos": [
+    "blog/spinoza-el-filosofo-que-pulia-lentes.html",
+    "en/blog/spinoza-the-philosopher-who-ground-lenses.html"
+   ],
+   "urls": [
+    "https://filopedia.com/blog/spinoza-el-filosofo-que-pulia-lentes.html",
+    "https://filopedia.com/en/blog/spinoza-the-philosopher-who-ground-lenses.html"
+   ]
+  },
+  {
+   "clave": "montaigne",
+   "fecha": "2026-12-01",
+   "archivos": [
+    "blog/montaigne-y-el-invento-del-ensayo.html",
+    "en/blog/montaigne-and-the-invention-of-the-essay.html"
+   ],
+   "urls": [
+    "https://filopedia.com/blog/montaigne-y-el-invento-del-ensayo.html",
+    "https://filopedia.com/en/blog/montaigne-and-the-invention-of-the-essay.html"
+   ]
+  },
+  {
+   "clave": "dickinson",
+   "fecha": "2026-12-08",
+   "archivos": [
+    "blog/emily-dickinson-la-poeta-que-no-quiso-publicar.html",
+    "en/blog/emily-dickinson-the-poet-who-would-not-publish.html"
+   ],
+   "urls": [
+    "https://filopedia.com/blog/emily-dickinson-la-poeta-que-no-quiso-publicar.html",
+    "https://filopedia.com/en/blog/emily-dickinson-the-poet-who-would-not-publish.html"
+   ]
+  },
+  {
+   "clave": "austen",
+   "fecha": "2026-12-15",
+   "archivos": [
+    "blog/jane-austen-y-orgullo-y-prejuicio.html",
+    "en/blog/jane-austen-and-pride-and-prejudice.html"
+   ],
+   "urls": [
+    "https://filopedia.com/blog/jane-austen-y-orgullo-y-prejuicio.html",
+    "https://filopedia.com/en/blog/jane-austen-and-pride-and-prejudice.html"
+   ]
+  },
+  {
+   "clave": "dickens",
+   "fecha": "2026-12-22",
+   "archivos": [
+    "blog/dickens-y-cuento-de-navidad.html",
+    "en/blog/dickens-and-a-christmas-carol.html"
+   ],
+   "urls": [
+    "https://filopedia.com/blog/dickens-y-cuento-de-navidad.html",
+    "https://filopedia.com/en/blog/dickens-and-a-christmas-carol.html"
+   ]
+  },
+  {
+   "clave": "platon",
+   "fecha": "2026-12-29",
+   "archivos": [
+    "blog/platon-y-el-mito-de-la-caverna.html",
+    "en/blog/plato-and-the-allegory-of-the-cave.html"
+   ],
+   "urls": [
+    "https://filopedia.com/blog/platon-y-el-mito-de-la-caverna.html",
+    "https://filopedia.com/en/blog/plato-and-the-allegory-of-the-cave.html"
+   ]
+  },
+  {
+   "clave": "tolkien",
+   "fecha": "2027-01-05",
+   "archivos": [
+    "blog/tolkien-el-profesor-que-invento-la-tierra-media.html",
+    "en/blog/tolkien-the-professor-who-invented-middle-earth.html"
+   ],
+   "urls": [
+    "https://filopedia.com/blog/tolkien-el-profesor-que-invento-la-tierra-media.html",
+    "https://filopedia.com/en/blog/tolkien-the-professor-who-invented-middle-earth.html"
+   ]
+  },
+  {
+   "clave": "arendt",
+   "fecha": "2027-01-12",
+   "archivos": [
+    "blog/hannah-arendt-y-la-banalidad-del-mal.html",
+    "en/blog/hannah-arendt-and-the-banality-of-evil.html"
+   ],
+   "urls": [
+    "https://filopedia.com/blog/hannah-arendt-y-la-banalidad-del-mal.html",
+    "https://filopedia.com/en/blog/hannah-arendt-and-the-banality-of-evil.html"
+   ]
+  }
+ ],
+ "indices": [
+  "2026-11-19",
+  "2026-11-24",
+  "2026-12-01",
+  "2026-12-08",
+  "2026-12-15",
+  "2026-12-22",
+  "2026-12-29",
+  "2027-01-05",
+  "2027-01-12"
+ ],
+ "dominio": "filopedia.com",
+ "js_menu": "assets/busca.js"
+}

@@ -12,7 +12,7 @@ for sitio in SITIOS_V:
     dom = m['dominio']
     ult = m['indices'][-1]
     pags = {}
-    for lang, carp in (('es', 'blog'), ('en', 'en/blog')):
+    for lang, carp in [x for x in (('es', 'blog'), ('en', 'en/blog')) if x[0] in m.get('idiomas', ['es', 'en'])]:
         for f in (d / carp).glob('*.html'):
             pags[f'{carp}/{f.name}'] = f.read_text()
         pags[f'{carp}/index.html'] = (d / 'indices' / lang / f'{ult}.html').read_text()

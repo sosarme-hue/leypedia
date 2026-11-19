@@ -140,3 +140,4 @@ from sitios_tn import TN  # noqa: E402  Tenispedia y Newtonpedia
 SITIOS.update(TN)
 from sitios_cm import CM  # noqa: E402  Cinematopedia y Medicapedia
 SITIOS.update(CM)
+from sitios_fe import FE; SITIOS.update(FE)

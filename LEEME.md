@@ -14,3 +14,6 @@ La carpeta no es accesible desde la web (`.htaccess`). Cada web usa solo su subc
 - Para deshacer: restaurar desde `copias/` el JS y `sitemap.xml`, y borrar `/blog/`, `/en/blog/` y `sitemap-blog.xml`.
 
 - Cinematopedia (`_blog/cinematopedia/`, JS `assets/cine.js`) y Medicapedia (`_blog/medicapedia/`, JS `assets/busca.js`) se añadieron el 19-11-2026, con el mismo calendario.
+- Filopedia (`_blog/filopedia/`, JS `assets/busca.js`) y enfermeria.si (`_blog/enfermeria/`, solo en español) se añadieron el 19-11-2026, con el mismo calendario.
+  enfermeria.si se despliega desde Git (repositorio enfermeria-si): su `publicar.php` (opción `no_tocar_web` del manifiesto) solo escribe `blog/` y `sitemap-blog.xml`;
+  el enlace «Blog» del menú y la línea de `robots.txt` van en ese repositorio.

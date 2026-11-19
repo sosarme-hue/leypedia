@@ -1,0 +1,130 @@
+{
+ "articulos": [
+  {
+   "clave": "nightingale",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/florence-nightingale-la-dama-de-la-lampara.html"
+   ],
+   "urls": [
+    "https://enfermeria.si/blog/florence-nightingale-la-dama-de-la-lampara.html"
+   ]
+  },
+  {
+   "clave": "manos",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/la-higiene-de-manos-el-gesto-que-mas-vidas-salva.html"
+   ],
+   "urls": [
+    "https://enfermeria.si/blog/la-higiene-de-manos-el-gesto-que-mas-vidas-salva.html"
+   ]
+  },
+  {
+   "clave": "eir",
+   "fecha": "2026-11-19",
+   "archivos": [
+    "blog/como-preparar-el-eir.html"
+   ],
+   "urls": [
+    "https://enfermeria.si/blog/como-preparar-el-eir.html"
+   ]
+  },
+  {
+   "clave": "henderson",
+   "fecha": "2026-11-24",
+   "archivos": [
+    "blog/virginia-henderson-y-las-14-necesidades.html"
+   ],
+   "urls": [
+    "https://enfermeria.si/blog/virginia-henderson-y-las-14-necesidades.html"
+   ]
+  },
+  {
+   "clave": "sida",
+   "fecha": "2026-12-01",
+   "archivos": [
+    "blog/el-sida-y-la-enfermeria.html"
+   ],
+   "urls": [
+    "https://enfermeria.si/blog/el-sida-y-la-enfermeria.html"
+   ]
+  },
+  {
+   "clave": "glasgow",
+   "fecha": "2026-12-08",
+   "archivos": [
+    "blog/historia-de-la-escala-de-glasgow.html"
+   ],
+   "urls": [
+    "https://enfermeria.si/blog/historia-de-la-escala-de-glasgow.html"
+   ]
+  },
+  {
+   "clave": "cuidador",
+   "fecha": "2026-12-15",
+   "archivos": [
+    "blog/cuidar-al-que-cuida.html"
+   ],
+   "urls": [
+    "https://enfermeria.si/blog/cuidar-al-que-cuida.html"
+   ]
+  },
+  {
+   "clave": "atragantamiento",
+   "fecha": "2026-12-22",
+   "archivos": [
+    "blog/atragantamientos-en-las-comidas-de-navidad.html"
+   ],
+   "urls": [
+    "https://enfermeria.si/blog/atragantamientos-en-las-comidas-de-navidad.html"
+   ]
+  },
+  {
+   "clave": "zendal",
+   "fecha": "2026-12-29",
+   "archivos": [
+    "blog/isabel-zendal-la-primera-enfermera-en-mision-internacional.html"
+   ],
+   "urls": [
+    "https://enfermeria.si/blog/isabel-zendal-la-primera-enfermera-en-mision-internacional.html"
+   ]
+  },
+  {
+   "clave": "caidas",
+   "fecha": "2027-01-05",
+   "archivos": [
+    "blog/prevenir-caidas-en-personas-mayores.html"
+   ],
+   "urls": [
+    "https://enfermeria.si/blog/prevenir-caidas-en-personas-mayores.html"
+   ]
+  },
+  {
+   "clave": "eir2",
+   "fecha": "2027-01-12",
+   "archivos": [
+    "blog/ultimos-consejos-para-el-eir.html"
+   ],
+   "urls": [
+    "https://enfermeria.si/blog/ultimos-consejos-para-el-eir.html"
+   ]
+  }
+ ],
+ "indices": [
+  "2026-11-19",
+  "2026-11-24",
+  "2026-12-01",
+  "2026-12-08",
+  "2026-12-15",
+  "2026-12-22",
+  "2026-12-29",
+  "2027-01-05",
+  "2027-01-12"
+ ],
+ "dominio": "enfermeria.si",
+ "idiomas": [
+  "es"
+ ],
+ "no_tocar_web": true
+}
